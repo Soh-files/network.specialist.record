@@ -46,6 +46,70 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item" id="h_BBR">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#BBR" aria-expanded="false" aria-controls="BBR">
+                        BBR(Bottleneck Bandwidth and Round-trip propagation time)
+                    </button>
+                </h2>
+                <div id="BBR" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Googleが開発したTCPの輻輳制御アルゴリズム。ボトルネック帯域幅と往復伝搬時間を常に監視し、ネットワークの混雑状態を正確に把握することで、パケットの損失が起こる前に送信量を調整する。
+                        これによりTCPのパフォーマンスが改善される。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_BGP">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#BGP" aria-expanded="false" aria-controls="BGP">
+                        BGP(Border Gateway Protocol)
+                    </button>
+                </h2>
+                <div id="BGP" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        インターネットにおいてISP管理のネットワークなど自律システム同士の相互接続時にお互いの経路情報をやり取りするために使用され、通過する経路のリストだけで経路制御を行う経路ベクトル型のプロトコル。
+                        一般的に2つ以上のASに接続される場合に必要となる。<br>
+                        ルーティングポリシーに従ったポリシールーティングを実現するために経路情報にいくつかの属性パラメータ(パス属性値)を付加することができ、このパラメータを調整して経路情報を広告すること、あるいは
+                        このパラメータに従って経路情報の優先制御を行うことでポリシールーティングを実現する。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_BPDU">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#BPDU" aria-expanded="false" aria-controls="BPDU">
+                        BPDU(Bridge Protocol Data Unit)
+                    </button>
+                </h2>
+                <div id="BPDU" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        スパニングツリープロトコル(STP)においてスイッチ間で情報をやり取りするための制御フレーム。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_CCK">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#CCK" aria-expanded="false" aria-controls="CCK">
+                        CCK(Complementary Code Keying)
+                    </button>
+                </h2>
+                <div id="CCK" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        相補型符号変調のことで、IEEE802.11bで採用されている変調方式。ビットを信号に変換する際に拡散符号を掛け合わせることで通信の高速化やノイズへの耐性を高めた方式。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_CDM">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#CDM" aria-expanded="false" aria-controls="CDM">
+                        CDM(Code Division Multiplexing)
+                    </button>
+                </h2>
+                <div id="CDM" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        符号分割多重化のことで、通信信号ごとに特定の演算処理(符号化)を施したものを複数個まとめて送信し、受信側で同じ処理を行い特定の信号を取り出す仕組み。複数の送信者の通信を同じ周波数帯上で行う多重化方式。
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_CDN">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#CDN" aria-expanded="false" aria-controls="CDN">
@@ -61,7 +125,20 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" id="h_CoAP">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#CoAP" aria-expanded="false" aria-controls="CoAP">
+                        CoAP(Constrained Application Protocol)
+                    </button>
+                </h2>
+                <div id="CoAP" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        IoTデバイスのようにメモリ、消費電力、帯域幅などリソースに制約のあるデバイスが効率的にWeb通信を行えるように設計されたプロトコル。UDP上で動作するが、確認応答や再送処理をサポートしている。
+                        HTTPと同様にリクエスト/レスポンスモデルを採用していて、GET/POST/PUT/DELETEなどのHTTPメソッドと似たメソッドをサポートしているためHTTPの代替として使用することができる。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_DMARC">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#DMARC" aria-expanded="false" aria-controls="DMARC">
                         DMARC
@@ -73,6 +150,31 @@
                         　None(何もしない)：受信メールに対して特定のアクションを要求しない<br>
                         　Quarantine(隔離)：受信メールを疑わしいものとして処理するように要求する<br>
                         　Reject(拒否)：受信メールを拒否することを要求する
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_FaaS">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#FaaS" aria-expanded="false" aria-controls="FaaS">
+                        FaaS(Function as a Service)
+                    </button>
+                </h2>
+                <div id="FaaS" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        アプリケーション開発に必要な関数をクラウドのサーバ上で実行できるサービス。実現したい機能を関数(Function)として実装してアップロードしておけば指定したイベントをトリガーとして関数を実行してくれる。
+                        PaaSと比較するとサービス利用者側でプラットフォームを管理する必要がない(サーバレス)、イベントドリブン、自動スケーリングなどの特徴がある。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_GARP">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#GARP" aria-expanded="false" aria-controls="GARP">
+                        GARP(Gratuitous ARP)
+                    </button>
+                </h2>
+                <div id="GARP" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        自端末のIPアドレスをターゲットIPアドレスにセットした特殊なARP要求。
                     </div>
                 </div>
             </div>
@@ -90,6 +192,21 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item" id="h_IEEE802.1X">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#IEEE802.1X" aria-expanded="false" aria-controls="IEEE802.1X">
+                        IEEE802.1X
+                    </button>
+                </h2>
+                <div id="IEEE802.1X" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        正当な端末以外がLANに参加することを防ぐためにLANにおけるクライアント認証の方式を定めた規格でEAP(Extensible Authentication Protocol)として実装されている。EAPでは以下の3つの構成要素が存在する。<br>
+                        サプリカント：LANに接続するために認証を受けるクライアント<br>
+                        認証サーバ：実際に認証を行うサーバ。RADIUSサーバが使用されることが多い。<br>
+                        オーセンティケータ：サプリカントと認証サーバ間の認証プロセスを相互に中継する装置で、有線接続ではL2SWやL3SW、無線接続ではアクセスポイントがその役割を担う。
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_MOS値">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#MOS値" aria-expanded="false" aria-controls="MOS値">
@@ -99,6 +216,45 @@
                 <div id="MOS値" class="accordion-collapse collapse">
                     <div class="accordion-body">
                         ユーザーが体感する品質を評価した指標値で、多数の評価者の主観的な5段階評価(非常に良い〜非常に悪い)を平均することによって決定される。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_MSTP">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#MSTP" aria-expanded="false" aria-controls="MSTP">
+                        MSTP(Multiple Spanning Tree Protocol)
+                    </button>
+                </h2>
+                <div id="MSTP" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        VLANをインスタンスという単位で管理し、複数のVLANをまとめたスパニングツリーを構成するプロトコル。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_MTU">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#MTU" aria-expanded="false" aria-controls="MTU">
+                        MTU(Maximum Transmission Unit)
+                    </button>
+                </h2>
+                <div id="MTU" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        そのネットワークのデータリンク層において1回に送信できるデータサイズのことで、TCP/IPにおいてはデータリンク層のプロトコルによってカプセル化できるIPパケットの最大サイズを表す(イーサネットでは1,500バイト、
+                        光ファイバーでは4,352バイトなど)。IPパケットのサイズがMTUを超えるとIPがフラグメント化を行い、MTU以下のサイズの複数のIPパケットに分割してから送信され、送信先で再構成される。<br>
+                        IPパケットにはIPヘッダー、TCPヘッダー、データなどが含まれる。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_OFDM">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#OFDM" aria-expanded="false" aria-controls="OFDM">
+                        OFDM(Orthogonal Frequency Division Multiplexing)
+                    </button>
+                </h2>
+                <div id="OFDM" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        無線LANの規格IEEEsa802.11a/g/n/acで採用されている変調方式。各搬送波の中心を隣の搬送波の谷間に重なるように配置することで、さらに多数の搬送波を同時に送信できるようにしたもの。<br>
+                        データ信号を複数のサブキャリアに分割し、各サブキャリアが互いに干渉しないように配置する。
                     </div>
                 </div>
             </div>
@@ -226,6 +382,43 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item" id="h_SysML">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#SysML" aria-expanded="false" aria-controls="SysML">
+                        SysML(System Modeling Language)
+                    </button>
+                </h2>
+                <div id="SysML" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        ソフトウェア設計に用いられるUMLをハードウェアに関する記述を含めたものに拡張し、システム設計を行えるようにしたモデリング言語。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_TDM">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#TDM" aria-expanded="false" aria-controls="TDM">
+                        TDM(Time Division Multiplexing)
+                    </button>
+                </h2>
+                <div id="TDM" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        時分割多重化のことで、1つの伝送路で複数の通信を行う際に送信時間を非常に短く区切り、その時間(タイムスロット)ごとに複数の信号を順番に割り当てていくことで多重化通信を行う方式。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_VLANタグ">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#VLANタグ" aria-expanded="false" aria-controls="VLANタグ">
+                        VLANタグ
+                    </button>
+                </h2>
+                <div id="VLANタグ" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        IEEE802.1Qヘッダー情報を格納する4バイトのフィールドでタグつきフレームであることを示す識別子、VLAN ID、優先度などの情報を含む。VLANタグはイーサネットフレーム中の送信元MACアドレスとタイプ/長さフィールドの間に
+                        挿入される。
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_ウインドウ制御">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#ウインドウ制御" aria-expanded="false" aria-controls="ウインドウ制御">
@@ -301,6 +494,18 @@
                 <div id="マルチキャストアドレス" class="accordion-collapse collapse">
                     <div class="accordion-body">
                         先頭4ビットは「1110」固定で(クラスD)残りの28ビットはグループを識別するための領域として使用される。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_ルーティングポリシー">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#ルーティングポリシー" aria-expanded="false" aria-controls="ルーティングポリシー">
+                        ルーティングポリシー
+                    </button>
+                </h2>
+                <div id="ルーティングポリシー" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        インターネット上のいろいろな対地に対して、どの隣接ASを通じてトラフィックを到達させるか関する方針のこと。
                     </div>
                 </div>
             </div>
