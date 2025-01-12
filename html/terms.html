@@ -153,6 +153,20 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item" id="h_DNSリフレクタ攻撃">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#DNSリフレクタ攻撃" aria-expanded="false" aria-controls="DNSリフレクタ攻撃">
+                        DNSリフレクタ攻撃
+                    </button>
+                </h2>
+                <div id="DNSリフレクタ攻撃" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        脆弱性のある公開DNSキャッシュサーバを踏み台として悪用することで行われる分散型サービス妨害(DDoS)攻撃の1つ。DNSサーバをDNSキャッシュサーバと権威DNSサーバに分離し、
+                        踏み台として悪用されないためには、インターネット側からDNSキャッシュサーバに問い合わせできないようにしたり、利用可能なホストのIPアドレスの範囲を設定してDNSキャッシュサーバが不要なクエリを拒否するように
+                        アクセス制限を施したりする必要がある。
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_FaaS">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#FaaS" aria-expanded="false" aria-controls="FaaS">
@@ -204,6 +218,56 @@
                         サプリカント：LANに接続するために認証を受けるクライアント<br>
                         認証サーバ：実際に認証を行うサーバ。RADIUSサーバが使用されることが多い。<br>
                         オーセンティケータ：サプリカントと認証サーバ間の認証プロセスを相互に中継する装置で、有線接続ではL2SWやL3SW、無線接続ではアクセスポイントがその役割を担う。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_IGMP">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#IGMP" aria-expanded="false" aria-controls="IGMP">
+                        IGMP(Internet Group Management Protocol)
+                    </button>
+                </h2>
+                <div id="IGMP" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        IPマルチキャストにおいて参加するホストのグループを制御するためのプロトコル。「グループへの参加」「グループの問い合わせ」「グループの維持」「グループからの離脱」という
+                        4つの機能を持っている。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_IS-IS">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#IS-IS" aria-expanded="false" aria-controls="IS-IS">
+                        IS-IS(Intermediate System to Intermediate System)
+                    </button>
+                </h2>
+                <div id="IS-IS" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        AS内の経路制御を行うルーティングプロトコルでOSPFと同じリンクステート型のプロトコル。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_LDAP">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#LDAP" aria-expanded="false" aria-controls="LDAP">
+                        LDAP(Lightweight Directory Access Protocol)
+                    </button>
+                </h2>
+                <div id="LDAP" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        ユーザー名やパスワードなどのユーザー情報やネットワーク資源情報を一元管理するとともにそれらの情報を提供するディレクトリサービスにアクセスするためのプロトコル。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_MIB">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#MIB" aria-expanded="false" aria-controls="MIB">
+                        MIB(Management Information Base)
+                    </button>
+                </h2>
+                <div id="MIB" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        SNMPなどで遠く離れている機器をモニター・メンテナンスするときに使用されるモニター対象の機器が自分の力で設定・状態を整理してひとつにしたデータ集合、
+                        もしくはそのレファレンスについて定められた規格のこと。
                     </div>
                 </div>
             </div>
@@ -268,6 +332,7 @@
                     <div class="accordion-body">
                         リンク状態型のルーティングプロトコルで、すべてのルータがネットワークのトポロジー(接続状態)を完全に把握し、それをもとに制御制御を行う。ループがあるネットワークでも安定した経路制御が可能となる。各リンクに重み(コスト)をつけることができ、コストの合計が最も小さい経路が選択される。<br>
                         すべてのルータ間で経路情報が交換されるわけではなく、指名ルータが決められそれを中心に経路制御情報が交換される。またルータの台数が増えた場合にはエリアというグループに分けて管理される。各エリアは必ずバックボーンエリアに接続され、バックボーンエリアと各エリアの教会にあるルータはエリア境界ルータと呼ばれる。<br>
+                        主に中規模から大規模ネットワークで使用され、AS内部の経路制御に用いられる。<br>
                         　OSPFv2：<br>
                         　　IPv4アドレスを使用してルーティングテーブルを作成する<br>
                         　　シンプルな認証方法(平文テキストやMD5)が使用される<br>
@@ -334,7 +399,8 @@
                     <div class="accordion-body">
                         LANで最も広く利用されているルーティングプロトコル。距離ベクトル型であり、ホップ数(ルータの数)を用いて選択する経路を決定する。<br>
                         自分の知っている経路制御情報を30秒に1回ネットワーク上にブロードキャストする。他のルータから受け取った経路情報は距離に1足してから次の機会にブロードキャストする。<br>
-                        パケットが6回(180秒)こなかった場合には接続が切れたと判断して距離ベクトルデータベースから該当する情報を削除する。またパケットがループし続けないように、ホップの最大数を15とし、これを超えた場合には破棄する。
+                        パケットが6回(180秒)こなかった場合には接続が切れたと判断して距離ベクトルデータベースから該当する情報を削除する。またパケットがループし続けないように、ホップの最大数を15とし、これを超えた場合には破棄する。<br>
+                        AS内部で使用され、主に小規模ネットワークで使用されるルーティングプロトコル。
                     </div>
                 </div>
             </div>
@@ -366,6 +432,20 @@
                     <div class="accordion-body">
                         IPv6対応のRIPバージョン。RIPと同様にホップ数を使用してルート計算を行うが、FF02::9(全RIPngルータのIPv6マルチキャストアドレス)を利用して
                         ルーティング情報を交換する。IPv6のネットワーク環境に特化した設計がされている。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_RMON">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#RMON" aria-expanded="false" aria-controls="RMON">
+                        RMON(Remote network MONitoring)
+                    </button>
+                </h2>
+                <div id="RMON" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        ネットワークのトラフィック管理において、測定対象の回線やポートなどからパケットをキャプチャして解析し、SNMPを使って管理装置にデータを送信する仕組み。<br>
+                        ネットワークで情報を送ったり受け取ったりする状況を遠く離れている場所からモニターする仕組みで、通信するための機器をモニター・メンテナンスするSNMPとともに用いられることが多くなっている。
+                        管理者はそれぞれ様子が変化するネットワークの状態を一元的に正確な情報を得られ、トラブルの検知・原因のチェック・構成のオプティマイズを敏速に行える。
                     </div>
                 </div>
             </div>
@@ -478,6 +558,8 @@
                 </h2>
                 <div id="スパニングツリープロトコル" class="accordion-collapse collapse">
                     <div class="accordion-body">
+                        L2SWをループ状に構成した際に発生するブロードキャストストーム(ブロードキャストフレームがループ内を周回し続ける状態)を回避するために用いられる。
+                        スパニングツリープロトコルによって論理的な木構造として扱うことで障害時の転送経路を確保しつつブロードキャストフレームのループを防止できる。<br>
                         スパニングツリー構築の流れは以下の通り<br>
                         ①各ノードのポートのうちルートノードまでの区間コストが最も低いポートをルートポートとする<br>
                         ②ノード間の各リンクのうちルートノードに近い方を指定ポートする<br>
@@ -493,7 +575,32 @@
                 </h2>
                 <div id="マルチキャストアドレス" class="accordion-collapse collapse">
                     <div class="accordion-body">
-                        先頭4ビットは「1110」固定で(クラスD)残りの28ビットはグループを識別するための領域として使用される。
+                        先頭4ビットは「1110」固定で(クラスD)残りの28ビットはグループを識別するための領域として使用される。<br>
+                        一部のアドレスはWell-Knownアドレスとして用途が決められているが、他のアドレスは用途ごとのアドレス範囲の中で自由に使用できる。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_量子アニーリング方式">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#量子アニーリング方式" aria-expanded="false" aria-controls="量子アニーリング方式">
+                        量子アニーリング方式
+                    </button>
+                </h2>
+                <div id="量子アニーリング方式" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        量子特有の性質を情報処理に利用して組み合わせ最適化問題を解くことに特化した量子コンピュータのこと。膨大な選択肢の中から最適な選択肢を探すアルゴリズムに特化している。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_量子ゲート方式">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#量子ゲート方式" aria-expanded="false" aria-controls="量子ゲート方式">
+                        量子ゲート方式
+                    </button>
+                </h2>
+                <div id="量子ゲート方式" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        極低温の環境の中で量子ゲートを用いて演算を行う量子コンピュータのこと。
                     </div>
                 </div>
             </div>
