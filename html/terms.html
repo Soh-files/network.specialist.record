@@ -32,6 +32,18 @@
     <div class="container my-5">
         <h4 class="mb-3">用語</h4>
         <div class="accordion" id="accordion">
+            <div class="accordion-item" id="h_6LoWPAN">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#6LoWPAN" aria-expanded="false" aria-controls="6LoWPAN">
+                        6LoWPAN
+                    </button>
+                </h2>
+                <div id="6LoWPAN" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        6LoWPAN(シックスローパン)は、低速・低消費電力のIEEE802.15.4ネットワーク上で効率よくIPv6通信を行うためにパケットの分割と再結合、ヘッダー圧縮等の最適化を定めた仕様のこと。
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_AS">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#AS" aria-expanded="false" aria-controls="AS">
@@ -56,6 +68,18 @@
                     <div class="accordion-body">
                         Googleが開発したTCPの輻輳制御アルゴリズム。ボトルネック帯域幅と往復伝搬時間を常に監視し、ネットワークの混雑状態を正確に把握することで、パケットの損失が起こる前に送信量を調整する。
                         これによりTCPのパフォーマンスが改善される。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_BLE">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#BLE" aria-expanded="false" aria-controls="BLE">
+                        BLE(Bluetooth Low Energy)
+                    </button>
+                </h2>
+                <div id="BLE" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        無線通信規格Bluetoothの一部で、低消費電力に特化した通信モードのこと。
                     </div>
                 </div>
             </div>
@@ -153,6 +177,18 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item" id="h_DNSラウンドロビン">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#DNSラウンドロビン" aria-expanded="false" aria-controls="DNSラウンドロビン">
+                        DNSラウンドロビン
+                    </button>
+                </h2>
+                <div id="DNSラウンドロビン" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        1つのホストに複数のIPアドレスを対応させる仕組みで、複数台のサーバに負荷を分散させるために利用される。
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_DNSリフレクタ攻撃">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#DNSリフレクタ攻撃" aria-expanded="false" aria-controls="DNSリフレクタ攻撃">
@@ -246,6 +282,18 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item" id="h_L2TP">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#L2TP" aria-expanded="false" aria-controls="L2TP">
+                        L2TP(Layer 2 Tunneling Protocol)
+                    </button>
+                </h2>
+                <div id="L2TP" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        L2FとPPTPを統合して改良したデータリンク層のトンネリングプロトコル。
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_LDAP">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#LDAP" aria-expanded="false" aria-controls="LDAP">
@@ -280,6 +328,32 @@
                 <div id="MOS値" class="accordion-collapse collapse">
                     <div class="accordion-body">
                         ユーザーが体感する品質を評価した指標値で、多数の評価者の主観的な5段階評価(非常に良い〜非常に悪い)を平均することによって決定される。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_MPLS">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#MPLS" aria-expanded="false" aria-controls="MPLS">
+                        MPLS(Multi Protocol Label Switching)
+                    </button>
+                </h2>
+                <div id="MPLS" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        IPパケットごとにラベルと呼ばれる情報を付加し、その情報をもとにしたスイッチングでパケット制御を行う技術のこと。ユーザーごとに異なるラベルを用いたIP-VPN網での利用やMPLSネットワーク内で
+                        パケットの転送経路を明示的に選択したい場合などの使用される。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_MQTT">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#MQTT" aria-expanded="false" aria-controls="MQTT">
+                        MQTT(Message Queueing Telemetry Transport)
+                    </button>
+                </h2>
+                <div id="MQTT" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        短いメッセージを頻繁にやり取りすることに特化したシンプルかつ軽量のプロトコル。IoTネットワークやモバイルアプリケーションでの活用が期待されている。
+                        MQTTはパブリッシュ(送信側)とサブスクライブ(受信側)の間をMQTTブローカー(メッセージ配信サーバ)が取り持つという通信モデルになっている。
                     </div>
                 </div>
             </div>
@@ -385,7 +459,7 @@
                 </h2>
                 <div id="PPTP" class="accordion-collapse collapse">
                     <div class="accordion-body">
-                        PPPパケットをIPデータグラムでカプセル化してVPNを作り出す技術。
+                        PPPデータフレームをIPパケットでカプセル化してインターネットを通過させるためのトンネリングプロトコル。
                     </div>
                 </div>
             </div>
@@ -499,6 +573,30 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item" id="h_Wi-SUN">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#Wi-SUN" aria-expanded="false" aria-controls="Wi-SUN">
+                        Wi-SUN(Wireless Smart Utility Network)
+                    </button>
+                </h2>
+                <div id="Wi-SUN" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        920MHz帯を使用するLPWA規格の1つで100台から1,000台のメッシュ側ネットワークのこと。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_アドミッション制御">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#アドミッション制御" aria-expanded="false" aria-controls="アドミッション制御">
+                        アドミッション制御
+                    </button>
+                </h2>
+                <div id="アドミッション制御" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        ネットワークのQoSを実現するために使用されるトラフィック制御の1つで、通信を開始する前にネットワークに対して帯域などのリソースを要求し、確保の状況に応じて通信を制御すること。
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_ウインドウ制御">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#ウインドウ制御" aria-expanded="false" aria-controls="ウインドウ制御">
@@ -521,6 +619,18 @@
                     <div class="accordion-body">
                         TCPによる通信で受信者側が送信者側に返す番号。<br>
                         次に送ってほしいデータの先頭位置を表す。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_シェーピング">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#シェーピング" aria-expanded="false" aria-controls="シェーピング">
+                        シェーピング
+                    </button>
+                </h2>
+                <div id="シェーピング" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        ネットワークのQoSを実現するために使用されるトラフィック制御の1つで、パケットの送出間隔を調整することで規定された最大速度を超過しないようにトラフィックを平準化する制御のこと。
                     </div>
                 </div>
             </div>
@@ -567,6 +677,43 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item" id="h_ベストエフォート">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#ベストエフォート" aria-expanded="false" aria-controls="ベストエフォート">
+                        ベストエフォート
+                    </button>
+                </h2>
+                <div id="ベストエフォート" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        通信網は最善を尽くすが利用状況によっては通信の品質を保証しないとするサービスの方針のこと。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_ポリシング">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#ポリシング" aria-expanded="false" aria-controls="ポリシング">
+                        ポリシング
+                    </button>
+                </h2>
+                <div id="ポリシング" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        ネットワークのQoSを実現するために使用されるトラフィック制御の1つで、入力されたトラフィックが規定された最大速度を超過しないか監視し、超過分のパケットを破棄するか優先度を下げる制御のこと。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_待ち行列モデル">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#待ち行列モデル" aria-expanded="false" aria-controls="待ち行列モデル">
+                        待ち行列モデル
+                    </button>
+                </h2>
+                <div id="待ち行列モデル" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        M/M/1の待ち行列モデルにおいて待ち行列に並んでからサービスを受け終わるまでに要する平均時間は次の式で計算する。
+                        (利用率 / (1 - 利用率)) × 平均サービス時間 + 平均サービス時間
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_マルチキャストアドレス">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#マルチキャストアドレス" aria-expanded="false" aria-controls="マルチキャストアドレス">
@@ -577,6 +724,18 @@
                     <div class="accordion-body">
                         先頭4ビットは「1110」固定で(クラスD)残りの28ビットはグループを識別するための領域として使用される。<br>
                         一部のアドレスはWell-Knownアドレスとして用途が決められているが、他のアドレスは用途ごとのアドレス範囲の中で自由に使用できる。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_優先制御">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#優先制御" aria-expanded="false" aria-controls="優先制御">
+                        優先制御
+                    </button>
+                </h2>
+                <div id="優先制御" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        ネットワークのQoSを実現するために使用されるトラフィック制御の1つで、フレームの種類や宛先に応じて優先度を変えて中継すること。
                     </div>
                 </div>
             </div>
