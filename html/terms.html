@@ -162,6 +162,32 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item" id="h_CPPM">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#CPPM" aria-expanded="false" aria-controls="CPPM">
+                        CPPM(Content Protection for Pre-Recorded Media)
+                    </button>
+                </h2>
+                <div id="CPPM" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        コンテンツをメディアに暗号化した状態で記録し、再生時に対応した機器で復号することで違法コピーを防止する技術。メディア内の暗号鍵と再生機器(またはソフトウェア)の機器鍵が揃わないと復号できない仕組みとなっている。
+                        再生専用メディア用の規格。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_CPRM">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#CPRM" aria-expanded="false" aria-controls="CPRM">
+                        CPRM(Content Protection for Recordable Media)
+                    </button>
+                </h2>
+                <div id="CPRM" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        コンテンツをメディアに暗号化した状態で記録し、再生時に対応した機器で復号することで違法コピーを防止する技術。メディア内の暗号鍵と再生機器(またはソフトウェア)の機器鍵が揃わないと復号できない仕組みとなっている。
+                        記録可能なメディアを対象とした規格で、SDメモリカードなどの書き換え可能メディアは著作権保護技術としてCPRMが使用されている。
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_DMARC">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#DMARC" aria-expanded="false" aria-controls="DMARC">
@@ -203,6 +229,18 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item" id="h_DTCP">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#DTCP" aria-expanded="false" aria-controls="DTCP">
+                        DTCP(Digital Transmission Content Protection)
+                    </button>
+                </h2>
+                <div id="DTCP" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        家庭内ネットワーク内において、著作権保護されたデジタルコンテンツを暗号化して転送することでコピーや傍受を防ぐ技術。
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_FaaS">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#FaaS" aria-expanded="false" aria-controls="FaaS">
@@ -225,6 +263,18 @@
                 <div id="GARP" class="accordion-collapse collapse">
                     <div class="accordion-body">
                         自端末のIPアドレスをターゲットIPアドレスにセットした特殊なARP要求。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_HDCP">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#HDCP" aria-expanded="false" aria-controls="HDCP">
+                        HDCP(High-bandwidth Digital Content Protection)
+                    </button>
+                </h2>
+                <div id="HDCP" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        HDMI端子が搭載されたデジタルAV機器に採用され、HDMI端子やDisplayPort端子から表示機器にデジタル信号を送るときに受信する経路を暗号化する方式。
                     </div>
                 </div>
             </div>
@@ -267,6 +317,22 @@
                     <div class="accordion-body">
                         IPマルチキャストにおいて参加するホストのグループを制御するためのプロトコル。「グループへの参加」「グループの問い合わせ」「グループの維持」「グループからの離脱」という
                         4つの機能を持っている。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_IPSec">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#IPSec" aria-expanded="false" aria-controls="IPSec">
+                        IPSec
+                    </button>
+                </h2>
+                <div id="IPSec" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        ネットワーク層(TCP/IP階層モデルではインターネット層)で暗号化を行うプロトコル。以下の2つのモードがある。<br>
+                        トランスポートモード：<br>
+                        IPヘッダーはそのままでTCPセグメントとペイロード部を暗号化するモード<br>
+                        トンネルモード：<br>
+                        IPパケットを丸ごと暗号化して新たなIPヘッダーを付与するモード
                     </div>
                 </div>
             </div>
@@ -380,6 +446,19 @@
                         そのネットワークのデータリンク層において1回に送信できるデータサイズのことで、TCP/IPにおいてはデータリンク層のプロトコルによってカプセル化できるIPパケットの最大サイズを表す(イーサネットでは1,500バイト、
                         光ファイバーでは4,352バイトなど)。IPパケットのサイズがMTUを超えるとIPがフラグメント化を行い、MTU以下のサイズの複数のIPパケットに分割してから送信され、送信先で再構成される。<br>
                         IPパケットにはIPヘッダー、TCPヘッダー、データなどが含まれる。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_NSレコード">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#NSレコード" aria-expanded="false" aria-controls="NSレコード">
+                        NSレコード
+                    </button>
+                </h2>
+                <div id="NSレコード" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        ドメインにおいてDNSレコードを保持する権威DNSサーバを指定するためのレコード。先頭にはゾーンのドメイン名が記述される。ゾーン分割を行ってサブドメインに権威委譲する場合はそのネームサーバをNSレコードで指定する。
+                        データ部(RDATA)にはネームサーバのホスト名を記述する(別名は記述できない)。
                     </div>
                 </div>
             </div>
@@ -533,6 +612,18 @@
                     <div class="accordion-body">
                         主観品質評価と客観品質評価の要素を交え、最高100点で音声を総合的に評価する指標。<br>
                         ノイズ感、音量感、エコーや遅延、歪みや途切れ感といった音声品質を左右する要因に利便性など満足感を与える要素を加えて定量的に算出される。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_SDN">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#SDN" aria-expanded="false" aria-controls="SDN">
+                        SDN(Software-Defined Networking)
+                    </button>
+                </h2>
+                <div id="SDN" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        OpenFlowスイッチとコントローラーの間にOpenFlowチャネルを確立し、コントローラーはOpenFlowチャネルを介してOpenFlowスイッチの管理を行う。OpenFlowチャネルは通常TLSを使用して暗号化されるが、TCPを介して直接実行される場合もある。
                     </div>
                 </div>
             </div>
