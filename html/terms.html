@@ -98,6 +98,18 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item" id="h_Bluetooth">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#Bluetooth" aria-expanded="false" aria-controls="Bluetooth">
+                        Bluetooth
+                    </button>
+                </h2>
+                <div id="Bluetooth" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        2.4GHz帯を使用する近距離の無線通信方式で、1つのマスタと最大7台のスレーブからなるスター型ネットワークを構成する。
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_BPDU">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#BPDU" aria-expanded="false" aria-controls="BPDU">
@@ -203,6 +215,19 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item" id="h_DNSSEC">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#DNSSEC" aria-expanded="false" aria-controls="DNSSEC">
+                        DNSSEC(DNS Security Extensions)
+                    </button>
+                </h2>
+                <div id="DNSSEC" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        DNSにおける応答の正当性を保証するための拡張仕様。ドメイン応答に電子署名を付加することで正当な管理者によって生成された応答レコードであること、および応答レコードが改ざんされていないことの
+                        検証が可能となる。
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_DNSラウンドロビン">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#DNSラウンドロビン" aria-expanded="false" aria-controls="DNSラウンドロビン">
@@ -226,6 +251,18 @@
                         脆弱性のある公開DNSキャッシュサーバを踏み台として悪用することで行われる分散型サービス妨害(DDoS)攻撃の1つ。DNSサーバをDNSキャッシュサーバと権威DNSサーバに分離し、
                         踏み台として悪用されないためには、インターネット側からDNSキャッシュサーバに問い合わせできないようにしたり、利用可能なホストのIPアドレスの範囲を設定してDNSキャッシュサーバが不要なクエリを拒否するように
                         アクセス制限を施したりする必要がある。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_DSRC">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#DSRC" aria-expanded="false" aria-controls="DSRC">
+                        DSRC(Dedicated Short-Range Communication)
+                    </button>
+                </h2>
+                <div id="DSRC" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        専用狭域通信のこと。5.8GHz帯を使用する近距離の無線通信方式であり、有料道路の料金所のETCなどで利用されている。
                     </div>
                 </div>
             </div>
@@ -320,6 +357,18 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item" id="h_IPFIX">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#IPFIX" aria-expanded="false" aria-controls="IPFIX">
+                        IPFIX(Internet Protocol Flow Information Export)
+                    </button>
+                </h2>
+                <div id="IPFIX" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        ネットワークのトラフィックを分析するためのプロトコルであり、フロー(IPアドレスやポート番号の組み合わせ)ごとの統計情報をネットワーク機器がコレクタと呼ばれるサーバに送信するときに使用される。
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_IPSec">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#IPSec" aria-expanded="false" aria-controls="IPSec">
@@ -333,6 +382,20 @@
                         IPヘッダーはそのままでTCPセグメントとペイロード部を暗号化するモード<br>
                         トンネルモード：<br>
                         IPパケットを丸ごと暗号化して新たなIPヘッダーを付与するモード
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_IPv6">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#IPv6" aria-expanded="false" aria-controls="IPv6">
+                        IPv6
+                    </button>
+                </h2>
+                <div id="IPv6" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        IPv6では16ビットごとに区切ったグループを16新数で表記する方法が推奨されている。IPv4と比べてアドレスフィールドは拡張されたが、ヘッダーのチェックサムが削除されたためパケットを
+                        中継するルータの負荷は軽減されている。上位96ビットはIPv4機器と通信する際に使用されるIPv4射影アドレスとして使用され、上位80ビットに0、81〜96ビットに1、残りの32ビットにIPv4アドレスを
+                        埋め込んだ形式となっている。IPv6にはICMPv6に規定された近隣検索を用いてIPアドレスを自動設定できる仕組みが備わっている。
                     </div>
                 </div>
             </div>
@@ -676,6 +739,31 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item" id="h_VLAN_ID">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#VLAN_ID" aria-expanded="false" aria-controls="VLAN_ID">
+                        VLAN ID
+                    </button>
+                </h2>
+                <div id="VLAN_ID" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        VLAN IDは12ビットで表される番号でVLANを論理的に識別するために使用される。0と4095は予約されているため実際に割り当てられるのは1〜4,094の範囲となる。MACヘッダーのタイプ領域の前に挿入される
+                        VLANタグ内に含まれている。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_UWB">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#UWB" aria-expanded="false" aria-controls="UWB">
+                        UWB(Ultra Wide Band)
+                    </button>
+                </h2>
+                <div id="UWB" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        超広帯域無線。広い周波数帯にデータを拡散することで高速な伝送を行う無線通信方式で、近距離での映像や音楽配信に利用されている。
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_VLANタグ">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#VLANタグ" aria-expanded="false" aria-controls="VLANタグ">
@@ -712,6 +800,19 @@
                 <div id="Wi-SUN" class="accordion-collapse collapse">
                     <div class="accordion-body">
                         920MHz帯を使用するLPWA規格の1つで100台から1,000台のメッシュ側ネットワークのこと。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_ZigBee">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#ZigBee" aria-expanded="false" aria-controls="ZigBee">
+                        ZigBee
+                    </button>
+                </h2>
+                <div id="ZigBee" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Bluetoothよりも低速(20kbps・250bps)で転送距離も短い(30m程度)ながら、省電力性と低コストの利点を有する無線通信規格。理論上65,536台とBluetoothと比較して非常に多く、多数の端末間を
+                        低コストの無線通信で接続可能となる。規格のベース部分にはIEEE802.15.4が使用され、主にIoTなどによるセンサーネットワークの構築を目的としている。
                     </div>
                 </div>
             </div>
@@ -800,6 +901,8 @@
                     <div class="accordion-body">
                         L2SWをループ状に構成した際に発生するブロードキャストストーム(ブロードキャストフレームがループ内を周回し続ける状態)を回避するために用いられる。
                         スパニングツリープロトコルによって論理的な木構造として扱うことで障害時の転送経路を確保しつつブロードキャストフレームのループを防止できる。<br>
+                        スイッチ間でBPDU(Bridge Protocol Data Unit)と呼ばれる制御フレームをやりとりするが、これに含まれるブリッジの優先順位とMACアドレスを組み合わせた
+                        「ブリッジID」フィールドが最も小さいブリッジがルートブリッジとして自動的に選出される。<br>
                         スパニングツリー構築の流れは以下の通り<br>
                         ①各ノードのポートのうちルートノードまでの区間コストが最も低いポートをルートポートとする<br>
                         ②ノード間の各リンクのうちルートノードに近い方を指定ポートする<br>
