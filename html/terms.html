@@ -161,6 +161,18 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item" id="h_CNAMEレコード">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#CNAMEレコード" aria-expanded="false" aria-controls="CNAMEレコード">
+                        CNAMEレコード
+                    </button>
+                </h2>
+                <div id="CNAMEレコード" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        DNSの資源レコード(リソースレコード)のうち、ホスト名の別名(エイリアス)を登録するレコードのこと。
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_CoAP">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#CoAP" aria-expanded="false" aria-controls="CoAP">
@@ -524,6 +536,18 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item" id="h_MXレコード">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#MXレコード" aria-expanded="false" aria-controls="MXレコード">
+                        MXレコード
+                    </button>
+                </h2>
+                <div id="MXレコード" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        DNSの資源レコード(リソースレコード)のうち、電子メールの送り先となるサーバのホスト名を指定するレコードのこと。
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_NSレコード">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#NSレコード" aria-expanded="false" aria-controls="NSレコード">
@@ -630,6 +654,42 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item" id="h_PTRレコード">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#PTRレコード" aria-expanded="false" aria-controls="PTRレコード">
+                        PTRレコード
+                    </button>
+                </h2>
+                <div id="PTRレコード" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        DNSの資源レコード(リソースレコード)のうち、DNS逆引きで使用する「IPアドレス→ホスト名」の関係を登録するレコードのこと。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_RAID">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#RAID" aria-expanded="false" aria-controls="RAID">
+                        RAID(Redundant Arrays of Inexpensive Disks)
+                    </button>
+                </h2>
+                <div id="RAID" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        複数のディスクを組み合わせ1つの仮想敵なディスクとして扱うことで信頼性や性能を向上させる技術。以下の6つのレベルがある。<br>
+                        RAID0(ストライピング)：<br>
+                        複数のディスクに分散してデータを書き込むことでアクセス性能を向上させる。<br>
+                        RAID1(ミラーリング)：<br>
+                        同じデータを2台のディスクに書き込むことで信頼性を向上させる。実質記憶領域は50%となるので記憶効率は悪い。<br>
+                        RAID2()：<br>
+                        データにエラー訂正用のハミング符号を付加したものをストライピングで書き込む。<br>
+                        RAID3：<br>
+                        ビット／バイト単位でストライピングを行う。データのエラー訂正用にパリティビットを使用し、1つのディスクをエラー訂正符号の買い込み専用とする。<br>
+                        RAID4：<br>
+                        RAID3とほぼ同じ。RAID3でビット／バイト単位だったストライピングをブロック単位で行う。<br>
+                        RAID5：<br>
+                        情報データとともにパリティビットも各ディスクに分散して書き込む方式。信頼性、アクセス性能がともに向上する。
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_RIP">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#RIP" aria-expanded="false" aria-controls="RIP">
@@ -690,6 +750,19 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item" id="h_RSVP">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#RSVP" aria-expanded="false" aria-controls="RSVP">
+                        RSVP(Resource Reservation Protocol)
+                    </button>
+                </h2>
+                <div id="RSVP" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        IPネットワークにおいて特定の通信に対して通信品質を確保するためのプロトコル。受信ホストから送信ホストに制御パケットを送信することで、品質確保の対象とする通信が経由するすべてのルータに対して
+                        制御設定を行う。この制御設定をもとにルータがその通信のパケットを識別し処理できる仕組みとなっている。
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_R値">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#R値" aria-expanded="false" aria-controls="R値">
@@ -712,6 +785,18 @@
                 <div id="SDN" class="accordion-collapse collapse">
                     <div class="accordion-body">
                         OpenFlowスイッチとコントローラーの間にOpenFlowチャネルを確立し、コントローラーはOpenFlowチャネルを介してOpenFlowスイッチの管理を行う。OpenFlowチャネルは通常TLSを使用して暗号化されるが、TCPを介して直接実行される場合もある。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_SOAレコード">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#SOAレコード" aria-expanded="false" aria-controls="SOAレコード">
+                        SOAレコード
+                    </button>
+                </h2>
+                <div id="SOAレコード" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        DNSの資源レコード(リソースレコード)のうち、他のDNSサーバのキャッシュ領域に情報を残す許可時間やゾーン情報の更新をチェックする間隔などを指定するレコードのこと。
                     </div>
                 </div>
             </div>
@@ -907,6 +992,20 @@
                         ①各ノードのポートのうちルートノードまでの区間コストが最も低いポートをルートポートとする<br>
                         ②ノード間の各リンクのうちルートノードに近い方を指定ポートする<br>
                         ③ルートポートと指定ポート以外は非指定ポートとしてブロックする
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_フラグシーケンス">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#フラグシーケンス" aria-expanded="false" aria-controls="フラグシーケンス">
+                        フラグシーケンス
+                    </button>
+                </h2>
+                <div id="フラグシーケンス" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        送信するデータの境目を識別するためにフレームの前後に挿入される「01111110」という8ビットのパターンのこと。データ中の1が連続して5回続く部分に対しては送信時にそのあとに0を挿入して
+                        受信側で挿入された0を取り除く「ゼロインサーション処理」を行うことでフラグの一貫性を保っている。<br>
+                        HDLC手順ではこのフラグを使用して同期をとる「フラグ同期方式」が採用されている。
                     </div>
                 </div>
             </div>
