@@ -407,7 +407,19 @@
                     <div class="accordion-body">
                         IPv6では16ビットごとに区切ったグループを16新数で表記する方法が推奨されている。IPv4と比べてアドレスフィールドは拡張されたが、ヘッダーのチェックサムが削除されたためパケットを
                         中継するルータの負荷は軽減されている。上位96ビットはIPv4機器と通信する際に使用されるIPv4射影アドレスとして使用され、上位80ビットに0、81〜96ビットに1、残りの32ビットにIPv4アドレスを
-                        埋め込んだ形式となっている。IPv6にはICMPv6に規定された近隣検索を用いてIPアドレスを自動設定できる仕組みが備わっている。
+                        埋め込んだ形式となっている。IPv6にはICMPv6に規定された近隣検索を用いてIPアドレスを自動設定できる仕組みが備わっている。<br>
+                        代表的なアドレスの型としては以下の通り。<br>
+                        ループバックアドレス：<br>
+                        現在使用しているコンピュータを指すアドレス。IPv4の「127.0.0.1」に相当する。<br>
+                        グローバルユニキャストアドレス：<br>
+                        IPv6ネットワークすべての中で一意のアドレス。IPv4のグローバルアドレスに相当する。<br>
+                        リンクローカルユニキャストアドレス：<br>
+                        ルータを超えない範囲内でのみ一意なアドレス。<br>
+                        ユニークローカルユニキャストアドレス：<br>
+                        企業LANや自宅LANなどのように、内部LANの端末同士が通信を行う際にインターネット接続が生じない範囲のネットワークでのみ一意なアドレス。
+                        IPv4のプライベートアドレスに相当する。<br>
+                        マルチキャストアドレス：<br>
+                        複数のアドレス宛に同報通信を行うためのアドレス。IPv4のマルチキャストアドレスとブロードキャストを兼ねた役割を果たす。
                     </div>
                 </div>
             </div>
@@ -938,6 +950,20 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item" id="h_国際化ドメイン">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#国際化ドメイン" aria-expanded="false" aria-controls="国際化ドメイン">
+                        国際化ドメイン
+                    </button>
+                </h2>
+                <div id="国際化ドメイン" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        漢字やひらがな、アラビア文字などのASCII以外の文字をドメインに使用できるようにした仕組み。ユーザー側のアプリケーションにて
+                        国際化ドメイン名を一定の法則(Punycode：ピュニコード)に従って英数字からなるドメイン名に変換し、ネームサーバとの通信はこれまで通り
+                        7bit ASCIIだけで構成される文字列を用いる。
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_シェーピング">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#シェーピング" aria-expanded="false" aria-controls="シェーピング">
@@ -1056,6 +1082,18 @@
                     <div class="accordion-body">
                         先頭4ビットは「1110」固定で(クラスD)残りの28ビットはグループを識別するための領域として使用される。<br>
                         一部のアドレスはWell-Knownアドレスとして用途が決められているが、他のアドレスは用途ごとのアドレス範囲の中で自由に使用できる。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_メモリインタリープ">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#メモリインタリープ" aria-expanded="false" aria-controls="メモリインタリープ">
+                        メモリインタリープ
+                    </button>
+                </h2>
+                <div id="メモリインタリープ" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        物理上は1つである主記憶領域を同時アクセス可能は複数の論理的な領域(バンク)に分け、それぞれのバンクに対してデータの読み書きを並列で行うことにより、メモリアクセスの高速化を図る技術。
                     </div>
                 </div>
             </div>
