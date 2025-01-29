@@ -472,6 +472,28 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item" id="h_LSA">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#LSA" aria-expanded="false" aria-controls="LSA">
+                        LSA(Link State Advertisement)
+                    </button>
+                </h2>
+                <div id="LSA" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        OSPFにおいてリンク状態データベース(Link State Database)を作成するためにルータ間でやり取りされる情報で、OSPFv2では以下の5種類が規定されている。<br>
+                        LSAタイプ1 Router-LSA(ルータLSA)：<br>
+                        そのルータがどのネットワークに接続されているかを表す情報ですべてのOPSFルータが作成する基本的なLSA.IPアドレス、リンクの種類、コストなどの情報が含まれる。<br>
+                        LSAタイプ2 Network-LSA(ネットワークLSA)：<br>
+                        そのネットワークにはどのルータが接続されているかを表す情報で同一リンク内にあるルータのうちDR(Designed Router)が生成する。<br>
+                        LSAタイプ3 (Network-)Summary-LSA(サマリーLSA)：<br>
+                        他のエリアの情報を要約したものでエリア境界ルータ(ABR)が作成する。<br>
+                        LSAタイプ4 (ASBR-)Summary-LSA(AS境界ルータサマリーLSA)：<br>
+                        AS境界ルータのIDとそこに到達するためのコスト情報で、エリア境界ルータ(ABR)が作成する。<br>
+                        LSAタイプ5 AS-External-LSA(AS外部LSA)：<br>
+                        ASの外部にあるネットワークアドレス情報でAS境界ルータ(ASBR)が作成する。
+                    </div>
+                </div>
+            </div>
             <div class="accordion-item" id="h_MDA">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#MDA" aria-expanded="false" aria-controls="MDA">
@@ -1267,6 +1289,19 @@
                 <div id="ルーティングポリシー" class="accordion-collapse collapse">
                     <div class="accordion-body">
                         インターネット上のいろいろな対地に対して、どの隣接ASを通じてトラフィックを到達させるか関する方針のこと。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_ルートリフレクション">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#ルートリフレクション" aria-expanded="false" aria-controls="ルートリフレクション">
+                        ルートリフレクション
+                    </button>
+                </h2>
+                <div id="ルートリフレクション" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        ルータが受け取った情報をループを発生させることなく他のルータに転送する仕組みによって確立が必要なセッション数を削減する機能。BGPルータはAS内のすべてのBGPルータとの間で
+                        IBGPセッションを張る必要があるが、このときに生じるスケーラビリティ問題を回避するために利用される。
                     </div>
                 </div>
             </div>
