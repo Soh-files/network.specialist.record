@@ -71,18 +71,6 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion-item" id="h_BLE">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#BLE" aria-expanded="false" aria-controls="BLE">
-                        BLE(Bluetooth Low Energy)
-                    </button>
-                </h2>
-                <div id="BLE" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        無線通信規格Bluetoothの一部で、低消費電力に特化した通信モードのこと。
-                    </div>
-                </div>
-            </div>
             <div class="accordion-item" id="h_BGP">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#BGP" aria-expanded="false" aria-controls="BGP">
@@ -94,7 +82,24 @@
                         インターネットにおいてISP管理のネットワークなど自律システム同士の相互接続時にお互いの経路情報をやり取りするために使用され、通過する経路のリストだけで経路制御を行う経路ベクトル型のプロトコル。
                         一般的に2つ以上のASに接続される場合に必要となる。<br>
                         ルーティングポリシーに従ったポリシールーティングを実現するために経路情報にいくつかの属性パラメータ(パス属性値)を付加することができ、このパラメータを調整して経路情報を広告すること、あるいは
-                        このパラメータに従って経路情報の優先制御を行うことでポリシールーティングを実現する。
+                        このパラメータに従って経路情報の優先制御を行うことでポリシールーティングを実現する。<br>
+                        LP値、MED値を利用してトラフィック制御を行うことができる。<br>
+                        LP値(LOCAL_PREFERENCE):<br>
+                        外部ASにパケットを転送するための自ASの出口を指定する。自AS内でのみ有効で、全iBGPピアに伝搬される。大きい値が優先されデフォルトは100。トラフィックの出口を内部ネットワークにBGPUpdateで伝える。<br>
+                        MED値:<br>
+                        自AS内NW宛のトラフィックの入口を、eBGPネイバーに伝える。eBGPネイバー間で有効となる。小さい値が優先されデフォルトは0。トラフィックの入口を外部ASにBGPUpdateで伝える。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="h_BLE">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#BLE" aria-expanded="false" aria-controls="BLE">
+                        BLE(Bluetooth Low Energy)
+                    </button>
+                </h2>
+                <div id="BLE" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        無線通信規格Bluetoothの一部で、低消費電力に特化した通信モードのこと。
                     </div>
                 </div>
             </div>
