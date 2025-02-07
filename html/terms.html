@@ -1,1343 +1,2068 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ネットワークスペシャリスト学習記録 | 用語</title>
 
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <script src="../js/bootstrap.min.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- ナビゲーション -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">ネットワークスペシャリスト学習記録</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">トップ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="terms.html">用語</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html"
+          >ネットワークスペシャリスト学習記録</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">トップ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="terms.html">用語</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <div class="container my-5">
-        <h4 class="mb-3">用語</h4>
-        <div class="accordion" id="accordion">
-            <div class="accordion-item" id="h_6LoWPAN">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#6LoWPAN" aria-expanded="false" aria-controls="6LoWPAN">
-                        6LoWPAN
-                    </button>
-                </h2>
-                <div id="6LoWPAN" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        6LoWPAN(シックスローパン)は、低速・低消費電力のIEEE802.15.4ネットワーク上で効率よくIPv6通信を行うためにパケットの分割と再結合、ヘッダー圧縮等の最適化を定めた仕様のこと。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_AS">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#AS" aria-expanded="false" aria-controls="AS">
-                        AS(Autonomous System)
-                    </button>
-                </h2>
-                <div id="AS" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        自律システムとも呼ばれ、統一された運用ポリシーによって管理されたネットワークの集まりを意味し、BGPというプロトコルにより接続される単位。<br>
-                        AS間で経路情報の交換を行うことによりインターネット上での効率的な経路制御を実現する。<br>
-                        16ビット(2オクテット)または32ビット(4オクテット)の数字を用いた「AS番号」によってインターネット上で一意に識別される。日本ではJPNICがその割り当てと管理を行なっている。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_BBR">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#BBR" aria-expanded="false" aria-controls="BBR">
-                        BBR(Bottleneck Bandwidth and Round-trip propagation time)
-                    </button>
-                </h2>
-                <div id="BBR" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Googleが開発したTCPの輻輳制御アルゴリズム。ボトルネック帯域幅と往復伝搬時間を常に監視し、ネットワークの混雑状態を正確に把握することで、パケットの損失が起こる前に送信量を調整する。
-                        これによりTCPのパフォーマンスが改善される。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_BGP">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#BGP" aria-expanded="false" aria-controls="BGP">
-                        BGP(Border Gateway Protocol)
-                    </button>
-                </h2>
-                <div id="BGP" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        インターネットにおいてISP管理のネットワークなど自律システム同士の相互接続時にお互いの経路情報をやり取りするために使用され、通過する経路のリストだけで経路制御を行う経路ベクトル型のプロトコル。
-                        一般的に2つ以上のASに接続される場合に必要となる。<br>
-                        ルーティングポリシーに従ったポリシールーティングを実現するために経路情報にいくつかの属性パラメータ(パス属性値)を付加することができ、このパラメータを調整して経路情報を広告すること、あるいは
-                        このパラメータに従って経路情報の優先制御を行うことでポリシールーティングを実現する。<br>
-                        LP値、MED値を利用してトラフィック制御を行うことができる。<br>
-                        LP値(LOCAL_PREFERENCE):<br>
-                        外部ASにパケットを転送するための自ASの出口を指定する。自AS内でのみ有効で、全iBGPピアに伝搬される。大きい値が優先されデフォルトは100。トラフィックの出口を内部ネットワークにBGPUpdateで伝える。<br>
-                        MED値:<br>
-                        自AS内NW宛のトラフィックの入口を、eBGPネイバーに伝える。eBGPネイバー間で有効となる。小さい値が優先されデフォルトは0。トラフィックの入口を外部ASにBGPUpdateで伝える。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_BLE">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#BLE" aria-expanded="false" aria-controls="BLE">
-                        BLE(Bluetooth Low Energy)
-                    </button>
-                </h2>
-                <div id="BLE" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        無線通信規格Bluetoothの一部で、低消費電力に特化した通信モードのこと。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_Bluetooth">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#Bluetooth" aria-expanded="false" aria-controls="Bluetooth">
-                        Bluetooth
-                    </button>
-                </h2>
-                <div id="Bluetooth" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        2.4GHz帯を使用する近距離の無線通信方式で、1つのマスタと最大7台のスレーブからなるスター型ネットワークを構成する。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_BPDU">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#BPDU" aria-expanded="false" aria-controls="BPDU">
-                        BPDU(Bridge Protocol Data Unit)
-                    </button>
-                </h2>
-                <div id="BPDU" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        スパニングツリープロトコル(STP)においてスイッチ間で情報をやり取りするための制御フレーム。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_CCK">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#CCK" aria-expanded="false" aria-controls="CCK">
-                        CCK(Complementary Code Keying)
-                    </button>
-                </h2>
-                <div id="CCK" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        相補型符号変調のことで、IEEE802.11bで採用されている変調方式。ビットを信号に変換する際に拡散符号を掛け合わせることで通信の高速化やノイズへの耐性を高めた方式。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_CDM">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#CDM" aria-expanded="false" aria-controls="CDM">
-                        CDM(Code Division Multiplexing)
-                    </button>
-                </h2>
-                <div id="CDM" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        符号分割多重化のことで、通信信号ごとに特定の演算処理(符号化)を施したものを複数個まとめて送信し、受信側で同じ処理を行い特定の信号を取り出す仕組み。複数の送信者の通信を同じ周波数帯上で行う多重化方式。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_CDN">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#CDN" aria-expanded="false" aria-controls="CDN">
-                        CDN(Contents Delivery Network)
-                    </button>
-                </h2>
-                <div id="CDN" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        世界中に分散配置されたキャッシュサーバにWebサイトのコンテンツを保存し、コンテンツをユーザーに最も近いサーバから
-                        配信するサービス。もともとはWebコンテンツの高速かつ安定的な配信を目的としたものだったが、トラフィックの分散、
-                        CDNが有するトラフィックフィルタリング、キャッシュ機能などにより、オリジンサーバへのトラフィックを抑えることができ
-                        結果的にDDoS攻撃への耐性が高まり自社ネットワークの被害を抑えることができる。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_CNAMEレコード">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#CNAMEレコード" aria-expanded="false" aria-controls="CNAMEレコード">
-                        CNAMEレコード
-                    </button>
-                </h2>
-                <div id="CNAMEレコード" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        DNSの資源レコード(リソースレコード)のうち、ホスト名の別名(エイリアス)を登録するレコードのこと。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_CoAP">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#CoAP" aria-expanded="false" aria-controls="CoAP">
-                        CoAP(Constrained Application Protocol)
-                    </button>
-                </h2>
-                <div id="CoAP" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        IoTデバイスのようにメモリ、消費電力、帯域幅などリソースに制約のあるデバイスが効率的にWeb通信を行えるように設計されたプロトコル。UDP上で動作するが、確認応答や再送処理をサポートしている。
-                        HTTPと同様にリクエスト/レスポンスモデルを採用していて、GET/POST/PUT/DELETEなどのHTTPメソッドと似たメソッドをサポートしているためHTTPの代替として使用することができる。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_CPPM">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#CPPM" aria-expanded="false" aria-controls="CPPM">
-                        CPPM(Content Protection for Pre-Recorded Media)
-                    </button>
-                </h2>
-                <div id="CPPM" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        コンテンツをメディアに暗号化した状態で記録し、再生時に対応した機器で復号することで違法コピーを防止する技術。メディア内の暗号鍵と再生機器(またはソフトウェア)の機器鍵が揃わないと復号できない仕組みとなっている。
-                        再生専用メディア用の規格。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_CPRM">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#CPRM" aria-expanded="false" aria-controls="CPRM">
-                        CPRM(Content Protection for Recordable Media)
-                    </button>
-                </h2>
-                <div id="CPRM" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        コンテンツをメディアに暗号化した状態で記録し、再生時に対応した機器で復号することで違法コピーを防止する技術。メディア内の暗号鍵と再生機器(またはソフトウェア)の機器鍵が揃わないと復号できない仕組みとなっている。
-                        記録可能なメディアを対象とした規格で、SDメモリカードなどの書き換え可能メディアは著作権保護技術としてCPRMが使用されている。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_DMARC">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#DMARC" aria-expanded="false" aria-controls="DMARC">
-                        DMARC
-                    </button>
-                </h2>
-                <div id="DMARC" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        受信者がヘッダーFromのメールアドレス(送信者のメールアドレス)のドメインについてSPFおよびDKIMで検証することでなりすましメールを防ぐ技術。認証に失敗した場合、ドメインの所有者はメール受信者に以下の3つのポリシーを強制することができる。<br>
-                        　None(何もしない)：受信メールに対して特定のアクションを要求しない<br>
-                        　Quarantine(隔離)：受信メールを疑わしいものとして処理するように要求する<br>
-                        　Reject(拒否)：受信メールを拒否することを要求する
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_DNSSEC">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#DNSSEC" aria-expanded="false" aria-controls="DNSSEC">
-                        DNSSEC(DNS Security Extensions)
-                    </button>
-                </h2>
-                <div id="DNSSEC" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        DNSにおける応答の正当性を保証するための拡張仕様。ドメイン応答に電子署名を付加することで正当な管理者によって生成された応答レコードであること、および応答レコードが改ざんされていないことの
-                        検証が可能となる。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_DNSラウンドロビン">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#DNSラウンドロビン" aria-expanded="false" aria-controls="DNSラウンドロビン">
-                        DNSラウンドロビン
-                    </button>
-                </h2>
-                <div id="DNSラウンドロビン" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        1つのホストに複数のIPアドレスを対応させる仕組みで、複数台のサーバに負荷を分散させるために利用される。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_DNSリフレクタ攻撃">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#DNSリフレクタ攻撃" aria-expanded="false" aria-controls="DNSリフレクタ攻撃">
-                        DNSリフレクタ攻撃
-                    </button>
-                </h2>
-                <div id="DNSリフレクタ攻撃" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        脆弱性のある公開DNSキャッシュサーバを踏み台として悪用することで行われる分散型サービス妨害(DDoS)攻撃の1つ。DNSサーバをDNSキャッシュサーバと権威DNSサーバに分離し、
-                        踏み台として悪用されないためには、インターネット側からDNSキャッシュサーバに問い合わせできないようにしたり、利用可能なホストのIPアドレスの範囲を設定してDNSキャッシュサーバが不要なクエリを拒否するように
-                        アクセス制限を施したりする必要がある。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_DSRC">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#DSRC" aria-expanded="false" aria-controls="DSRC">
-                        DSRC(Dedicated Short-Range Communication)
-                    </button>
-                </h2>
-                <div id="DSRC" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        専用狭域通信のこと。5.8GHz帯を使用する近距離の無線通信方式であり、有料道路の料金所のETCなどで利用されている。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_DTCP">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#DTCP" aria-expanded="false" aria-controls="DTCP">
-                        DTCP(Digital Transmission Content Protection)
-                    </button>
-                </h2>
-                <div id="DTCP" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        家庭内ネットワーク内において、著作権保護されたデジタルコンテンツを暗号化して転送することでコピーや傍受を防ぐ技術。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_EAP">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#EAP" aria-expanded="false" aria-controls="EAP">
-                        EAP(Extensible Authentication Protocol)
-                    </button>
-                </h2>
-                <div id="EAP" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        PPPの認証機能を拡張したプロトコル。デジタル証明書、メッセージダイジェスト、OTPなど様々な認証方式をサポートしているが
-                        暗号化通信の機能は規定されていない。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_FaaS">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#FaaS" aria-expanded="false" aria-controls="FaaS">
-                        FaaS(Function as a Service)
-                    </button>
-                </h2>
-                <div id="FaaS" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        アプリケーション開発に必要な関数をクラウドのサーバ上で実行できるサービス。実現したい機能を関数(Function)として実装してアップロードしておけば指定したイベントをトリガーとして関数を実行してくれる。
-                        PaaSと比較するとサービス利用者側でプラットフォームを管理する必要がない(サーバレス)、イベントドリブン、自動スケーリングなどの特徴がある。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_FDDI">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#FDDI" aria-expanded="false" aria-controls="FDDI">
-                        FDDI(Fiber Distributed Data Interface)
-                    </button>
-                </h2>
-                <div id="FDDI" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        光ファイバーを通信媒体に使用し、2,000mまでの距離で最大100Mbpsの通信を行うLANの規格の1つ。伝送制御にトークンリング(IEEE 802.5)と同じ
-                        トークンパッシング方式が使用され、リング型のネットワークトポロジーで構成されることが特徴(スター型も可能)。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_GARP">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#GARP" aria-expanded="false" aria-controls="GARP">
-                        GARP(Gratuitous ARP)
-                    </button>
-                </h2>
-                <div id="GARP" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        自端末のIPアドレスをターゲットIPアドレスにセットした特殊なARP要求。DHCPにおける重複IPアドレスの検知、フェールオーバー時のARPテーブルの更新に利用される。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_HDCP">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#HDCP" aria-expanded="false" aria-controls="HDCP">
-                        HDCP(High-bandwidth Digital Content Protection)
-                    </button>
-                </h2>
-                <div id="HDCP" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        HDMI端子が搭載されたデジタルAV機器に採用され、HDMI端子やDisplayPort端子から表示機器にデジタル信号を送るときに受信する経路を暗号化する方式。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_ICMPv6">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#ICMPv6" aria-expanded="false" aria-controls="ICMPv6">
-                        ICMPv6(ICMP for IPv6)
-                    </button>
-                </h2>
-                <div id="ICMPv6" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        エラーメッセージの通知やネットワーク診断などIPプロトコルを補完する役割を持つICMP(Internet Control Message Protocol)をIPv6環境に対応させたプロトコル。<br>
-                        IPv4でARPが行なっていた同一リンク上のノードに対するアドレスの解決とIPアドレスの重複検出はIPv6ではICMPv6の近隣要請メッセージ(Neighbor Solicitation)と近隣告知メッセージ(Neighbor Advertisement)によって提供される。<br>
-                        ルータ要請メッセージ(Router Solicitation)とルータ告知メッセージ(Router Advertisement)のやり取りによってプラグアンドプレイのIPアドレスの自動割り当てにも対応する。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_IEEE802.1X">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#IEEE802.1X" aria-expanded="false" aria-controls="IEEE802.1X">
-                        IEEE802.1X
-                    </button>
-                </h2>
-                <div id="IEEE802.1X" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        正当な端末以外がLANに参加することを防ぐためにLANにおけるクライアント認証の方式を定めた規格でEAP(Extensible Authentication Protocol)として実装されている。EAPでは以下の3つの構成要素が存在する。<br>
-                        サプリカント：LANに接続するために認証を受けるクライアント<br>
-                        認証サーバ：実際に認証を行うサーバ。RADIUSサーバが使用されることが多い。<br>
-                        オーセンティケータ：サプリカントと認証サーバ間の認証プロセスを相互に中継する装置で、有線接続ではL2SWやL3SW、無線接続ではアクセスポイントがその役割を担う。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_IGMP">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#IGMP" aria-expanded="false" aria-controls="IGMP">
-                        IGMP(Internet Group Management Protocol)
-                    </button>
-                </h2>
-                <div id="IGMP" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        IPマルチキャストにおいて参加するホストのグループを制御するためのプロトコル。「グループへの参加」「グループの問い合わせ」「グループの維持」「グループからの離脱」という
-                        4つの機能を持っている。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_IPFIX">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#IPFIX" aria-expanded="false" aria-controls="IPFIX">
-                        IPFIX(Internet Protocol Flow Information Export)
-                    </button>
-                </h2>
-                <div id="IPFIX" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        ネットワークのトラフィックを分析するためのプロトコルであり、フロー(IPアドレスやポート番号の組み合わせ)ごとの統計情報をネットワーク機器がコレクタと呼ばれるサーバに送信するときに使用される。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_IPSec">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#IPSec" aria-expanded="false" aria-controls="IPSec">
-                        IPSec
-                    </button>
-                </h2>
-                <div id="IPSec" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        ネットワーク層(TCP/IP階層モデルではインターネット層)で暗号化を行うプロトコル。以下の2つのモードがある。<br>
-                        トランスポートモード：<br>
-                        IPヘッダーはそのままでTCPセグメントとペイロード部を暗号化するモード<br>
-                        トンネルモード：<br>
-                        IPパケットを丸ごと暗号化して新たなIPヘッダーを付与するモード
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_IPv6">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#IPv6" aria-expanded="false" aria-controls="IPv6">
-                        IPv6
-                    </button>
-                </h2>
-                <div id="IPv6" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        IPv6では16ビットごとに区切ったグループを16新数で表記する方法が推奨されている。IPv4と比べてアドレスフィールドは拡張されたが、ヘッダーのチェックサムが削除されたためパケットを
-                        中継するルータの負荷は軽減されている。上位96ビットはIPv4機器と通信する際に使用されるIPv4射影アドレスとして使用され、上位80ビットに0、81〜96ビットに1、残りの32ビットにIPv4アドレスを
-                        埋め込んだ形式となっている。IPv6にはICMPv6に規定された近隣検索を用いてIPアドレスを自動設定できる仕組みが備わっている。<br>
-                        代表的なアドレスの型としては以下の通り。<br>
-                        ループバックアドレス：<br>
-                        現在使用しているコンピュータを指すアドレス。IPv4の「127.0.0.1」に相当する。<br>
-                        グローバルユニキャストアドレス：<br>
-                        IPv6ネットワークすべての中で一意のアドレス。IPv4のグローバルアドレスに相当する。<br>
-                        リンクローカルユニキャストアドレス：<br>
-                        ルータを超えない範囲内でのみ一意なアドレス。<br>
-                        ユニークローカルユニキャストアドレス：<br>
-                        企業LANや自宅LANなどのように、内部LANの端末同士が通信を行う際にインターネット接続が生じない範囲のネットワークでのみ一意なアドレス。
-                        IPv4のプライベートアドレスに相当する。<br>
-                        マルチキャストアドレス：<br>
-                        複数のアドレス宛に同報通信を行うためのアドレス。IPv4のマルチキャストアドレスとブロードキャストを兼ねた役割を果たす。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_IS-IS">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#IS-IS" aria-expanded="false" aria-controls="IS-IS">
-                        IS-IS(Intermediate System to Intermediate System)
-                    </button>
-                </h2>
-                <div id="IS-IS" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        AS内の経路制御を行うルーティングプロトコルでOSPFと同じリンクステート型のプロトコル。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_L2TP">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#L2TP" aria-expanded="false" aria-controls="L2TP">
-                        L2TP(Layer 2 Tunneling Protocol)
-                    </button>
-                </h2>
-                <div id="L2TP" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        L2FとPPTPを統合して改良したデータリンク層のトンネリングプロトコル。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_LDAP">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#LDAP" aria-expanded="false" aria-controls="LDAP">
-                        LDAP(Lightweight Directory Access Protocol)
-                    </button>
-                </h2>
-                <div id="LDAP" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        ユーザー名やパスワードなどのユーザー情報やネットワーク資源情報を一元管理するとともにそれらの情報を提供するディレクトリサービスにアクセスするためのプロトコル。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_LSA">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#LSA" aria-expanded="false" aria-controls="LSA">
-                        LSA(Link State Advertisement)
-                    </button>
-                </h2>
-                <div id="LSA" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        OSPFにおいてリンク状態データベース(Link State Database)を作成するためにルータ間でやり取りされる情報で、OSPFv2では以下の5種類が規定されている。<br>
-                        LSAタイプ1 Router-LSA(ルータLSA)：<br>
-                        そのルータがどのネットワークに接続されているかを表す情報ですべてのOPSFルータが作成する基本的なLSA.IPアドレス、リンクの種類、コストなどの情報が含まれる。<br>
-                        LSAタイプ2 Network-LSA(ネットワークLSA)：<br>
-                        そのネットワークにはどのルータが接続されているかを表す情報で同一リンク内にあるルータのうちDR(Designed Router)が生成する。<br>
-                        LSAタイプ3 (Network-)Summary-LSA(サマリーLSA)：<br>
-                        他のエリアの情報を要約したものでエリア境界ルータ(ABR)が作成する。<br>
-                        LSAタイプ4 (ASBR-)Summary-LSA(AS境界ルータサマリーLSA)：<br>
-                        AS境界ルータのIDとそこに到達するためのコスト情報で、エリア境界ルータ(ABR)が作成する。<br>
-                        LSAタイプ5 AS-External-LSA(AS外部LSA)：<br>
-                        ASの外部にあるネットワークアドレス情報でAS境界ルータ(ASBR)が作成する。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_MDA">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#MDA" aria-expanded="false" aria-controls="MDA">
-                        MDA(Model Driven Architecture)
-                    </button>
-                </h2>
-                <div id="MDA" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        モデル駆動型アーキテクチャと訳され、設計モデルと実装技術を完全に分離し、ベンダーやプラットフォームに依存しない開発を可能とする技術。
-                        UMLやCOBRAなどの規格化団体として有名なOMG(Object-oriented Management Group)によって策定された。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_MIB">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#MIB" aria-expanded="false" aria-controls="MIB">
-                        MIB(Management Information Base)
-                    </button>
-                </h2>
-                <div id="MIB" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        SNMPなどで遠く離れている機器をモニター・メンテナンスするときに使用されるモニター対象の機器が自分の力で設定・状態を整理してひとつにしたデータ集合、
-                        もしくはそのレファレンスについて定められた規格のこと。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_MOS値">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#MOS値" aria-expanded="false" aria-controls="MOS値">
-                        MOS値(Mean Opinion Score)
-                    </button>
-                </h2>
-                <div id="MOS値" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        ユーザーが体感する品質を評価した指標値で、多数の評価者の主観的な5段階評価(非常に良い〜非常に悪い)を平均することによって決定される。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_MPLS">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#MPLS" aria-expanded="false" aria-controls="MPLS">
-                        MPLS(Multi Protocol Label Switching)
-                    </button>
-                </h2>
-                <div id="MPLS" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        IPパケットごとにラベルと呼ばれる情報を付加し、その情報をもとにしたスイッチングでパケット制御を行う技術のこと。ユーザーごとに異なるラベルを用いたIP-VPN網での利用やMPLSネットワーク内で
-                        パケットの転送経路を明示的に選択したい場合などの使用される。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_MQTT">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#MQTT" aria-expanded="false" aria-controls="MQTT">
-                        MQTT(Message Queueing Telemetry Transport)
-                    </button>
-                </h2>
-                <div id="MQTT" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        短いメッセージを頻繁にやり取りすることに特化したシンプルかつ軽量のプロトコル。IoTネットワークやモバイルアプリケーションでの活用が期待されている。
-                        MQTTはパブリッシュ(送信側)とサブスクライブ(受信側)の間をMQTTブローカー(メッセージ配信サーバ)が取り持つという通信モデルになっている。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_MSTP">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#MSTP" aria-expanded="false" aria-controls="MSTP">
-                        MSTP(Multiple Spanning Tree Protocol)
-                    </button>
-                </h2>
-                <div id="MSTP" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        VLANをインスタンスという単位で管理し、複数のVLANをまとめたスパニングツリーを構成するプロトコル。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_MTU">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#MTU" aria-expanded="false" aria-controls="MTU">
-                        MTU(Maximum Transmission Unit)
-                    </button>
-                </h2>
-                <div id="MTU" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        そのネットワークのデータリンク層において1回に送信できるデータサイズのことで、TCP/IPにおいてはデータリンク層のプロトコルによってカプセル化できるIPパケットの最大サイズを表す(イーサネットでは1,500バイト、
-                        光ファイバーでは4,352バイトなど)。IPパケットのサイズがMTUを超えるとIPがフラグメント化を行い、MTU以下のサイズの複数のIPパケットに分割してから送信され、送信先で再構成される。<br>
-                        IPパケットにはIPヘッダー、TCPヘッダー、データなどが含まれる。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_NICチーミング">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#NICチーミング" aria-expanded="false" aria-controls="NICチーミング">
-                        NICチーミング
-                    </button>
-                </h2>
-                <div id="NICチーミング" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        コンピュータ(主にサーバ)に搭載されている複数のNICに同じIPアドレスを割り当てることで論理的に1つのNICとして扱う技術。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_MXレコード">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#MXレコード" aria-expanded="false" aria-controls="MXレコード">
-                        MXレコード
-                    </button>
-                </h2>
-                <div id="MXレコード" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        DNSの資源レコード(リソースレコード)のうち、電子メールの送り先となるサーバのホスト名を指定するレコードのこと。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_NSレコード">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#NSレコード" aria-expanded="false" aria-controls="NSレコード">
-                        NSレコード
-                    </button>
-                </h2>
-                <div id="NSレコード" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        ドメインにおいてDNSレコードを保持する権威DNSサーバを指定するためのレコード。先頭にはゾーンのドメイン名が記述される。ゾーン分割を行ってサブドメインに権威委譲する場合はそのネームサーバをNSレコードで指定する。
-                        データ部(RDATA)にはネームサーバのホスト名を記述する(別名は記述できない)。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_OFDM">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#OFDM" aria-expanded="false" aria-controls="OFDM">
-                        OFDM(Orthogonal Frequency Division Multiplexing)
-                    </button>
-                </h2>
-                <div id="OFDM" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        無線LANの規格IEEEsa802.11a/g/n/acで採用されている変調方式。各搬送波の中心を隣の搬送波の谷間に重なるように配置することで、さらに多数の搬送波を同時に送信できるようにしたもの。<br>
-                        データ信号を複数のサブキャリアに分割し、各サブキャリアが互いに干渉しないように配置する。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_OP25B">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#OP25B" aria-expanded="false" aria-controls="OP25B">
-                        OP25B
-                    </button>
-                </h2>
-                <div id="OP25B" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        ISP管理下の動的IPアドレスからの電子メール送信について、管理外ネットワークのメールサーバへのSMTP通信を禁止することで
-                        ISPのメールサーバを介さずに送信側のメールサーバと直接コネクションを確立して送信されるスパムメールを防ぐ。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_OpenFlow">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#OpenFlow" aria-expanded="false" aria-controls="OpenFlow">
-                        OpenFlow
-                    </button>
-                </h2>
-                <div id="OpenFlow" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        データ転送と経路制御の機能を論理的に分離し、コントローラが複数のネットワーク機器のデータ転送を集中的に制御・管理するプロトコル。アプリケーションはノースバウンドインターフェースを介してコントロータに
-                        指示を出す。ネットワーク機器がコントローラに提供するAPIはサウスバウンドインターフェースと呼ばれる。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_OSPF">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#OSPF" aria-expanded="false" aria-controls="OSPF">
-                        OSPF(Open Shortest Path First)
-                    </button>
-                </h2>
-                <div id="OSPF" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        リンク状態型のルーティングプロトコルで、すべてのルータがネットワークのトポロジー(接続状態)を完全に把握し、それをもとに制御制御を行う。ループがあるネットワークでも安定した経路制御が可能となる。各リンクに重み(コスト)をつけることができ、コストの合計が最も小さい経路が選択される。<br>
-                        すべてのルータ間で経路情報が交換されるわけではなく、指名ルータが決められそれを中心に経路制御情報が交換される。またルータの台数が増えた場合にはエリアというグループに分けて管理される。各エリアは必ずバックボーンエリアに接続され、バックボーンエリアと各エリアの教会にあるルータはエリア境界ルータと呼ばれる。<br>
-                        主に中規模から大規模ネットワークで使用され、AS内部の経路制御に用いられる。<br>
-                        　OSPFv2：<br>
-                        　　IPv4アドレスを使用してルーティングテーブルを作成する<br>
-                        　　シンプルな認証方法(平文テキストやMD5)が使用される<br>
-                        　OSPFv3：<br>
-                        　　IPv6アドレスを使用してルーティングテーブルを作成する<br>
-                        　　IPSecを使用したセキュリティが導入されている
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_PAP">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#PAP" aria-expanded="false" aria-controls="PAP">
-                        PAP(Password Authentication Protocol)
-                    </button>
-                </h2>
-                <div id="PAP" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        PPPで利用できる認証プロトコルでIDとパスワードを平文で送って認証を受ける方式。<br>
-                        アカウンティング情報に関しては規定がない。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_PCIExpress">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#PCIExpress" aria-expanded="false" aria-controls="PCIExpress">
-                        PCI Express(PCIs)
-                    </button>
-                </h2>
-                <div id="PCIExpress" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        マザーボードに取り付ける拡張スロット用のインターフェース。主にグラフィックボードやストレージデバイス、ネットワークカードなどの接続に使用される。<br>
-                        1レーンあたりの片方向最大転送レート<br>
-                        　PCI Express3.0：8Gbps<br>
-                        　PCI Express4.0：16Gbps<br>
-                        　PCI Express5.0：32Gbps<br>
-                        　PCI Express6.0：64Gbps<br>
-                        最大レーン数<br>
-                        　PCI Express3.0：32レーン<br>
-                        　PCI Express4.0：64レーン<br>
-                        　PCI Express5.0：64レーン<br>
-                        　PCI Express6.0：64レーン
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_PPP">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#PPP" aria-expanded="false" aria-controls="PPP">
-                        PPP(Point-to-Point Protocol)
-                    </button>
-                </h2>
-                <div id="PPP" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        電話回線を通じてコンピュータをネットワークに接続するダイヤルアップ接続でよく使われる、2点間を接続してデータ通信を行うための通信プロトコル。
-                        通信にリンク制御プロトコル(Link Control Protocol:LCP)とネットワーク制御プロトコル(Network Control Protocol:NCP)という2つの通信プロトコルを使用する。
-                        パケットのヘッダー領域を圧縮して伝送したり、PAP(Password Authentication Protocol)やCHAP(Challenge Handshake Authentication Protocol)といった
-                        認証機能を含んでいる。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_PPTP">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#PPTP" aria-expanded="false" aria-controls="PPTP">
-                        PPTP(Point-to-Point Tunneling Protocol)
-                    </button>
-                </h2>
-                <div id="PPTP" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        PPPデータフレームをIPパケットでカプセル化してインターネットを通過させるためのトンネリングプロトコル。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_PTRレコード">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#PTRレコード" aria-expanded="false" aria-controls="PTRレコード">
-                        PTRレコード
-                    </button>
-                </h2>
-                <div id="PTRレコード" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        DNSの資源レコード(リソースレコード)のうち、DNS逆引きで使用する「IPアドレス→ホスト名」の関係を登録するレコードのこと。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_RAID">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#RAID" aria-expanded="false" aria-controls="RAID">
-                        RAID(Redundant Arrays of Inexpensive Disks)
-                    </button>
-                </h2>
-                <div id="RAID" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        複数のディスクを組み合わせ1つの仮想敵なディスクとして扱うことで信頼性や性能を向上させる技術。以下の6つのレベルがある。<br>
-                        RAID0(ストライピング)：<br>
-                        複数のディスクに分散してデータを書き込むことでアクセス性能を向上させる。<br>
-                        RAID1(ミラーリング)：<br>
-                        同じデータを2台のディスクに書き込むことで信頼性を向上させる。実質記憶領域は50%となるので記憶効率は悪い。<br>
-                        RAID2()：<br>
-                        データにエラー訂正用のハミング符号を付加したものをストライピングで書き込む。<br>
-                        RAID3：<br>
-                        ビット／バイト単位でストライピングを行う。データのエラー訂正用にパリティビットを使用し、1つのディスクをエラー訂正符号の買い込み専用とする。<br>
-                        RAID4：<br>
-                        RAID3とほぼ同じ。RAID3でビット／バイト単位だったストライピングをブロック単位で行う。<br>
-                        RAID5：<br>
-                        情報データとともにパリティビットも各ディスクに分散して書き込む方式。信頼性、アクセス性能がともに向上する。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_RARP">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#RARP" aria-expanded="false" aria-controls="RARP">
-                        RARP(Reverse Address Resolution Protocol)
-                    </button>
-                </h2>
-                <div id="RARP" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        自装置のMACアドレスから自装置に割り当てられているIPアドレスを知るためのプロトコル。データリンク層のプロトコルで
-                        ブロードキャストを利用する。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_RIP">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#RIP" aria-expanded="false" aria-controls="RIP">
-                        RIP(Routing Information Protocol)
-                    </button>
-                </h2>
-                <div id="RIP" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        LANで最も広く利用されているルーティングプロトコル。距離ベクトル型であり、ホップ数(ルータの数)を用いて選択する経路を決定する。<br>
-                        自分の知っている経路制御情報を30秒に1回ネットワーク上にブロードキャストする。他のルータから受け取った経路情報は距離に1足してから次の機会にブロードキャストする。<br>
-                        パケットが6回(180秒)こなかった場合には接続が切れたと判断して距離ベクトルデータベースから該当する情報を削除する。またパケットがループし続けないように、ホップの最大数を15とし、これを超えた場合には破棄する。<br>
-                        AS内部で使用され、主に小規模ネットワークで使用されるルーティングプロトコル。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_RIP2">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#RIP2" aria-expanded="false" aria-controls="RIP2">
-                        RIP2
-                    </button>
-                </h2>
-                <div id="RIP2" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        RIPのバージョン2で次の点が改良されている。<br>
-                        ①サブネットマスク対応<br>
-                        RIPではクラスのみで判断されるが、RIP2ではサブネットマスクに対応し、可変長のネットワークアドレスをルーティングすることが可能。<br>
-                        ②マルチキャスト使用<br>
-                        RIPのパケットをブロードキャストではなくマルチキャスト(244.0.0.9)で送ることでトラフィックを軽減する。<br>
-                        ③認証<br>
-                        自分が認識できるパスワードを持っているRIPパケットのみを受容し、他を無視するという認証の仕組みを使用可能。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_RIPng">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#RIPng" aria-expanded="false" aria-controls="RIPng">
-                        RIPng(Routing Information Protocol next generation)
-                    </button>
-                </h2>
-                <div id="RIPng" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        IPv6対応のRIPバージョン。RIPと同様にホップ数を使用してルート計算を行うが、FF02::9(全RIPngルータのIPv6マルチキャストアドレス)を利用して
-                        ルーティング情報を交換する。IPv6のネットワーク環境に特化した設計がされている。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_RMON">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#RMON" aria-expanded="false" aria-controls="RMON">
-                        RMON(Remote network MONitoring)
-                    </button>
-                </h2>
-                <div id="RMON" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        ネットワークのトラフィック管理において、測定対象の回線やポートなどからパケットをキャプチャして解析し、SNMPを使って管理装置にデータを送信する仕組み。<br>
-                        ネットワークで情報を送ったり受け取ったりする状況を遠く離れている場所からモニターする仕組みで、通信するための機器をモニター・メンテナンスするSNMPとともに用いられることが多くなっている。
-                        管理者はそれぞれ様子が変化するネットワークの状態を一元的に正確な情報を得られ、トラブルの検知・原因のチェック・構成のオプティマイズを敏速に行える。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_RSVP">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#RSVP" aria-expanded="false" aria-controls="RSVP">
-                        RSVP(Resource Reservation Protocol)
-                    </button>
-                </h2>
-                <div id="RSVP" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        IPネットワークにおいて特定の通信に対して通信品質を確保するためのプロトコル。受信ホストから送信ホストに制御パケットを送信することで、品質確保の対象とする通信が経由するすべてのルータに対して
-                        制御設定を行う。この制御設定をもとにルータがその通信のパケットを識別し処理できる仕組みとなっている。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_R値">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#R値" aria-expanded="false" aria-controls="R値">
-                        R値(Rating factor)
-                    </button>
-                </h2>
-                <div id="R値" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        主観品質評価と客観品質評価の要素を交え、最高100点で音声を総合的に評価する指標。<br>
-                        ノイズ感、音量感、エコーや遅延、歪みや途切れ感といった音声品質を左右する要因に利便性など満足感を与える要素を加えて定量的に算出される。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_SAN">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#SAN" aria-expanded="false" aria-controls="SAN">
-                        SAN(Storage Area Network)
-                    </button>
-                </h2>
-                <div id="SAN" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        個々のサーバにストレージを直接接続するのではなく、LANとは別にサーバ群の後ろにストレージ専用のネットワークを構築し、そこにストレージを統合する
-                        技術。ストレージとはHDDやSSDなどデータを長期保管しておくための記憶装置の総称。<br>
-                        ファイバーチャネルネットワークで構築するFC-SANとTCP/IPネットワークで構築するIP-SANの2種類がある。サーバとSANの接続は光ファイバーを伝送媒体とする
-                        FCP(Fiber Channel Protocol)やiSCSI(Internet SCSI)プロトコルによって行われるためより高速な転送が可能となる。またストレージがサーバから独立するため
-                        スケールアウトや運用管理も効率的に行えるようになる。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_SDN">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#SDN" aria-expanded="false" aria-controls="SDN">
-                        SDN(Software-Defined Networking)
-                    </button>
-                </h2>
-                <div id="SDN" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        OpenFlowスイッチとコントローラーの間にOpenFlowチャネルを確立し、コントローラーはOpenFlowチャネルを介してOpenFlowスイッチの管理を行う。OpenFlowチャネルは通常TLSを使用して暗号化されるが、TCPを介して直接実行される場合もある。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_SOAレコード">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#SOAレコード" aria-expanded="false" aria-controls="SOAレコード">
-                        SOAレコード
-                    </button>
-                </h2>
-                <div id="SOAレコード" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        DNSの資源レコード(リソースレコード)のうち、他のDNSサーバのキャッシュ領域に情報を残す許可時間やゾーン情報の更新をチェックする間隔などを指定するレコードのこと。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_SysML">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#SysML" aria-expanded="false" aria-controls="SysML">
-                        SysML(System Modeling Language)
-                    </button>
-                </h2>
-                <div id="SysML" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        ソフトウェア設計に用いられるUMLをハードウェアに関する記述を含めたものに拡張し、システム設計を行えるようにしたモデリング言語。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_TDM">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#TDM" aria-expanded="false" aria-controls="TDM">
-                        TDM(Time Division Multiplexing)
-                    </button>
-                </h2>
-                <div id="TDM" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        時分割多重化のことで、1つの伝送路で複数の通信を行う際に送信時間を非常に短く区切り、その時間(タイムスロット)ごとに複数の信号を順番に割り当てていくことで多重化通信を行う方式。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_VLAN_ID">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#VLAN_ID" aria-expanded="false" aria-controls="VLAN_ID">
-                        VLAN ID
-                    </button>
-                </h2>
-                <div id="VLAN_ID" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        VLAN IDは12ビットで表される番号でVLANを論理的に識別するために使用される。0と4095は予約されているため実際に割り当てられるのは1〜4,094の範囲となる。MACヘッダーのタイプ領域の前に挿入される
-                        VLANタグ内に含まれている。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_UWB">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#UWB" aria-expanded="false" aria-controls="UWB">
-                        UWB(Ultra Wide Band)
-                    </button>
-                </h2>
-                <div id="UWB" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        超広帯域無線。広い周波数帯にデータを拡散することで高速な伝送を行う無線通信方式で、近距離での映像や音楽配信に利用されている。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_VLANタグ">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#VLANタグ" aria-expanded="false" aria-controls="VLANタグ">
-                        VLANタグ
-                    </button>
-                </h2>
-                <div id="VLANタグ" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        IEEE802.1Qヘッダー情報を格納する4バイトのフィールドでタグつきフレームであることを示す識別子、VLAN ID、優先度などの情報を含む。VLANタグはイーサネットフレーム中の送信元MACアドレスとタイプ/長さフィールドの間に
-                        挿入される。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_WebSocket">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#WebSocket" aria-expanded="false" aria-controls="WebSocket">
-                        WebSocket
-                    </button>
-                </h2>
-                <div id="WebSocket" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Webアプリケーションにおいて、クライアント(Webブラウザ)とWebサーバの間で効率的な双方向通信を実現するプロトコル。通信路確立後はHTTPの手順に縛られず1つのTCPコネクション上でデータのやりとりが可能で、
-                        サーバからクライアントへのデータのプッシュが可能となる。URIのスキームにはws(平文通信)またはwss(暗号通信)の2つがあり、デフォルトのポートはwsが80、wssが443とhttp、httpsに準じているが任意のポートを
-                        指定できる。WebSocketはクライアント側がハンドシェイク要求をサーバに送信することで開始され、サーバ側からWebSocketの接続開始を要求することはできない。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_Wi-SUN">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#Wi-SUN" aria-expanded="false" aria-controls="Wi-SUN">
-                        Wi-SUN(Wireless Smart Utility Network)
-                    </button>
-                </h2>
-                <div id="Wi-SUN" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        920MHz帯を使用するLPWA規格の1つで100台から1,000台のメッシュ側ネットワークのこと。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_WPA2">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#WPA2" aria-expanded="false" aria-controls="WPA2">
-                        WPA2(Wi-Fi Protected Access 2)
-                    </button>
-                </h2>
-                <div id="WPA2" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        無線LANの業界団体Wi-Fi Allianceが策定した無線LANの暗号化方式の規格。WPAではWEPで指摘された脆弱性を克服するためにTKIP(Temporal Key Integrity Protocol)を使用して、
-                        一定時間(または一定通信量)ごとに暗号鍵を更新することでセキュリティを高めている。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_ZigBee">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#ZigBee" aria-expanded="false" aria-controls="ZigBee">
-                        ZigBee
-                    </button>
-                </h2>
-                <div id="ZigBee" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Bluetoothよりも低速(20kbps・250bps)で転送距離も短い(30m程度)ながら、省電力性と低コストの利点を有する無線通信規格。理論上65,536台とBluetoothと比較して非常に多く、多数の端末間を
-                        低コストの無線通信で接続可能となる。規格のベース部分にはIEEE802.15.4が使用され、主にIoTなどによるセンサーネットワークの構築を目的としている。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_アドミッション制御">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#アドミッション制御" aria-expanded="false" aria-controls="アドミッション制御">
-                        アドミッション制御
-                    </button>
-                </h2>
-                <div id="アドミッション制御" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        ネットワークのQoSを実現するために使用されるトラフィック制御の1つで、通信を開始する前にネットワークに対して帯域などのリソースを要求し、確保の状況に応じて通信を制御すること。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_ウインドウ制御">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#ウインドウ制御" aria-expanded="false" aria-controls="ウインドウ制御">
-                        ウインドウ制御
-                    </button>
-                </h2>
-                <div id="ウインドウ制御" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        TCPによる通信において、確認応答を待たずに続けて送信する仕組み。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_確認応答番号">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#確認応答番号" aria-expanded="false" aria-controls="確認応答番号">
-                        確認応答番号
-                    </button>
-                </h2>
-                <div id="確認応答番号" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        TCPによる通信で受信者側が送信者側に返す番号。<br>
-                        次に送ってほしいデータの先頭位置を表す。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_国際化ドメイン">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#国際化ドメイン" aria-expanded="false" aria-controls="国際化ドメイン">
-                        国際化ドメイン
-                    </button>
-                </h2>
-                <div id="国際化ドメイン" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        漢字やひらがな、アラビア文字などのASCII以外の文字をドメインに使用できるようにした仕組み。ユーザー側のアプリケーションにて
-                        国際化ドメイン名を一定の法則(Punycode：ピュニコード)に従って英数字からなるドメイン名に変換し、ネームサーバとの通信はこれまで通り
-                        7bit ASCIIだけで構成される文字列を用いる。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_シェーピング">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#シェーピング" aria-expanded="false" aria-controls="シェーピング">
-                        シェーピング
-                    </button>
-                </h2>
-                <div id="シェーピング" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        ネットワークのQoSを実現するために使用されるトラフィック制御の1つで、パケットの送出間隔を調整することで規定された最大速度を超過しないようにトラフィックを平準化する制御のこと。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_シーケンス番号">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#シーケンス番号" aria-expanded="false" aria-controls="シーケンス番号">
-                        シーケンス番号
-                    </button>
-                </h2>
-                <div id="シーケンス番号" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        TCPでデータを送信する際にTCPセグメントに含まれるデータ。
-                        送信データの最初の位置を表す番号で、これに送信したオクテット数を加えたものが次回送信のシーケンス番号となる。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_ジッタ">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#ジッタ" aria-expanded="false" aria-controls="ジッタ">
-                        ジッタ
-                    </button>
-                </h2>
-                <div id="ジッタ" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        パケット伝送時間の不安定さが原因で生じる到着順の乱れや
-                        それに伴い発生する音声や映像の乱れのこと。R値を算出するために測定される。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_スパニングツリープロトコル">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#スパニングツリープロトコル" aria-expanded="false" aria-controls="スパニングツリープロトコル">
-                        スパニングツリープロトコル
-                    </button>
-                </h2>
-                <div id="スパニングツリープロトコル" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        L2SWをループ状に構成した際に発生するブロードキャストストーム(ブロードキャストフレームがループ内を周回し続ける状態)を回避するために用いられる。
-                        スパニングツリープロトコルによって論理的な木構造として扱うことで障害時の転送経路を確保しつつブロードキャストフレームのループを防止できる。<br>
-                        スイッチ間でBPDU(Bridge Protocol Data Unit)と呼ばれる制御フレームをやりとりするが、これに含まれるブリッジの優先順位とMACアドレスを組み合わせた
-                        「ブリッジID」フィールドが最も小さいブリッジがルートブリッジとして自動的に選出される。<br>
-                        スパニングツリー構築の流れは以下の通り<br>
-                        ①各ノードのポートのうちルートノードまでの区間コストが最も低いポートをルートポートとする<br>
-                        ②ノード間の各リンクのうちルートノードに近い方を指定ポートする<br>
-                        ③ルートポートと指定ポート以外は非指定ポートとしてブロックする
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_認証VLAN">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#認証VLAN" aria-expanded="false" aria-controls="認証VLAN">
-                        認証VLAN
-                    </button>
-                </h2>
-                <div id="認証VLAN" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        VLANの方式の1つでネットワーク接続前に「MACアドレス認証」「ID + パスワードによる認証」「IEEE 802.1x」などでユーザーを特定し、ユーザーことに所属すべきVLANに
-                        振り分けることで端末のグルーピングを行う技術。これにより接続ポート単位やアドレス単位というグルーピングができない無線アクセスポイントへの接続でもVLANに対応させることができる。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_パイプライン処理">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#パイプライン処理" aria-expanded="false" aria-controls="パイプライン処理">
-                        パイプライン処理
-                    </button>
-                </h2>
-                <div id="パイプライン処理" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        パイプラインの処理時間は以下の公式で求められる。<br>
-                        (D + I - 1) × P<br>
-                        D：パイプラインの深さ(命令のステージ数)<br>
-                        I：命令数<br>
-                        P：パイプラインのピッチ(時間)
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_ハミング符号">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#ハミング符号" aria-expanded="false" aria-controls="ハミング符号">
-                        ハミング符号
-                    </button>
-                </h2>
-                <div id="ハミング符号" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        送信される情報ビットに対して検査ビットを付加することで受信側で2ビットの誤り検出と1ビットの自動訂正機能を持った方式。
-                        ECCメモリやRAID2、Bluetoothの誤り訂正方式として採用されている。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_フラグシーケンス">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#フラグシーケンス" aria-expanded="false" aria-controls="フラグシーケンス">
-                        フラグシーケンス
-                    </button>
-                </h2>
-                <div id="フラグシーケンス" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        送信するデータの境目を識別するためにフレームの前後に挿入される「01111110」という8ビットのパターンのこと。データ中の1が連続して5回続く部分に対しては送信時にそのあとに0を挿入して
-                        受信側で挿入された0を取り除く「ゼロインサーション処理」を行うことでフラグの一貫性を保っている。<br>
-                        HDLC手順ではこのフラグを使用して同期をとる「フラグ同期方式」が採用されている。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_ベストエフォート">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#ベストエフォート" aria-expanded="false" aria-controls="ベストエフォート">
-                        ベストエフォート
-                    </button>
-                </h2>
-                <div id="ベストエフォート" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        通信網は最善を尽くすが利用状況によっては通信の品質を保証しないとするサービスの方針のこと。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_ポリシング">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#ポリシング" aria-expanded="false" aria-controls="ポリシング">
-                        ポリシング
-                    </button>
-                </h2>
-                <div id="ポリシング" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        ネットワークのQoSを実現するために使用されるトラフィック制御の1つで、入力されたトラフィックが規定された最大速度を超過しないか監視し、超過分のパケットを破棄するか優先度を下げる制御のこと。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_待ち行列モデル">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#待ち行列モデル" aria-expanded="false" aria-controls="待ち行列モデル">
-                        待ち行列モデル
-                    </button>
-                </h2>
-                <div id="待ち行列モデル" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        M/M/1の待ち行列モデルにおいて待ち行列に並んでからサービスを受け終わるまでに要する平均時間は次の式で計算する。
-                        (利用率 / (1 - 利用率)) × 平均サービス時間 + 平均サービス時間
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_マルチキャストアドレス">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#マルチキャストアドレス" aria-expanded="false" aria-controls="マルチキャストアドレス">
-                        マルチキャストアドレス
-                    </button>
-                </h2>
-                <div id="マルチキャストアドレス" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        先頭4ビットは「1110」固定で(クラスD)残りの28ビットはグループを識別するための領域として使用される。<br>
-                        一部のアドレスはWell-Knownアドレスとして用途が決められているが、他のアドレスは用途ごとのアドレス範囲の中で自由に使用できる。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_メモリインタリープ">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#メモリインタリープ" aria-expanded="false" aria-controls="メモリインタリープ">
-                        メモリインタリープ
-                    </button>
-                </h2>
-                <div id="メモリインタリープ" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        物理上は1つである主記憶領域を同時アクセス可能は複数の論理的な領域(バンク)に分け、それぞれのバンクに対してデータの読み書きを並列で行うことにより、メモリアクセスの高速化を図る技術。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_優先制御">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#優先制御" aria-expanded="false" aria-controls="優先制御">
-                        優先制御
-                    </button>
-                </h2>
-                <div id="優先制御" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        ネットワークのQoSを実現するために使用されるトラフィック制御の1つで、フレームの種類や宛先に応じて優先度を変えて中継すること。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_量子アニーリング方式">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#量子アニーリング方式" aria-expanded="false" aria-controls="量子アニーリング方式">
-                        量子アニーリング方式
-                    </button>
-                </h2>
-                <div id="量子アニーリング方式" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        量子特有の性質を情報処理に利用して組み合わせ最適化問題を解くことに特化した量子コンピュータのこと。膨大な選択肢の中から最適な選択肢を探すアルゴリズムに特化している。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_量子ゲート方式">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#量子ゲート方式" aria-expanded="false" aria-controls="量子ゲート方式">
-                        量子ゲート方式
-                    </button>
-                </h2>
-                <div id="量子ゲート方式" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        極低温の環境の中で量子ゲートを用いて演算を行う量子コンピュータのこと。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_ルーティングポリシー">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#ルーティングポリシー" aria-expanded="false" aria-controls="ルーティングポリシー">
-                        ルーティングポリシー
-                    </button>
-                </h2>
-                <div id="ルーティングポリシー" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        インターネット上のいろいろな対地に対して、どの隣接ASを通じてトラフィックを到達させるか関する方針のこと。
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item" id="h_ルートリフレクション">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#ルートリフレクション" aria-expanded="false" aria-controls="ルートリフレクション">
-                        ルートリフレクション
-                    </button>
-                </h2>
-                <div id="ルートリフレクション" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        ルータが受け取った情報をループを発生させることなく他のルータに転送する仕組みによって確立が必要なセッション数を削減する機能。BGPルータはAS内のすべてのBGPルータとの間で
-                        IBGPセッションを張る必要があるが、このときに生じるスケーラビリティ問題を回避するために利用される。
-                    </div>
-                </div>
-            </div>
+      <h4 class="mb-3">用語</h4>
+      <div class="accordion" id="accordion">
+        <div class="accordion-item" id="h_6LoWPAN">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#6LoWPAN"
+              aria-expanded="false"
+              aria-controls="6LoWPAN"
+            >
+              6LoWPAN
+            </button>
+          </h2>
+          <div id="6LoWPAN" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              6LoWPAN(シックスローパン)は、低速・低消費電力のIEEE802.15.4ネットワーク上で効率よくIPv6通信を行うためにパケットの分割と再結合、ヘッダー圧縮等の最適化を定めた仕様のこと。
+            </div>
+          </div>
         </div>
+        <div class="accordion-item" id="h_AS">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#AS"
+              aria-expanded="false"
+              aria-controls="AS"
+            >
+              AS(Autonomous System)
+            </button>
+          </h2>
+          <div id="AS" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              自律システムとも呼ばれ、統一された運用ポリシーによって管理されたネットワークの集まりを意味し、BGPというプロトコルにより接続される単位。<br />
+              AS間で経路情報の交換を行うことによりインターネット上での効率的な経路制御を実現する。<br />
+              16ビット(2オクテット)または32ビット(4オクテット)の数字を用いた「AS番号」によってインターネット上で一意に識別される。日本ではJPNICがその割り当てと管理を行なっている。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_BBR">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#BBR"
+              aria-expanded="false"
+              aria-controls="BBR"
+            >
+              BBR(Bottleneck Bandwidth and Round-trip propagation time)
+            </button>
+          </h2>
+          <div id="BBR" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Googleが開発したTCPの輻輳制御アルゴリズム。ボトルネック帯域幅と往復伝搬時間を常に監視し、ネットワークの混雑状態を正確に把握することで、パケットの損失が起こる前に送信量を調整する。
+              これによりTCPのパフォーマンスが改善される。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_BGP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#BGP"
+              aria-expanded="false"
+              aria-controls="BGP"
+            >
+              BGP(Border Gateway Protocol)
+            </button>
+          </h2>
+          <div id="BGP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              インターネットにおいてISP管理のネットワークなど自律システム同士の相互接続時にお互いの経路情報をやり取りするために使用され、通過する経路のリストだけで経路制御を行う経路ベクトル型のプロトコル。
+              一般的に2つ以上のASに接続される場合に必要となる。<br />
+              ルーティングポリシーに従ったポリシールーティングを実現するために経路情報にいくつかの属性パラメータ(パス属性値)を付加することができ、このパラメータを調整して経路情報を広告すること、あるいは
+              このパラメータに従って経路情報の優先制御を行うことでポリシールーティングを実現する。<br />
+              LP値、MED値を利用してトラフィック制御を行うことができる。<br />
+              LP値(LOCAL_PREFERENCE):<br />
+              外部ASにパケットを転送するための自ASの出口を指定する。自AS内でのみ有効で、全iBGPピアに伝搬される。大きい値が優先されデフォルトは100。トラフィックの出口を内部ネットワークにBGPUpdateで伝える。<br />
+              MED値:<br />
+              自AS内NW宛のトラフィックの入口を、eBGPネイバーに伝える。eBGPネイバー間で有効となる。小さい値が優先されデフォルトは0。トラフィックの入口を外部ASにBGPUpdateで伝える。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_BLE">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#BLE"
+              aria-expanded="false"
+              aria-controls="BLE"
+            >
+              BLE(Bluetooth Low Energy)
+            </button>
+          </h2>
+          <div id="BLE" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              無線通信規格Bluetoothの一部で、低消費電力に特化した通信モードのこと。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_Bluetooth">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#Bluetooth"
+              aria-expanded="false"
+              aria-controls="Bluetooth"
+            >
+              Bluetooth
+            </button>
+          </h2>
+          <div id="Bluetooth" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              2.4GHz帯を使用する近距離の無線通信方式で、1つのマスタと最大7台のスレーブからなるスター型ネットワークを構成する。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_BPDU">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#BPDU"
+              aria-expanded="false"
+              aria-controls="BPDU"
+            >
+              BPDU(Bridge Protocol Data Unit)
+            </button>
+          </h2>
+          <div id="BPDU" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              スパニングツリープロトコル(STP)においてスイッチ間で情報をやり取りするための制御フレーム。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_CCK">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#CCK"
+              aria-expanded="false"
+              aria-controls="CCK"
+            >
+              CCK(Complementary Code Keying)
+            </button>
+          </h2>
+          <div id="CCK" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              相補型符号変調のことで、IEEE802.11bで採用されている変調方式。ビットを信号に変換する際に拡散符号を掛け合わせることで通信の高速化やノイズへの耐性を高めた方式。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_CDM">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#CDM"
+              aria-expanded="false"
+              aria-controls="CDM"
+            >
+              CDM(Code Division Multiplexing)
+            </button>
+          </h2>
+          <div id="CDM" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              符号分割多重化のことで、通信信号ごとに特定の演算処理(符号化)を施したものを複数個まとめて送信し、受信側で同じ処理を行い特定の信号を取り出す仕組み。複数の送信者の通信を同じ周波数帯上で行う多重化方式。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_CDN">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#CDN"
+              aria-expanded="false"
+              aria-controls="CDN"
+            >
+              CDN(Contents Delivery Network)
+            </button>
+          </h2>
+          <div id="CDN" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              世界中に分散配置されたキャッシュサーバにWebサイトのコンテンツを保存し、コンテンツをユーザーに最も近いサーバから
+              配信するサービス。もともとはWebコンテンツの高速かつ安定的な配信を目的としたものだったが、トラフィックの分散、
+              CDNが有するトラフィックフィルタリング、キャッシュ機能などにより、オリジンサーバへのトラフィックを抑えることができ
+              結果的にDDoS攻撃への耐性が高まり自社ネットワークの被害を抑えることができる。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_CNAMEレコード">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#CNAMEレコード"
+              aria-expanded="false"
+              aria-controls="CNAMEレコード"
+            >
+              CNAMEレコード
+            </button>
+          </h2>
+          <div id="CNAMEレコード" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              DNSの資源レコード(リソースレコード)のうち、ホスト名の別名(エイリアス)を登録するレコードのこと。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_CoAP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#CoAP"
+              aria-expanded="false"
+              aria-controls="CoAP"
+            >
+              CoAP(Constrained Application Protocol)
+            </button>
+          </h2>
+          <div id="CoAP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              IoTデバイスのようにメモリ、消費電力、帯域幅などリソースに制約のあるデバイスが効率的にWeb通信を行えるように設計されたプロトコル。UDP上で動作するが、確認応答や再送処理をサポートしている。
+              HTTPと同様にリクエスト/レスポンスモデルを採用していて、GET/POST/PUT/DELETEなどのHTTPメソッドと似たメソッドをサポートしているためHTTPの代替として使用することができる。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_CPPM">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#CPPM"
+              aria-expanded="false"
+              aria-controls="CPPM"
+            >
+              CPPM(Content Protection for Pre-Recorded Media)
+            </button>
+          </h2>
+          <div id="CPPM" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              コンテンツをメディアに暗号化した状態で記録し、再生時に対応した機器で復号することで違法コピーを防止する技術。メディア内の暗号鍵と再生機器(またはソフトウェア)の機器鍵が揃わないと復号できない仕組みとなっている。
+              再生専用メディア用の規格。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_CPRM">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#CPRM"
+              aria-expanded="false"
+              aria-controls="CPRM"
+            >
+              CPRM(Content Protection for Recordable Media)
+            </button>
+          </h2>
+          <div id="CPRM" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              コンテンツをメディアに暗号化した状態で記録し、再生時に対応した機器で復号することで違法コピーを防止する技術。メディア内の暗号鍵と再生機器(またはソフトウェア)の機器鍵が揃わないと復号できない仕組みとなっている。
+              記録可能なメディアを対象とした規格で、SDメモリカードなどの書き換え可能メディアは著作権保護技術としてCPRMが使用されている。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_DMARC">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#DMARC"
+              aria-expanded="false"
+              aria-controls="DMARC"
+            >
+              DMARC
+            </button>
+          </h2>
+          <div id="DMARC" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              受信者がヘッダーFromのメールアドレス(送信者のメールアドレス)のドメインについてSPFおよびDKIMで検証することでなりすましメールを防ぐ技術。認証に失敗した場合、ドメインの所有者はメール受信者に以下の3つのポリシーを強制することができる。<br />
+              　None(何もしない)：受信メールに対して特定のアクションを要求しない<br />
+              　Quarantine(隔離)：受信メールを疑わしいものとして処理するように要求する<br />
+              　Reject(拒否)：受信メールを拒否することを要求する
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_DNSSEC">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#DNSSEC"
+              aria-expanded="false"
+              aria-controls="DNSSEC"
+            >
+              DNSSEC(DNS Security Extensions)
+            </button>
+          </h2>
+          <div id="DNSSEC" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              DNSにおける応答の正当性を保証するための拡張仕様。ドメイン応答に電子署名を付加することで正当な管理者によって生成された応答レコードであること、および応答レコードが改ざんされていないことの
+              検証が可能となる。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_DNSラウンドロビン">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#DNSラウンドロビン"
+              aria-expanded="false"
+              aria-controls="DNSラウンドロビン"
+            >
+              DNSラウンドロビン
+            </button>
+          </h2>
+          <div id="DNSラウンドロビン" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              1つのホストに複数のIPアドレスを対応させる仕組みで、複数台のサーバに負荷を分散させるために利用される。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_DNSリフレクタ攻撃">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#DNSリフレクタ攻撃"
+              aria-expanded="false"
+              aria-controls="DNSリフレクタ攻撃"
+            >
+              DNSリフレクタ攻撃
+            </button>
+          </h2>
+          <div id="DNSリフレクタ攻撃" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              脆弱性のある公開DNSキャッシュサーバを踏み台として悪用することで行われる分散型サービス妨害(DDoS)攻撃の1つ。DNSサーバをDNSキャッシュサーバと権威DNSサーバに分離し、
+              踏み台として悪用されないためには、インターネット側からDNSキャッシュサーバに問い合わせできないようにしたり、利用可能なホストのIPアドレスの範囲を設定してDNSキャッシュサーバが不要なクエリを拒否するように
+              アクセス制限を施したりする必要がある。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_DSRC">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#DSRC"
+              aria-expanded="false"
+              aria-controls="DSRC"
+            >
+              DSRC(Dedicated Short-Range Communication)
+            </button>
+          </h2>
+          <div id="DSRC" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              専用狭域通信のこと。5.8GHz帯を使用する近距離の無線通信方式であり、有料道路の料金所のETCなどで利用されている。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_DTCP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#DTCP"
+              aria-expanded="false"
+              aria-controls="DTCP"
+            >
+              DTCP(Digital Transmission Content Protection)
+            </button>
+          </h2>
+          <div id="DTCP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              家庭内ネットワーク内において、著作権保護されたデジタルコンテンツを暗号化して転送することでコピーや傍受を防ぐ技術。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_EAP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#EAP"
+              aria-expanded="false"
+              aria-controls="EAP"
+            >
+              EAP(Extensible Authentication Protocol)
+            </button>
+          </h2>
+          <div id="EAP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              PPPの認証機能を拡張したプロトコル。デジタル証明書、メッセージダイジェスト、OTPなど様々な認証方式をサポートしているが
+              暗号化通信の機能は規定されていない。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_FaaS">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#FaaS"
+              aria-expanded="false"
+              aria-controls="FaaS"
+            >
+              FaaS(Function as a Service)
+            </button>
+          </h2>
+          <div id="FaaS" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              アプリケーション開発に必要な関数をクラウドのサーバ上で実行できるサービス。実現したい機能を関数(Function)として実装してアップロードしておけば指定したイベントをトリガーとして関数を実行してくれる。
+              PaaSと比較するとサービス利用者側でプラットフォームを管理する必要がない(サーバレス)、イベントドリブン、自動スケーリングなどの特徴がある。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_FDDI">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#FDDI"
+              aria-expanded="false"
+              aria-controls="FDDI"
+            >
+              FDDI(Fiber Distributed Data Interface)
+            </button>
+          </h2>
+          <div id="FDDI" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              光ファイバーを通信媒体に使用し、2,000mまでの距離で最大100Mbpsの通信を行うLANの規格の1つ。伝送制御にトークンリング(IEEE
+              802.5)と同じ
+              トークンパッシング方式が使用され、リング型のネットワークトポロジーで構成されることが特徴(スター型も可能)。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_GARP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#GARP"
+              aria-expanded="false"
+              aria-controls="GARP"
+            >
+              GARP(Gratuitous ARP)
+            </button>
+          </h2>
+          <div id="GARP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              自端末のIPアドレスをターゲットIPアドレスにセットした特殊なARP要求。DHCPにおける重複IPアドレスの検知、フェールオーバー時のARPテーブルの更新に利用される。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_HDCP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#HDCP"
+              aria-expanded="false"
+              aria-controls="HDCP"
+            >
+              HDCP(High-bandwidth Digital Content Protection)
+            </button>
+          </h2>
+          <div id="HDCP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              HDMI端子が搭載されたデジタルAV機器に採用され、HDMI端子やDisplayPort端子から表示機器にデジタル信号を送るときに受信する経路を暗号化する方式。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_ICMPv6">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#ICMPv6"
+              aria-expanded="false"
+              aria-controls="ICMPv6"
+            >
+              ICMPv6(ICMP for IPv6)
+            </button>
+          </h2>
+          <div id="ICMPv6" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              エラーメッセージの通知やネットワーク診断などIPプロトコルを補完する役割を持つICMP(Internet
+              Control Message Protocol)をIPv6環境に対応させたプロトコル。<br />
+              IPv4でARPが行なっていた同一リンク上のノードに対するアドレスの解決とIPアドレスの重複検出はIPv6ではICMPv6の近隣要請メッセージ(Neighbor
+              Solicitation)と近隣告知メッセージ(Neighbor
+              Advertisement)によって提供される。<br />
+              ルータ要請メッセージ(Router
+              Solicitation)とルータ告知メッセージ(Router
+              Advertisement)のやり取りによってプラグアンドプレイのIPアドレスの自動割り当てにも対応する。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_IEEE802.1X">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#IEEE802.1X"
+              aria-expanded="false"
+              aria-controls="IEEE802.1X"
+            >
+              IEEE802.1X
+            </button>
+          </h2>
+          <div id="IEEE802.1X" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              正当な端末以外がLANに参加することを防ぐためにLANにおけるクライアント認証の方式を定めた規格でEAP(Extensible
+              Authentication
+              Protocol)として実装されている。EAPでは以下の3つの構成要素が存在する。<br />
+              サプリカント：LANに接続するために認証を受けるクライアント<br />
+              認証サーバ：実際に認証を行うサーバ。RADIUSサーバが使用されることが多い。<br />
+              オーセンティケータ：サプリカントと認証サーバ間の認証プロセスを相互に中継する装置で、有線接続ではL2SWやL3SW、無線接続ではアクセスポイントがその役割を担う。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_IGMP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#IGMP"
+              aria-expanded="false"
+              aria-controls="IGMP"
+            >
+              IGMP(Internet Group Management Protocol)
+            </button>
+          </h2>
+          <div id="IGMP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              IPマルチキャストにおいて参加するホストのグループを制御するためのプロトコル。「グループへの参加」「グループの問い合わせ」「グループの維持」「グループからの離脱」という
+              4つの機能を持っている。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_IPFIX">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#IPFIX"
+              aria-expanded="false"
+              aria-controls="IPFIX"
+            >
+              IPFIX(Internet Protocol Flow Information Export)
+            </button>
+          </h2>
+          <div id="IPFIX" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              ネットワークのトラフィックを分析するためのプロトコルであり、フロー(IPアドレスやポート番号の組み合わせ)ごとの統計情報をネットワーク機器がコレクタと呼ばれるサーバに送信するときに使用される。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_IP_in_IP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#IP_in_IP"
+              aria-expanded="false"
+              aria-controls="IP_in_IP"
+            >
+              IP in IP(IP over IP)
+            </button>
+          </h2>
+          <div id="IP_in_IP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              IPパケットにIPヘッダを付加してカプセル化することでネットワーク間でVPN接続を実現するトンネリングプロトコル。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_IPSec">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#IPSec"
+              aria-expanded="false"
+              aria-controls="IPSec"
+            >
+              IPSec
+            </button>
+          </h2>
+          <div id="IPSec" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              ネットワーク層(TCP/IP階層モデルではインターネット層)で暗号化を行うプロトコル。以下の2つのモードがある。<br />
+              トランスポートモード：<br />
+              IPヘッダーはそのままでTCPセグメントとペイロード部を暗号化するモード<br />
+              トンネルモード：<br />
+              IPパケットを丸ごと暗号化して新たなIPヘッダーを付与するモード
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_IPv6">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#IPv6"
+              aria-expanded="false"
+              aria-controls="IPv6"
+            >
+              IPv6
+            </button>
+          </h2>
+          <div id="IPv6" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              IPv6では16ビットごとに区切ったグループを16新数で表記する方法が推奨されている。IPv4と比べてアドレスフィールドは拡張されたが、ヘッダーのチェックサムが削除されたためパケットを
+              中継するルータの負荷は軽減されている。上位96ビットはIPv4機器と通信する際に使用されるIPv4射影アドレスとして使用され、上位80ビットに0、81〜96ビットに1、残りの32ビットにIPv4アドレスを
+              埋め込んだ形式となっている。IPv6にはICMPv6に規定された近隣検索を用いてIPアドレスを自動設定できる仕組みが備わっている。<br />
+              代表的なアドレスの型としては以下の通り。<br />
+              ループバックアドレス：<br />
+              現在使用しているコンピュータを指すアドレス。IPv4の「127.0.0.1」に相当する。<br />
+              グローバルユニキャストアドレス：<br />
+              IPv6ネットワークすべての中で一意のアドレス。IPv4のグローバルアドレスに相当する。<br />
+              リンクローカルユニキャストアドレス：<br />
+              ルータを超えない範囲内でのみ一意なアドレス。<br />
+              ユニークローカルユニキャストアドレス：<br />
+              企業LANや自宅LANなどのように、内部LANの端末同士が通信を行う際にインターネット接続が生じない範囲のネットワークでのみ一意なアドレス。
+              IPv4のプライベートアドレスに相当する。<br />
+              マルチキャストアドレス：<br />
+              複数のアドレス宛に同報通信を行うためのアドレス。IPv4のマルチキャストアドレスとブロードキャストを兼ねた役割を果たす。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_IS-IS">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#IS-IS"
+              aria-expanded="false"
+              aria-controls="IS-IS"
+            >
+              IS-IS(Intermediate System to Intermediate System)
+            </button>
+          </h2>
+          <div id="IS-IS" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              AS内の経路制御を行うルーティングプロトコルでOSPFと同じリンクステート型のプロトコル。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_L2TP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#L2TP"
+              aria-expanded="false"
+              aria-controls="L2TP"
+            >
+              L2TP(Layer 2 Tunneling Protocol)
+            </button>
+          </h2>
+          <div id="L2TP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              L2FとPPTPを統合して改良したデータリンク層のトンネリングプロトコル。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_LDAP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#LDAP"
+              aria-expanded="false"
+              aria-controls="LDAP"
+            >
+              LDAP(Lightweight Directory Access Protocol)
+            </button>
+          </h2>
+          <div id="LDAP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              ユーザー名やパスワードなどのユーザー情報やネットワーク資源情報を一元管理するとともにそれらの情報を提供するディレクトリサービスにアクセスするためのプロトコル。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_LSA">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#LSA"
+              aria-expanded="false"
+              aria-controls="LSA"
+            >
+              LSA(Link State Advertisement)
+            </button>
+          </h2>
+          <div id="LSA" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              OSPFにおいてリンク状態データベース(Link State
+              Database)を作成するためにルータ間でやり取りされる情報で、OSPFv2では以下の5種類が規定されている。<br />
+              LSAタイプ1 Router-LSA(ルータLSA)：<br />
+              そのルータがどのネットワークに接続されているかを表す情報ですべてのOPSFルータが作成する基本的なLSA.IPアドレス、リンクの種類、コストなどの情報が含まれる。<br />
+              LSAタイプ2 Network-LSA(ネットワークLSA)：<br />
+              そのネットワークにはどのルータが接続されているかを表す情報で同一リンク内にあるルータのうちDR(Designed
+              Router)が生成する。<br />
+              LSAタイプ3 (Network-)Summary-LSA(サマリーLSA)：<br />
+              他のエリアの情報を要約したものでエリア境界ルータ(ABR)が作成する。<br />
+              LSAタイプ4 (ASBR-)Summary-LSA(AS境界ルータサマリーLSA)：<br />
+              AS境界ルータのIDとそこに到達するためのコスト情報で、エリア境界ルータ(ABR)が作成する。<br />
+              LSAタイプ5 AS-External-LSA(AS外部LSA)：<br />
+              ASの外部にあるネットワークアドレス情報でAS境界ルータ(ASBR)が作成する。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_MDA">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#MDA"
+              aria-expanded="false"
+              aria-controls="MDA"
+            >
+              MDA(Model Driven Architecture)
+            </button>
+          </h2>
+          <div id="MDA" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              モデル駆動型アーキテクチャと訳され、設計モデルと実装技術を完全に分離し、ベンダーやプラットフォームに依存しない開発を可能とする技術。
+              UMLやCOBRAなどの規格化団体として有名なOMG(Object-oriented
+              Management Group)によって策定された。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_MIB">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#MIB"
+              aria-expanded="false"
+              aria-controls="MIB"
+            >
+              MIB(Management Information Base)
+            </button>
+          </h2>
+          <div id="MIB" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              SNMPなどで遠く離れている機器をモニター・メンテナンスするときに使用されるモニター対象の機器が自分の力で設定・状態を整理してひとつにしたデータ集合、
+              もしくはそのレファレンスについて定められた規格のこと。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_MOS値">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#MOS値"
+              aria-expanded="false"
+              aria-controls="MOS値"
+            >
+              MOS値(Mean Opinion Score)
+            </button>
+          </h2>
+          <div id="MOS値" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              ユーザーが体感する品質を評価した指標値で、多数の評価者の主観的な5段階評価(非常に良い〜非常に悪い)を平均することによって決定される。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_MPLS">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#MPLS"
+              aria-expanded="false"
+              aria-controls="MPLS"
+            >
+              MPLS(Multi Protocol Label Switching)
+            </button>
+          </h2>
+          <div id="MPLS" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              IPパケットごとにラベルと呼ばれる情報を付加し、その情報をもとにしたスイッチングでパケット制御を行う技術のこと。ユーザーごとに異なるラベルを用いたIP-VPN網での利用やMPLSネットワーク内で
+              パケットの転送経路を明示的に選択したい場合などの使用される。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_MQTT">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#MQTT"
+              aria-expanded="false"
+              aria-controls="MQTT"
+            >
+              MQTT(Message Queueing Telemetry Transport)
+            </button>
+          </h2>
+          <div id="MQTT" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              短いメッセージを頻繁にやり取りすることに特化したシンプルかつ軽量のプロトコル。IoTネットワークやモバイルアプリケーションでの活用が期待されている。
+              MQTTはパブリッシュ(送信側)とサブスクライブ(受信側)の間をMQTTブローカー(メッセージ配信サーバ)が取り持つという通信モデルになっている。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_MSTP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#MSTP"
+              aria-expanded="false"
+              aria-controls="MSTP"
+            >
+              MSTP(Multiple Spanning Tree Protocol)
+            </button>
+          </h2>
+          <div id="MSTP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              VLANをインスタンスという単位で管理し、複数のVLANをまとめたスパニングツリーを構成するプロトコル。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_MTU">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#MTU"
+              aria-expanded="false"
+              aria-controls="MTU"
+            >
+              MTU(Maximum Transmission Unit)
+            </button>
+          </h2>
+          <div id="MTU" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              そのネットワークのデータリンク層において1回に送信できるデータサイズのことで、TCP/IPにおいてはデータリンク層のプロトコルによってカプセル化できるIPパケットの最大サイズを表す(イーサネットでは1,500バイト、
+              光ファイバーでは4,352バイトなど)。IPパケットのサイズがMTUを超えるとIPがフラグメント化を行い、MTU以下のサイズの複数のIPパケットに分割してから送信され、送信先で再構成される。<br />
+              IPパケットにはIPヘッダー、TCPヘッダー、データなどが含まれる。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_NICチーミング">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#NICチーミング"
+              aria-expanded="false"
+              aria-controls="NICチーミング"
+            >
+              NICチーミング
+            </button>
+          </h2>
+          <div id="NICチーミング" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              コンピュータ(主にサーバ)に搭載されている複数のNICに同じIPアドレスを割り当てることで論理的に1つのNICとして扱う技術。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_MXレコード">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#MXレコード"
+              aria-expanded="false"
+              aria-controls="MXレコード"
+            >
+              MXレコード
+            </button>
+          </h2>
+          <div id="MXレコード" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              DNSの資源レコード(リソースレコード)のうち、電子メールの送り先となるサーバのホスト名を指定するレコードのこと。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_NSレコード">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#NSレコード"
+              aria-expanded="false"
+              aria-controls="NSレコード"
+            >
+              NSレコード
+            </button>
+          </h2>
+          <div id="NSレコード" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              ドメインにおいてDNSレコードを保持する権威DNSサーバを指定するためのレコード。先頭にはゾーンのドメイン名が記述される。ゾーン分割を行ってサブドメインに権威委譲する場合はそのネームサーバをNSレコードで指定する。
+              データ部(RDATA)にはネームサーバのホスト名を記述する(別名は記述できない)。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_OFDM">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#OFDM"
+              aria-expanded="false"
+              aria-controls="OFDM"
+            >
+              OFDM(Orthogonal Frequency Division Multiplexing)
+            </button>
+          </h2>
+          <div id="OFDM" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              無線LANの規格IEEEsa802.11a/g/n/acで採用されている変調方式。各搬送波の中心を隣の搬送波の谷間に重なるように配置することで、さらに多数の搬送波を同時に送信できるようにしたもの。<br />
+              データ信号を複数のサブキャリアに分割し、各サブキャリアが互いに干渉しないように配置する。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_OP25B">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#OP25B"
+              aria-expanded="false"
+              aria-controls="OP25B"
+            >
+              OP25B
+            </button>
+          </h2>
+          <div id="OP25B" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              ISP管理下の動的IPアドレスからの電子メール送信について、管理外ネットワークのメールサーバへのSMTP通信を禁止することで
+              ISPのメールサーバを介さずに送信側のメールサーバと直接コネクションを確立して送信されるスパムメールを防ぐ。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_OpenFlow">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#OpenFlow"
+              aria-expanded="false"
+              aria-controls="OpenFlow"
+            >
+              OpenFlow
+            </button>
+          </h2>
+          <div id="OpenFlow" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              データ転送と経路制御の機能を論理的に分離し、コントローラが複数のネットワーク機器のデータ転送を集中的に制御・管理するプロトコル。アプリケーションはノースバウンドインターフェースを介してコントロータに
+              指示を出す。ネットワーク機器がコントローラに提供するAPIはサウスバウンドインターフェースと呼ばれる。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_OSPF">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#OSPF"
+              aria-expanded="false"
+              aria-controls="OSPF"
+            >
+              OSPF(Open Shortest Path First)
+            </button>
+          </h2>
+          <div id="OSPF" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              リンク状態型のルーティングプロトコルで、すべてのルータがネットワークのトポロジー(接続状態)を完全に把握し、それをもとに制御制御を行う。ループがあるネットワークでも安定した経路制御が可能となる。各リンクに重み(コスト)をつけることができ、コストの合計が最も小さい経路が選択される。<br />
+              すべてのルータ間で経路情報が交換されるわけではなく、指名ルータが決められそれを中心に経路制御情報が交換される。またルータの台数が増えた場合にはエリアというグループに分けて管理される。各エリアは必ずバックボーンエリアに接続され、バックボーンエリアと各エリアの教会にあるルータはエリア境界ルータと呼ばれる。<br />
+              主に中規模から大規模ネットワークで使用され、AS内部の経路制御に用いられる。<br />
+              　OSPFv2：<br />
+              　　IPv4アドレスを使用してルーティングテーブルを作成する<br />
+              　　シンプルな認証方法(平文テキストやMD5)が使用される<br />
+              　OSPFv3：<br />
+              　　IPv6アドレスを使用してルーティングテーブルを作成する<br />
+              　　IPSecを使用したセキュリティが導入されている
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_PAP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#PAP"
+              aria-expanded="false"
+              aria-controls="PAP"
+            >
+              PAP(Password Authentication Protocol)
+            </button>
+          </h2>
+          <div id="PAP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              PPPで利用できる認証プロトコルでIDとパスワードを平文で送って認証を受ける方式。<br />
+              アカウンティング情報に関しては規定がない。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_PCIExpress">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#PCIExpress"
+              aria-expanded="false"
+              aria-controls="PCIExpress"
+            >
+              PCI Express(PCIs)
+            </button>
+          </h2>
+          <div id="PCIExpress" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              マザーボードに取り付ける拡張スロット用のインターフェース。主にグラフィックボードやストレージデバイス、ネットワークカードなどの接続に使用される。<br />
+              1レーンあたりの片方向最大転送レート<br />
+              　PCI Express3.0：8Gbps<br />
+              　PCI Express4.0：16Gbps<br />
+              　PCI Express5.0：32Gbps<br />
+              　PCI Express6.0：64Gbps<br />
+              最大レーン数<br />
+              　PCI Express3.0：32レーン<br />
+              　PCI Express4.0：64レーン<br />
+              　PCI Express5.0：64レーン<br />
+              　PCI Express6.0：64レーン
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_PPP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#PPP"
+              aria-expanded="false"
+              aria-controls="PPP"
+            >
+              PPP(Point-to-Point Protocol)
+            </button>
+          </h2>
+          <div id="PPP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              電話回線を通じてコンピュータをネットワークに接続するダイヤルアップ接続でよく使われる、2点間を接続してデータ通信を行うための通信プロトコル。
+              通信にリンク制御プロトコル(Link Control
+              Protocol:LCP)とネットワーク制御プロトコル(Network Control
+              Protocol:NCP)という2つの通信プロトコルを使用する。
+              パケットのヘッダー領域を圧縮して伝送したり、PAP(Password
+              Authentication Protocol)やCHAP(Challenge Handshake Authentication
+              Protocol)といった 認証機能を含んでいる。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_PPTP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#PPTP"
+              aria-expanded="false"
+              aria-controls="PPTP"
+            >
+              PPTP(Point-to-Point Tunneling Protocol)
+            </button>
+          </h2>
+          <div id="PPTP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              PPPデータフレームをIPパケットでカプセル化してインターネットを通過させるためのトンネリングプロトコル。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_PTRレコード">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#PTRレコード"
+              aria-expanded="false"
+              aria-controls="PTRレコード"
+            >
+              PTRレコード
+            </button>
+          </h2>
+          <div id="PTRレコード" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              DNSの資源レコード(リソースレコード)のうち、DNS逆引きで使用する「IPアドレス→ホスト名」の関係を登録するレコードのこと。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_RAID">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#RAID"
+              aria-expanded="false"
+              aria-controls="RAID"
+            >
+              RAID(Redundant Arrays of Inexpensive Disks)
+            </button>
+          </h2>
+          <div id="RAID" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              複数のディスクを組み合わせ1つの仮想敵なディスクとして扱うことで信頼性や性能を向上させる技術。以下の6つのレベルがある。<br />
+              RAID0(ストライピング)：<br />
+              複数のディスクに分散してデータを書き込むことでアクセス性能を向上させる。<br />
+              RAID1(ミラーリング)：<br />
+              同じデータを2台のディスクに書き込むことで信頼性を向上させる。実質記憶領域は50%となるので記憶効率は悪い。<br />
+              RAID2()：<br />
+              データにエラー訂正用のハミング符号を付加したものをストライピングで書き込む。<br />
+              RAID3：<br />
+              ビット／バイト単位でストライピングを行う。データのエラー訂正用にパリティビットを使用し、1つのディスクをエラー訂正符号の買い込み専用とする。<br />
+              RAID4：<br />
+              RAID3とほぼ同じ。RAID3でビット／バイト単位だったストライピングをブロック単位で行う。<br />
+              RAID5：<br />
+              情報データとともにパリティビットも各ディスクに分散して書き込む方式。信頼性、アクセス性能がともに向上する。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_RARP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#RARP"
+              aria-expanded="false"
+              aria-controls="RARP"
+            >
+              RARP(Reverse Address Resolution Protocol)
+            </button>
+          </h2>
+          <div id="RARP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              自装置のMACアドレスから自装置に割り当てられているIPアドレスを知るためのプロトコル。データリンク層のプロトコルで
+              ブロードキャストを利用する。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_RIP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#RIP"
+              aria-expanded="false"
+              aria-controls="RIP"
+            >
+              RIP(Routing Information Protocol)
+            </button>
+          </h2>
+          <div id="RIP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              LANで最も広く利用されているルーティングプロトコル。距離ベクトル型であり、ホップ数(ルータの数)を用いて選択する経路を決定する。<br />
+              自分の知っている経路制御情報を30秒に1回ネットワーク上にブロードキャストする。他のルータから受け取った経路情報は距離に1足してから次の機会にブロードキャストする。<br />
+              パケットが6回(180秒)こなかった場合には接続が切れたと判断して距離ベクトルデータベースから該当する情報を削除する。またパケットがループし続けないように、ホップの最大数を15とし、これを超えた場合には破棄する。<br />
+              AS内部で使用され、主に小規模ネットワークで使用されるルーティングプロトコル。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_RIP2">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#RIP2"
+              aria-expanded="false"
+              aria-controls="RIP2"
+            >
+              RIP2
+            </button>
+          </h2>
+          <div id="RIP2" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              RIPのバージョン2で次の点が改良されている。<br />
+              ①サブネットマスク対応<br />
+              RIPではクラスのみで判断されるが、RIP2ではサブネットマスクに対応し、可変長のネットワークアドレスをルーティングすることが可能。<br />
+              ②マルチキャスト使用<br />
+              RIPのパケットをブロードキャストではなくマルチキャスト(244.0.0.9)で送ることでトラフィックを軽減する。<br />
+              ③認証<br />
+              自分が認識できるパスワードを持っているRIPパケットのみを受容し、他を無視するという認証の仕組みを使用可能。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_RIPng">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#RIPng"
+              aria-expanded="false"
+              aria-controls="RIPng"
+            >
+              RIPng(Routing Information Protocol next generation)
+            </button>
+          </h2>
+          <div id="RIPng" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              IPv6対応のRIPバージョン。RIPと同様にホップ数を使用してルート計算を行うが、FF02::9(全RIPngルータのIPv6マルチキャストアドレス)を利用して
+              ルーティング情報を交換する。IPv6のネットワーク環境に特化した設計がされている。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_RMON">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#RMON"
+              aria-expanded="false"
+              aria-controls="RMON"
+            >
+              RMON(Remote network MONitoring)
+            </button>
+          </h2>
+          <div id="RMON" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              ネットワークのトラフィック管理において、測定対象の回線やポートなどからパケットをキャプチャして解析し、SNMPを使って管理装置にデータを送信する仕組み。<br />
+              ネットワークで情報を送ったり受け取ったりする状況を遠く離れている場所からモニターする仕組みで、通信するための機器をモニター・メンテナンスするSNMPとともに用いられることが多くなっている。
+              管理者はそれぞれ様子が変化するネットワークの状態を一元的に正確な情報を得られ、トラブルの検知・原因のチェック・構成のオプティマイズを敏速に行える。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_RSVP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#RSVP"
+              aria-expanded="false"
+              aria-controls="RSVP"
+            >
+              RSVP(Resource Reservation Protocol)
+            </button>
+          </h2>
+          <div id="RSVP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              IPネットワークにおいて特定の通信に対して通信品質を確保するためのプロトコル。受信ホストから送信ホストに制御パケットを送信することで、品質確保の対象とする通信が経由するすべてのルータに対して
+              制御設定を行う。この制御設定をもとにルータがその通信のパケットを識別し処理できる仕組みとなっている。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_R値">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#R値"
+              aria-expanded="false"
+              aria-controls="R値"
+            >
+              R値(Rating factor)
+            </button>
+          </h2>
+          <div id="R値" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              主観品質評価と客観品質評価の要素を交え、最高100点で音声を総合的に評価する指標。<br />
+              ノイズ感、音量感、エコーや遅延、歪みや途切れ感といった音声品質を左右する要因に利便性など満足感を与える要素を加えて定量的に算出される。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_SAN">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#SAN"
+              aria-expanded="false"
+              aria-controls="SAN"
+            >
+              SAN(Storage Area Network)
+            </button>
+          </h2>
+          <div id="SAN" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              個々のサーバにストレージを直接接続するのではなく、LANとは別にサーバ群の後ろにストレージ専用のネットワークを構築し、そこにストレージを統合する
+              技術。ストレージとはHDDやSSDなどデータを長期保管しておくための記憶装置の総称。<br />
+              ファイバーチャネルネットワークで構築するFC-SANとTCP/IPネットワークで構築するIP-SANの2種類がある。サーバとSANの接続は光ファイバーを伝送媒体とする
+              FCP(Fiber Channel Protocol)やiSCSI(Internet
+              SCSI)プロトコルによって行われるためより高速な転送が可能となる。またストレージがサーバから独立するため
+              スケールアウトや運用管理も効率的に行えるようになる。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_SDN">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#SDN"
+              aria-expanded="false"
+              aria-controls="SDN"
+            >
+              SDN(Software-Defined Networking)
+            </button>
+          </h2>
+          <div id="SDN" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              OpenFlowスイッチとコントローラーの間にOpenFlowチャネルを確立し、コントローラーはOpenFlowチャネルを介してOpenFlowスイッチの管理を行う。OpenFlowチャネルは通常TLSを使用して暗号化されるが、TCPを介して直接実行される場合もある。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_SOAレコード">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#SOAレコード"
+              aria-expanded="false"
+              aria-controls="SOAレコード"
+            >
+              SOAレコード
+            </button>
+          </h2>
+          <div id="SOAレコード" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              DNSの資源レコード(リソースレコード)のうち、他のDNSサーバのキャッシュ領域に情報を残す許可時間やゾーン情報の更新をチェックする間隔などを指定するレコードのこと。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_SysML">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#SysML"
+              aria-expanded="false"
+              aria-controls="SysML"
+            >
+              SysML(System Modeling Language)
+            </button>
+          </h2>
+          <div id="SysML" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              ソフトウェア設計に用いられるUMLをハードウェアに関する記述を含めたものに拡張し、システム設計を行えるようにしたモデリング言語。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_TDM">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#TDM"
+              aria-expanded="false"
+              aria-controls="TDM"
+            >
+              TDM(Time Division Multiplexing)
+            </button>
+          </h2>
+          <div id="TDM" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              時分割多重化のことで、1つの伝送路で複数の通信を行う際に送信時間を非常に短く区切り、その時間(タイムスロット)ごとに複数の信号を順番に割り当てていくことで多重化通信を行う方式。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_VLAN_ID">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#VLAN_ID"
+              aria-expanded="false"
+              aria-controls="VLAN_ID"
+            >
+              VLAN ID
+            </button>
+          </h2>
+          <div id="VLAN_ID" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              VLAN
+              IDは12ビットで表される番号でVLANを論理的に識別するために使用される。0と4095は予約されているため実際に割り当てられるのは1〜4,094の範囲となる。MACヘッダーのタイプ領域の前に挿入される
+              VLANタグ内に含まれている。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_UWB">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#UWB"
+              aria-expanded="false"
+              aria-controls="UWB"
+            >
+              UWB(Ultra Wide Band)
+            </button>
+          </h2>
+          <div id="UWB" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              超広帯域無線。広い周波数帯にデータを拡散することで高速な伝送を行う無線通信方式で、近距離での映像や音楽配信に利用されている。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_VLANタグ">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#VLANタグ"
+              aria-expanded="false"
+              aria-controls="VLANタグ"
+            >
+              VLANタグ
+            </button>
+          </h2>
+          <div id="VLANタグ" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              IEEE802.1Qヘッダー情報を格納する4バイトのフィールドでタグつきフレームであることを示す識別子、VLAN
+              ID、優先度などの情報を含む。VLANタグはイーサネットフレーム中の送信元MACアドレスとタイプ/長さフィールドの間に
+              挿入される。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_WebSocket">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#WebSocket"
+              aria-expanded="false"
+              aria-controls="WebSocket"
+            >
+              WebSocket
+            </button>
+          </h2>
+          <div id="WebSocket" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Webアプリケーションにおいて、クライアント(Webブラウザ)とWebサーバの間で効率的な双方向通信を実現するプロトコル。通信路確立後はHTTPの手順に縛られず1つのTCPコネクション上でデータのやりとりが可能で、
+              サーバからクライアントへのデータのプッシュが可能となる。URIのスキームにはws(平文通信)またはwss(暗号通信)の2つがあり、デフォルトのポートはwsが80、wssが443とhttp、httpsに準じているが任意のポートを
+              指定できる。WebSocketはクライアント側がハンドシェイク要求をサーバに送信することで開始され、サーバ側からWebSocketの接続開始を要求することはできない。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_Wi-SUN">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#Wi-SUN"
+              aria-expanded="false"
+              aria-controls="Wi-SUN"
+            >
+              Wi-SUN(Wireless Smart Utility Network)
+            </button>
+          </h2>
+          <div id="Wi-SUN" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              920MHz帯を使用するLPWA規格の1つで100台から1,000台のメッシュ側ネットワークのこと。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_WPA2">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#WPA2"
+              aria-expanded="false"
+              aria-controls="WPA2"
+            >
+              WPA2(Wi-Fi Protected Access 2)
+            </button>
+          </h2>
+          <div id="WPA2" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              無線LANの業界団体Wi-Fi
+              Allianceが策定した無線LANの暗号化方式の規格。WPAではWEPで指摘された脆弱性を克服するためにTKIP(Temporal
+              Key Integrity Protocol)を使用して、
+              一定時間(または一定通信量)ごとに暗号鍵を更新することでセキュリティを高めている。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_ZigBee">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#ZigBee"
+              aria-expanded="false"
+              aria-controls="ZigBee"
+            >
+              ZigBee
+            </button>
+          </h2>
+          <div id="ZigBee" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Bluetoothよりも低速(20kbps・250bps)で転送距離も短い(30m程度)ながら、省電力性と低コストの利点を有する無線通信規格。理論上65,536台とBluetoothと比較して非常に多く、多数の端末間を
+              低コストの無線通信で接続可能となる。規格のベース部分にはIEEE802.15.4が使用され、主にIoTなどによるセンサーネットワークの構築を目的としている。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_アドミッション制御">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#アドミッション制御"
+              aria-expanded="false"
+              aria-controls="アドミッション制御"
+            >
+              アドミッション制御
+            </button>
+          </h2>
+          <div id="アドミッション制御" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              ネットワークのQoSを実現するために使用されるトラフィック制御の1つで、通信を開始する前にネットワークに対して帯域などのリソースを要求し、確保の状況に応じて通信を制御すること。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_ウインドウ制御">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#ウインドウ制御"
+              aria-expanded="false"
+              aria-controls="ウインドウ制御"
+            >
+              ウインドウ制御
+            </button>
+          </h2>
+          <div id="ウインドウ制御" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              TCPによる通信において、確認応答を待たずに続けて送信する仕組み。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_確認応答番号">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#確認応答番号"
+              aria-expanded="false"
+              aria-controls="確認応答番号"
+            >
+              確認応答番号
+            </button>
+          </h2>
+          <div id="確認応答番号" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              TCPによる通信で受信者側が送信者側に返す番号。<br />
+              次に送ってほしいデータの先頭位置を表す。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_国際化ドメイン">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#国際化ドメイン"
+              aria-expanded="false"
+              aria-controls="国際化ドメイン"
+            >
+              国際化ドメイン
+            </button>
+          </h2>
+          <div id="国際化ドメイン" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              漢字やひらがな、アラビア文字などのASCII以外の文字をドメインに使用できるようにした仕組み。ユーザー側のアプリケーションにて
+              国際化ドメイン名を一定の法則(Punycode：ピュニコード)に従って英数字からなるドメイン名に変換し、ネームサーバとの通信はこれまで通り
+              7bit ASCIIだけで構成される文字列を用いる。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_シェーピング">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#シェーピング"
+              aria-expanded="false"
+              aria-controls="シェーピング"
+            >
+              シェーピング
+            </button>
+          </h2>
+          <div id="シェーピング" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              ネットワークのQoSを実現するために使用されるトラフィック制御の1つで、パケットの送出間隔を調整することで規定された最大速度を超過しないようにトラフィックを平準化する制御のこと。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_シーケンス番号">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#シーケンス番号"
+              aria-expanded="false"
+              aria-controls="シーケンス番号"
+            >
+              シーケンス番号
+            </button>
+          </h2>
+          <div id="シーケンス番号" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              TCPでデータを送信する際にTCPセグメントに含まれるデータ。
+              送信データの最初の位置を表す番号で、これに送信したオクテット数を加えたものが次回送信のシーケンス番号となる。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_ジッタ">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#ジッタ"
+              aria-expanded="false"
+              aria-controls="ジッタ"
+            >
+              ジッタ
+            </button>
+          </h2>
+          <div id="ジッタ" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              パケット伝送時間の不安定さが原因で生じる到着順の乱れや
+              それに伴い発生する音声や映像の乱れのこと。R値を算出するために測定される。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_スパニングツリープロトコル">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#スパニングツリープロトコル"
+              aria-expanded="false"
+              aria-controls="スパニングツリープロトコル"
+            >
+              スパニングツリープロトコル
+            </button>
+          </h2>
+          <div
+            id="スパニングツリープロトコル"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              L2SWをループ状に構成した際に発生するブロードキャストストーム(ブロードキャストフレームがループ内を周回し続ける状態)を回避するために用いられる。
+              スパニングツリープロトコルによって論理的な木構造として扱うことで障害時の転送経路を確保しつつブロードキャストフレームのループを防止できる。<br />
+              スイッチ間でBPDU(Bridge Protocol Data
+              Unit)と呼ばれる制御フレームをやりとりするが、これに含まれるブリッジの優先順位とMACアドレスを組み合わせた
+              「ブリッジID」フィールドが最も小さいブリッジがルートブリッジとして自動的に選出される。<br />
+              スパニングツリー構築の流れは以下の通り<br />
+              ①各ノードのポートのうちルートノードまでの区間コストが最も低いポートをルートポートとする<br />
+              ②ノード間の各リンクのうちルートノードに近い方を指定ポートする<br />
+              ③ルートポートと指定ポート以外は非指定ポートとしてブロックする
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_認証VLAN">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#認証VLAN"
+              aria-expanded="false"
+              aria-controls="認証VLAN"
+            >
+              認証VLAN
+            </button>
+          </h2>
+          <div id="認証VLAN" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              VLANの方式の1つでネットワーク接続前に「MACアドレス認証」「ID +
+              パスワードによる認証」「IEEE
+              802.1x」などでユーザーを特定し、ユーザーことに所属すべきVLANに
+              振り分けることで端末のグルーピングを行う技術。これにより接続ポート単位やアドレス単位というグルーピングができない無線アクセスポイントへの接続でもVLANに対応させることができる。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_パイプライン処理">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#パイプライン処理"
+              aria-expanded="false"
+              aria-controls="パイプライン処理"
+            >
+              パイプライン処理
+            </button>
+          </h2>
+          <div id="パイプライン処理" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              パイプラインの処理時間は以下の公式で求められる。<br />
+              (D + I - 1) × P<br />
+              D：パイプラインの深さ(命令のステージ数)<br />
+              I：命令数<br />
+              P：パイプラインのピッチ(時間)
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_ハミング符号">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#ハミング符号"
+              aria-expanded="false"
+              aria-controls="ハミング符号"
+            >
+              ハミング符号
+            </button>
+          </h2>
+          <div id="ハミング符号" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              送信される情報ビットに対して検査ビットを付加することで受信側で2ビットの誤り検出と1ビットの自動訂正機能を持った方式。
+              ECCメモリやRAID2、Bluetoothの誤り訂正方式として採用されている。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_フラグシーケンス">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#フラグシーケンス"
+              aria-expanded="false"
+              aria-controls="フラグシーケンス"
+            >
+              フラグシーケンス
+            </button>
+          </h2>
+          <div id="フラグシーケンス" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              送信するデータの境目を識別するためにフレームの前後に挿入される「01111110」という8ビットのパターンのこと。データ中の1が連続して5回続く部分に対しては送信時にそのあとに0を挿入して
+              受信側で挿入された0を取り除く「ゼロインサーション処理」を行うことでフラグの一貫性を保っている。<br />
+              HDLC手順ではこのフラグを使用して同期をとる「フラグ同期方式」が採用されている。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_ベストエフォート">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#ベストエフォート"
+              aria-expanded="false"
+              aria-controls="ベストエフォート"
+            >
+              ベストエフォート
+            </button>
+          </h2>
+          <div id="ベストエフォート" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              通信網は最善を尽くすが利用状況によっては通信の品質を保証しないとするサービスの方針のこと。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_ポリシング">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#ポリシング"
+              aria-expanded="false"
+              aria-controls="ポリシング"
+            >
+              ポリシング
+            </button>
+          </h2>
+          <div id="ポリシング" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              ネットワークのQoSを実現するために使用されるトラフィック制御の1つで、入力されたトラフィックが規定された最大速度を超過しないか監視し、超過分のパケットを破棄するか優先度を下げる制御のこと。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_待ち行列モデル">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#待ち行列モデル"
+              aria-expanded="false"
+              aria-controls="待ち行列モデル"
+            >
+              待ち行列モデル
+            </button>
+          </h2>
+          <div id="待ち行列モデル" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              M/M/1の待ち行列モデルにおいて待ち行列に並んでからサービスを受け終わるまでに要する平均時間は次の式で計算する。
+              (利用率 / (1 - 利用率)) × 平均サービス時間 + 平均サービス時間
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_マルチキャストアドレス">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#マルチキャストアドレス"
+              aria-expanded="false"
+              aria-controls="マルチキャストアドレス"
+            >
+              マルチキャストアドレス
+            </button>
+          </h2>
+          <div id="マルチキャストアドレス" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              先頭4ビットは「1110」固定で(クラスD)残りの28ビットはグループを識別するための領域として使用される。<br />
+              一部のアドレスはWell-Knownアドレスとして用途が決められているが、他のアドレスは用途ごとのアドレス範囲の中で自由に使用できる。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_メモリインタリープ">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#メモリインタリープ"
+              aria-expanded="false"
+              aria-controls="メモリインタリープ"
+            >
+              メモリインタリープ
+            </button>
+          </h2>
+          <div id="メモリインタリープ" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              物理上は1つである主記憶領域を同時アクセス可能は複数の論理的な領域(バンク)に分け、それぞれのバンクに対してデータの読み書きを並列で行うことにより、メモリアクセスの高速化を図る技術。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_優先制御">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#優先制御"
+              aria-expanded="false"
+              aria-controls="優先制御"
+            >
+              優先制御
+            </button>
+          </h2>
+          <div id="優先制御" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              ネットワークのQoSを実現するために使用されるトラフィック制御の1つで、フレームの種類や宛先に応じて優先度を変えて中継すること。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_量子アニーリング方式">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#量子アニーリング方式"
+              aria-expanded="false"
+              aria-controls="量子アニーリング方式"
+            >
+              量子アニーリング方式
+            </button>
+          </h2>
+          <div id="量子アニーリング方式" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              量子特有の性質を情報処理に利用して組み合わせ最適化問題を解くことに特化した量子コンピュータのこと。膨大な選択肢の中から最適な選択肢を探すアルゴリズムに特化している。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_量子ゲート方式">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#量子ゲート方式"
+              aria-expanded="false"
+              aria-controls="量子ゲート方式"
+            >
+              量子ゲート方式
+            </button>
+          </h2>
+          <div id="量子ゲート方式" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              極低温の環境の中で量子ゲートを用いて演算を行う量子コンピュータのこと。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_ルーティングポリシー">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#ルーティングポリシー"
+              aria-expanded="false"
+              aria-controls="ルーティングポリシー"
+            >
+              ルーティングポリシー
+            </button>
+          </h2>
+          <div id="ルーティングポリシー" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              インターネット上のいろいろな対地に対して、どの隣接ASを通じてトラフィックを到達させるか関する方針のこと。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_ルートリフレクション">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#ルートリフレクション"
+              aria-expanded="false"
+              aria-controls="ルートリフレクション"
+            >
+              ルートリフレクション
+            </button>
+          </h2>
+          <div id="ルートリフレクション" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              ルータが受け取った情報をループを発生させることなく他のルータに転送する仕組みによって確立が必要なセッション数を削減する機能。BGPルータはAS内のすべてのBGPルータとの間で
+              IBGPセッションを張る必要があるが、このときに生じるスケーラビリティ問題を回避するために利用される。
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-</body>
+  </body>
 </html>
