@@ -61,6 +61,26 @@
             </div>
           </div>
         </div>
+        <div class="accordion-item" id="h_ALPN">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#ALPN"
+              aria-expanded="false"
+              aria-controls="ALPN"
+            >
+              ALPN(Application-Layer Protocol Negotiation)
+            </button>
+          </h2>
+          <div id="ALPN" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              TLSプロトコルの拡張の1つで、クライアントとサーバ間でプロトコルのネゴシエーションを行い使用するプロトコルを決定するために使用する。
+              HTTP/2の通信開始処理で用いられる。TLSセッション開始時のClientHello、ServerHelloにネゴシエーションが含まれ、ネゴシエーションにはクライアントが利用可能なアプリケーション階層のプロトコルの情報が含まれる。
+            </div>
+          </div>
+        </div>
         <div class="accordion-item" id="h_AS">
           <h2 class="accordion-header">
             <button
@@ -541,6 +561,26 @@
           <div id="HDCP" class="accordion-collapse collapse">
             <div class="accordion-body">
               HDMI端子が搭載されたデジタルAV機器に採用され、HDMI端子やDisplayPort端子から表示機器にデジタル信号を送るときに受信する経路を暗号化する方式。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_HTTP_2">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#HTTP_2"
+              aria-expanded="false"
+              aria-controls="HTTP_2"
+            >
+              HTTP/2
+            </button>
+          </h2>
+          <div id="HTTP_2" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              HTTP/2のヘッダー情報はバイナリ圧縮されており、ヘッダーフィールドには必須フィールドとして:schema、:path、:methodがある。
+              :methodではGET、POSTなどHTTP/1.1でのメソッドに該当するものを記述する。
             </div>
           </div>
         </div>
@@ -1751,6 +1791,25 @@
             <div class="accordion-body">
               パケット伝送時間の不安定さが原因で生じる到着順の乱れや
               それに伴い発生する音声や映像の乱れのこと。R値を算出するために測定される。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_ストリーム">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#ストリーム"
+              aria-expanded="false"
+              aria-controls="ストリーム"
+            >
+              ストリーム
+            </button>
+          </h2>
+          <div id="ストリーム" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              HTTP/2においてTCPコネクション内での仮想的な通信路のこと。複数のリクエストとレスポンスのやり取りを多重化することができる。
             </div>
           </div>
         </div>
