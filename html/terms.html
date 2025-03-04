@@ -650,7 +650,27 @@
           <div id="IGMP" class="accordion-collapse collapse">
             <div class="accordion-body">
               IPマルチキャストにおいて参加するホストのグループを制御するためのプロトコル。「グループへの参加」「グループの問い合わせ」「グループの維持」「グループからの離脱」という
-              4つの機能を持っている。
+              4つの機能を持っている。IGMPv2ではIGMPメンバーシップレポートにSender(送信ホスト)のIPアドレスを指定できず、グループアドレスしか指定できないが、IGMPv3では両方指定できる。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_IGMPスヌーピング">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#IGMPスヌーピング"
+              aria-expanded="false"
+              aria-controls="IGMPスヌーピング"
+            >
+              IGMPスヌーピング
+            </button>
+          </h2>
+          <div id="IGMPスヌーピング" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              レシーバから送信されるパケットをすヌーピング(盗み見)することによってどのスイッチの先にどのマルチキャストグループのメンバーが存在するかを認識することができる機能。不要なインターフェースへの
+              転送を防ぐことで負荷を軽減することができる。
             </div>
           </div>
         </div>
@@ -1171,6 +1191,29 @@
             </div>
           </div>
         </div>
+        <div class="accordion-item" id="h_PIM_SM">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#PIM_SM"
+              aria-expanded="false"
+              aria-controls="PIM_SM"
+            >
+              PIM-SM(Protocol-Independent Multicast Sparse Mode)
+            </button>
+          </h2>
+          <div id="PIM_SM" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Sparseモードのマルチキャストルーティングプロトコルで、Explicit
+              Join(明示的な参加)で作成される。送信元ツリーと共有ツリーを組み合わせて使用する。<br />
+              まず空のディストリビューションツリーを作成し、そのツリーに明示的にJoin
+              Request(参加要求)があった場合のみそのルータをツリーに追加する。ツリーの中心にはRP(ランデブーポイント)と呼ばれる
+              ルータが存在しマルチキャストのトラフィックを受信したいReceiverが接続されているルータはRPにその情報が登録される。
+            </div>
+          </div>
+        </div>
         <div class="accordion-item" id="h_PPP">
           <h2 class="accordion-header">
             <button
@@ -1472,6 +1515,26 @@
           <div id="SOAレコード" class="accordion-collapse collapse">
             <div class="accordion-body">
               DNSの資源レコード(リソースレコード)のうち、他のDNSサーバのキャッシュ領域に情報を残す許可時間やゾーン情報の更新をチェックする間隔などを指定するレコードのこと。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_SSM">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#SSM"
+              aria-expanded="false"
+              aria-controls="SSM"
+            >
+              SSM(Source Specific Multicast)
+            </button>
+          </h2>
+          <div id="SSM" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              PIM-SMから派生したモードで、「one-to-many」のマルチキャスト通信で効率よくパケットを転送できる。(S,
+              G)エントリのみを作成してSenderからReceiverへとマルチキャストパケットをルーティングする。
             </div>
           </div>
         </div>
@@ -1843,6 +1906,28 @@
             </div>
           </div>
         </div>
+        <div class="accordion-item" id="h_ディストリビューションツリー">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#ディストリビューションツリー"
+              aria-expanded="false"
+              aria-controls="ディストリビューションツリー"
+            >
+              ディストリビューションツリー
+            </button>
+          </h2>
+          <div
+            id="ディストリビューションツリー"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              マルチキャスト通信において、マルチキャストグループのメンバーが参加、離脱することから動的に形成される。複数のパケットの転送先にパケットがコピーされ、枝分かれしてツリー状に形成される。
+            </div>
+          </div>
+        </div>
         <div class="accordion-item" id="h_認証VLAN">
           <h2 class="accordion-header">
             <button
@@ -1926,6 +2011,25 @@
               送信するデータの境目を識別するためにフレームの前後に挿入される「01111110」という8ビットのパターンのこと。データ中の1が連続して5回続く部分に対しては送信時にそのあとに0を挿入して
               受信側で挿入された0を取り除く「ゼロインサーション処理」を行うことでフラグの一貫性を保っている。<br />
               HDLC手順ではこのフラグを使用して同期をとる「フラグ同期方式」が採用されている。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_フラッディング">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#フラッディング"
+              aria-expanded="false"
+              aria-controls="フラッディング"
+            >
+              フラッディング
+            </button>
+          </h2>
+          <div id="フラッディング" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              マルチキャストフレームにおいて同一セグメント上の受信インターフェース以外のすべてのインターフェースにフレームを転送する動作のこと。
             </div>
           </div>
         </div>
