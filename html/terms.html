@@ -145,7 +145,18 @@
               LP値(LOCAL_PREFERENCE):<br />
               外部ASにパケットを転送するための自ASの出口を指定する。自AS内でのみ有効で、全iBGPピアに伝搬される。大きい値が優先されデフォルトは100。トラフィックの出口を内部ネットワークにBGPUpdateで伝える。<br />
               MED値:<br />
-              自AS内NW宛のトラフィックの入口を、eBGPネイバーに伝える。eBGPネイバー間で有効となる。小さい値が優先されデフォルトは0。トラフィックの入口を外部ASにBGPUpdateで伝える。
+              自AS内NW宛のトラフィックの入口を、eBGPネイバーに伝える。eBGPネイバー間で有効となる。小さい値が優先されデフォルトは0。トラフィックの入口を外部ASにBGPUpdateで伝える。<br /><br />
+              BGPでは以下のメッセージが交換される。<br />
+              OPEN：<br />
+              BGP接続開始時に交換する。自AS番号、BGPID、バージョンなどの情報を含む<br />
+              UPDATE：<br />
+              経路情報の交換に利用する。経路の追加や削除が発生した場合に送信される<br />
+              NOTIFICATION：<br />
+              エラーを検出した場合に送信される<br />
+              KEEPALIVE：<br />
+              BGP接続の確立やBGP接続の維持のために交換する<br />
+              ルーティング方法には手動で経路を設定する静的経路制御(スタティックルーティング)と動的にルーティングプロトコルを用いて経路を設定する動的経路制御(ダイナミックルーティング)が
+              ある。同じ宛先ネットワークに対して複数のルーティング設定が存在する場合は静的経路制御が優先される。
             </div>
           </div>
         </div>
@@ -1014,6 +1025,26 @@
             <div class="accordion-body">
               複数の端末と同時に通信できる無線LANの技術のこと。ネットワークのスループットを向上させ、通信速度の高速化とネットワークの混雑の軽減を実現する。
               送信側の機器と受信側の機器のそれぞれで複数のアンテナを用いて複数のストリームを生成し、複数の端末での同時通信を可能とする。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_next_hop_self設定">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#next_hop_self設定"
+              aria-expanded="false"
+              aria-controls="next_hop_self設定"
+            >
+              next-hop-self設定
+            </button>
+          </h2>
+          <div id="next_hop_self設定" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              BGPのパス属性であるNEXT_HOPに自身のIPアドレスを設定するもの。iBGPピアではNEXT_HOPの値が更新されないため明示的に
+              自身のIPアドレスを設定することで自身がネクストホップのルータになる。
             </div>
           </div>
         </div>
