@@ -61,6 +61,25 @@
             </div>
           </div>
         </div>
+        <div class="accordion-item" id="h_AEAD">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#AEAD"
+              aria-expanded="false"
+              aria-controls="AEAD"
+            >
+              AEAD(Authenticated Encryption with Associated Data)
+            </button>
+          </h2>
+          <div id="AEAD" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              暗号化による秘匿性とデータが改ざんされていないことを保証する完全性を同時に満たす暗号方式。
+            </div>
+          </div>
+        </div>
         <div class="accordion-item" id="h_ALPN">
           <h2 class="accordion-header">
             <button
@@ -493,6 +512,30 @@
             <div class="accordion-body">
               PPPの認証機能を拡張したプロトコル。デジタル証明書、メッセージダイジェスト、OTPなど様々な認証方式をサポートしているが
               暗号化通信の機能は規定されていない。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_ECMP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#ECMP"
+              aria-expanded="false"
+              aria-controls="ECMP"
+            >
+              ECMP(Equal Cost Multi-Path、等コストマルチパス)
+            </button>
+          </h2>
+          <div id="ECMP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              あるルータから見てある特定の目的地までの間にコストが等しい経路が複数存在すること。またその複数の経路にトラフィックを振り分けることで負荷分散を行うこと。
+              以下の2つの動作モードがある。<br />
+              パケットモード：<br />
+              連続した通信パケットがランダムに複数経路に分散されるモード<br />
+              フローモート：<br />
+              送信元IPアドレスと宛先IPアドレスからハッシュ値を計算するため、送信元IPアドレスと宛先IPアドレスが同じ一連のパケットが同じ経路で送信されるモード
             </div>
           </div>
         </div>
@@ -1181,15 +1224,17 @@
           </h2>
           <div id="OSPF" class="accordion-collapse collapse">
             <div class="accordion-body">
-              リンク状態型のルーティングプロトコルで、すべてのルータがネットワークのトポロジー(接続状態)を完全に把握し、それをもとに制御制御を行う。ループがあるネットワークでも安定した経路制御が可能となる。各リンクに重み(コスト)をつけることができ、コストの合計が最も小さい経路が選択される。<br />
-              すべてのルータ間で経路情報が交換されるわけではなく、指名ルータが決められそれを中心に経路制御情報が交換される。またルータの台数が増えた場合にはエリアというグループに分けて管理される。各エリアは必ずバックボーンエリアに接続され、バックボーンエリアと各エリアの教会にあるルータはエリア境界ルータと呼ばれる。<br />
+              リンク状態型のルーティングプロトコルで、すべてのルータがネットワークのトポロジー(接続状態)を完全に把握し、それをもとに制御制御を行う。
+              ループがあるネットワークでも安定した経路制御が可能となる。各リンクに重み(コスト)をつけることができ、コストの合計が最も小さい経路が選択される。<br />
+              すべてのルータ間で経路情報が交換されるわけではなく、指名ルータが決められそれを中心に経路制御情報が交換される。またルータの台数が増えた場合には
+              エリアというグループに分けて管理される。各エリアは必ずバックボーンエリアに接続され、バックボーンエリアと各エリアの教会にあるルータはエリア境界ルータと呼ばれる。<br />
               主に中規模から大規模ネットワークで使用され、AS内部の経路制御に用いられる。<br />
-              　OSPFv2：<br />
-              　　IPv4アドレスを使用してルーティングテーブルを作成する<br />
-              　　シンプルな認証方法(平文テキストやMD5)が使用される<br />
-              　OSPFv3：<br />
-              　　IPv6アドレスを使用してルーティングテーブルを作成する<br />
-              　　IPSecを使用したセキュリティが導入されている
+              OSPFv2：<br />
+              IPv4アドレスを使用してルーティングテーブルを作成する<br />
+              シンプルな認証方法(平文テキストやMD5)が使用される<br />
+              OSPFv3：<br />
+              IPv6アドレスを使用してルーティングテーブルを作成する<br />
+              IPSecを使用したセキュリティが導入されている
             </div>
           </div>
         </div>
@@ -1589,6 +1634,34 @@
             </div>
           </div>
         </div>
+        <div class="accordion-item" id="h_SSL_VPN">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#SSL_VPN"
+              aria-expanded="false"
+              aria-controls="SSL_VPN"
+            >
+              SSL-VPN
+            </button>
+          </h2>
+          <div id="SSL_VPN" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              SSL技術を利用したVPNプロトコルで以下の3つの方式がある。<br />
+              リバースプロキシ方式：<br />
+              外部のネットワークから内部のネットワークにアクセスするための方式。指定されたhttps://〜で始まるURLにWebブラウザ経由でアクセスするとSSL-VPN装置がアクセス元の認証を行い
+              内部ネットワークにアクセスできる。Webブラウザで構築されるため専用のソフトは不要だが、Webブラウザに対応していないアプリケーションでは利用できない。<br />
+              ポートフォワーディング方式：<br />
+              クライアント側に通信用モジュールをインストールし、そのモジュールとSSL-VPN装置間でSSL通信を確立する方式。SSL-VPN装置には事前に利用するサーバやポートを設定する必要があり、
+              通信中にポートが変化するようなアプリケーションでは利用できない。<br />
+              L2フォワーディング方式：<br />
+              クライアント側にSSL-VPNクライアントソフトをインストールし、そのSSL-VPNクライアントソフトとSSL-VPN装置間でSSL通信を確立する方式。SSL-VPNクライアントソフトにある
+              仮想NICにVPN接続用のIPアドレスが付与されるためポート番号が変化するアプリケーションでも利用可能となる。
+            </div>
+          </div>
+        </div>
         <div class="accordion-item" id="h_SSM">
           <h2 class="accordion-header">
             <button
@@ -1665,6 +1738,35 @@
           <div id="TDM" class="accordion-collapse collapse">
             <div class="accordion-body">
               時分割多重化のことで、1つの伝送路で複数の通信を行う際に送信時間を非常に短く区切り、その時間(タイムスロット)ごとに複数の信号を順番に割り当てていくことで多重化通信を行う方式。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_TLSプロトコル">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#TLSプロトコル"
+              aria-expanded="false"
+              aria-controls="TLSプロトコル"
+            >
+              TLSプロトコル
+            </button>
+          </h2>
+          <div id="TLSプロトコル" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              トランスポート層で利用されるセキュリティプロトコル。Webアプリケーションとサーバ間の通信の暗号化、メールやメッセージ、VoIPなどの通信の暗号化にも利用される。
+              TLS1.2までの暗号スイートでは「鍵交換_署名_暗号化_ハッシュ関数」の組で個別に使用するプロトコルを決定していたが、TLS1.3では「暗号化_ハッシュ関数」だけの
+              構成となっている。またTLS1.3ではAEAD暗号利用モードで暗号化のプロコトルを決定して暗号化を行う。TLS1.2までの鍵交換方式であるDHでは前方秘匿性が実現されていないが、
+              TLS1.3では前方秘匿性が実現されているため通信後に秘密鍵の安全性が破られたとしても過去のセッション鍵の安全性は保証される。<br />
+              TLSは以下の3つの要素で構成される<br />
+              暗号化：<br />
+              転送されるデータを第三者から隠す<br />
+              認証：<br />
+              情報を交換する当事者がそれぞれ自称している本人であることを保証する<br />
+              完全性：<br />
+              データが改ざん、偽造されていないことを証明する
             </div>
           </div>
         </div>
@@ -1745,6 +1847,27 @@
           <div id="VRF" class="accordion-collapse collapse">
             <div class="accordion-body">
               1つのルータ上で独立した複数のルーティングテーブルを保持できる技術。1台のルータでインスタンスごとにルーティングテーブルを保持できる。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_VRRP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#VRRP"
+              aria-expanded="false"
+              aria-controls="VRRP"
+            >
+              VRRP(Virtual Router Redundancy Protocol)
+            </button>
+          </h2>
+          <div id="VRRP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              物理的に2台あるルータを論理的(仮想的)に1台のルータとして動作させる技術。2台のルータはそれぞれマスタとバックアップに分けられ、通常のマスタとなるルータの優先度を
+              あげることでマスタが通信に利用される。マスタルータ自体に障害が発生した場合、バックアップルータはその障害を検知して自動的にマスタルータとして通信を行う。マスタルータの
+              インターフェースの障害は通常バックアップルータでは検知できないため、インターフェースに障害が発生した場合は自動的にマスタルータに優先度を下げるように設定される場合がある。
             </div>
           </div>
         </div>
@@ -2112,6 +2235,27 @@
           >
             <div class="accordion-body">
               マルチキャスト通信において、マルチキャストグループのメンバーが参加、離脱することから動的に形成される。複数のパケットの転送先にパケットがコピーされ、枝分かれしてツリー状に形成される。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_電子証明書">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#電子証明書"
+              aria-expanded="false"
+              aria-controls="電子証明書"
+            >
+              電子証明書
+            </button>
+          </h2>
+          <div id="電子証明書" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              信頼できる第三者が間違いなく本人であることを電子的に証明するもので、書面取引における印鑑証明書の代わりとなる。O(Organization)やCN(Common
+              Name)など
+              証明対象を識別する識別用情報はSubjectフィールドに記述される。
             </div>
           </div>
         </div>
