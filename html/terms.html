@@ -121,6 +121,26 @@
             </div>
           </div>
         </div>
+        <div class="accordion-item" id="h_ATM">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#ATM"
+              aria-expanded="false"
+              aria-controls="ATM"
+            >
+              ATM(Asynchronous Transfer Mode)
+            </button>
+          </h2>
+          <div id="ATM" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              コネクション型のデータリンクで、データを「ヘッダー5オクテット+データ48オクテット」の53オクテットのセルという単位に
+              分割して通信を行う。
+            </div>
+          </div>
+        </div>
         <div class="accordion-item" id="h_BBR">
           <h2 class="accordion-header">
             <button
@@ -293,6 +313,27 @@
               配信するサービス。もともとはWebコンテンツの高速かつ安定的な配信を目的としたものだったが、トラフィックの分散、
               CDNが有するトラフィックフィルタリング、キャッシュ機能などにより、オリジンサーバへのトラフィックを抑えることができ
               結果的にDDoS攻撃への耐性が高まり自社ネットワークの被害を抑えることができる。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_CHAP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#CHAP"
+              aria-expanded="false"
+              aria-controls="CHAP"
+            >
+              CHAP(Challenge Handshake Authentication Protocol)
+            </button>
+          </h2>
+          <div id="CHAP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              チャレンジレスポンス方式を用いてユーザ認証を行うプロトコル。サーバが毎回異なるデータを生成しチャレンジとしてクライアントに送信する。
+              クライアントは送信されたチャレンジと入力されたパスワードを演算してレスポンスとしてサーバに返す。サーバは登録されたパスワードを用いて
+              演算し一致すれば認証成功となる。CHAPでは演算にハッシュ関数が用いられる。
             </div>
           </div>
         </div>
@@ -574,9 +615,8 @@
           </h2>
           <div id="FDDI" class="accordion-collapse collapse">
             <div class="accordion-body">
-              光ファイバーを通信媒体に使用し、2,000mまでの距離で最大100Mbpsの通信を行うLANの規格の1つ。伝送制御にトークンリング(IEEE
-              802.5)と同じ
-              トークンパッシング方式が使用され、リング型のネットワークトポロジーで構成されることが特徴(スター型も可能)。
+              トークンパッシング方式(アペンドトークン方式)で通信を行うデータリンクで、光ファイバやツイストペアケーブルを使用することで
+              最大2,000mまでの距離で最大100Mbpsの通信を行うLANの規格の1つ。リング型のネットワークトポロジーで構成されることが特徴(スター型も可能)。
             </div>
           </div>
         </div>
@@ -1345,13 +1385,17 @@
           </h2>
           <div id="PPP" class="accordion-collapse collapse">
             <div class="accordion-body">
-              電話回線を通じてコンピュータをネットワークに接続するダイヤルアップ接続でよく使われる、2点間を接続してデータ通信を行うための通信プロトコル。
-              通信にリンク制御プロトコル(Link Control
-              Protocol:LCP)とネットワーク制御プロトコル(Network Control
-              Protocol:NCP)という2つの通信プロトコルを使用する。
-              パケットのヘッダー領域を圧縮して伝送したり、PAP(Password
-              Authentication Protocol)やCHAP(Challenge Handshake Authentication
-              Protocol)といった 認証機能を含んでいる。
+              電話回線を通じてコンピュータをネットワークに接続するダイヤルアップ接続でよく使われる、2点間を接続してデータ通信を行うためのコネクション型の通信プロトコル。
+              通信に上位層に依存するリンク制御プロトコル(Link Control
+              Protocol:LCP)と上位層に依存しないネットワーク制御プロトコル(Network
+              Control Protocol:NCP)という2つの通信プロトコルを使用する。<br />
+              NCPでは上位層(ネットワーク層)がIPのときにはIPCP(Internet Protocol
+              Control Protocol)を利用する。
+              IPCPではIPアドレスの自動割り当てなどを行う。<br />
+              LCPではコネクションの確立や切断、ユーザ認証を行う。最初にリンク確立フェーズでリンクを確立し、その後認証フェーズで認証を行う。
+              認証を行うプロトコルとして、PAP(Password Authentication
+              Protocol)とCHAP(Challenge Handshake Authentication
+              Protocol)の2種類を使用する。
             </div>
           </div>
         </div>
@@ -1866,8 +1910,10 @@
           <div id="VRRP" class="accordion-collapse collapse">
             <div class="accordion-body">
               物理的に2台あるルータを論理的(仮想的)に1台のルータとして動作させる技術。2台のルータはそれぞれマスタとバックアップに分けられ、通常のマスタとなるルータの優先度を
-              あげることでマスタが通信に利用される。マスタルータ自体に障害が発生した場合、バックアップルータはその障害を検知して自動的にマスタルータとして通信を行う。マスタルータの
-              インターフェースの障害は通常バックアップルータでは検知できないため、インターフェースに障害が発生した場合は自動的にマスタルータに優先度を下げるように設定される場合がある。
+              あげることでマスタが通信に利用される。マスタルータ自体に障害が発生した場合、バックアップルータはその障害を検知して自動的にマスタルータとして通信を行う。
+              マスタとバックアップは互いに定期的にVRRPアドバタイズメンと(VRRP広告)を送り合うことで正常に稼働していることを確認する。マスタルータのインターフェースの障害は
+              通常バックアップルータでは検知できないため、インターフェースに障害が発生した場合は自動的にマスタルータに優先度を下げるように設定される場合がある。
+              VRRPでは仮想ルータごとにVRRPグループを作成してグループを識別するためにVRIDを使用する。VRIDは8ビットで、0以外の最大255組の仮想ルータを使用できる。
             </div>
           </div>
         </div>
@@ -2381,6 +2427,28 @@
           <div id="フラッディング" class="accordion-collapse collapse">
             <div class="accordion-body">
               マルチキャストフレームにおいて同一セグメント上の受信インターフェース以外のすべてのインターフェースにフレームを転送する動作のこと。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_プリアンブル">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#プリアンブル"
+              aria-expanded="false"
+              aria-controls="プリアンブル"
+            >
+              プリアンブル
+            </button>
+          </h2>
+          <div id="プリアンブル" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              イーサネットフレームを送信する前につけられるフィールドで、通信相手のNIC(Network
+              Interface Card)と同期を取るために使用される。
+              1と0を交互に並べて7オクテット送ったあとに「10101011」と8オクテット目の末尾を1にして送ることでプリアンブルの終わりを表す。最後の1オクテットは
+              SFD(Start Frame Delimiter)と呼ばれる。
             </div>
           </div>
         </div>
