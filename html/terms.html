@@ -920,6 +920,25 @@
             </div>
           </div>
         </div>
+        <div class="accordion-item" id="h_LLDP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#LLDP"
+              aria-expanded="false"
+              aria-controls="LLDP"
+            >
+              LLDP(Link Layer Discovery Protocol)
+            </button>
+          </h2>
+          <div id="LLDP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              OSI基本参照モデルのデータリンク層(第2層)で動作する隣接する機器に自分の情報を広告(Advertise)するためのプロトコル。
+            </div>
+          </div>
+        </div>
         <div class="accordion-item" id="h_LSA">
           <h2 class="accordion-header">
             <button
@@ -1268,6 +1287,8 @@
               ループがあるネットワークでも安定した経路制御が可能となる。各リンクに重み(コスト)をつけることができ、コストの合計が最も小さい経路が選択される。<br />
               すべてのルータ間で経路情報が交換されるわけではなく、指名ルータが決められそれを中心に経路制御情報が交換される。またルータの台数が増えた場合には
               エリアというグループに分けて管理される。各エリアは必ずバックボーンエリアに接続され、バックボーンエリアと各エリアの教会にあるルータはエリア境界ルータと呼ばれる。<br />
+              OSPFではすべてのルータがエリア0に接続されている必要があるため、エリア0に直接接続できないエリアが発生した場合にはOSPF仮想リンクを導入することで2台のエリア境界ルータの
+              間に論理リンクを確立させエリア0へ到達させる。<br />
               主に中規模から大規模ネットワークで使用され、AS内部の経路制御に用いられる。<br />
               OSPFv2：<br />
               IPv4アドレスを使用してルーティングテーブルを作成する<br />
@@ -1811,6 +1832,26 @@
               情報を交換する当事者がそれぞれ自称している本人であることを保証する<br />
               完全性：<br />
               データが改ざん、偽造されていないことを証明する
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_traceroute">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#traceroute"
+              aria-expanded="false"
+              aria-controls="traceroute"
+            >
+              traceroute
+            </button>
+          </h2>
+          <div id="traceroute" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              宛先ホストまでのネットワーク経路をリスト表示するコマンド。データが通過するルータのIPアドレスの確認、データの送信元から宛先までの応答遅延、データが送信されなかった場所の特定、
+              想定した経路を通っているかの確認などが可能。
             </div>
           </div>
         </div>
