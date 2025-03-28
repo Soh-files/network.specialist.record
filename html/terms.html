@@ -416,6 +416,26 @@
             </div>
           </div>
         </div>
+        <div class="accordion-item" id="h_CS_ACELP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#CS_ACELP"
+              aria-expanded="false"
+              aria-controls="CS_ACELP"
+            >
+              CS-ACELP(Conjugate-Structure Algebraic-Code-Excited
+              Linear-Prediction)
+            </button>
+          </h2>
+          <div id="CS_ACELP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              国際標準の音声符号化方式。G.729として標準化されており8kビット/秒の固定ビットで通信を行う。
+            </div>
+          </div>
+        </div>
         <div class="accordion-item" id="h_DMARC">
           <h2 class="accordion-header">
             <button
@@ -495,6 +515,26 @@
               脆弱性のある公開DNSキャッシュサーバを踏み台として悪用することで行われる分散型サービス妨害(DDoS)攻撃の1つ。DNSサーバをDNSキャッシュサーバと権威DNSサーバに分離し、
               踏み台として悪用されないためには、インターネット側からDNSキャッシュサーバに問い合わせできないようにしたり、利用可能なホストのIPアドレスの範囲を設定してDNSキャッシュサーバが不要なクエリを拒否するように
               アクセス制限を施したりする必要がある。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_DSCP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#DSCP"
+              aria-expanded="false"
+              aria-controls="DSCP"
+            >
+              DSCP(Diffrentiated Service Code Point)
+            </button>
+          </h2>
+          <div id="DSCP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              IP
+              Precedenceと同様にIPパケットに優先度を付加するために使用される。IPヘッダのToSフィールド(8ビット)のうち6ビットが使用される。
             </div>
           </div>
         </div>
@@ -2016,7 +2056,14 @@
               無線LANの業界団体Wi-Fi
               Allianceが策定した無線LANの暗号化方式の規格。WPAではWEPで指摘された脆弱性を克服するためにTKIP(Temporal
               Key Integrity Protocol)を使用して、
-              一定時間(または一定通信量)ごとに暗号鍵を更新することでセキュリティを高めている。
+              一定時間(または一定通信量)ごとに暗号鍵を更新することでセキュリティを高めている。<br />
+              AES(Advanced Encryption
+              Standard)を暗号化方式として採用しており、128〜256ビットの可変長鍵を利用した強力な
+              暗号化が可能。<br />
+              パーソナルモード(WPA2-PSK)とエンタープライズモード(WPA2-EAP)の2つのモードで動作する。<br />
+              CCMP(Counter Mode Cipher Block Chaining Message Authentication
+              Code Protocol)プロトコルが利用されており、
+              メッセージ認証と整合性検証が備わっている。
             </div>
           </div>
         </div>
