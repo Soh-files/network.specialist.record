@@ -960,6 +960,26 @@
             </div>
           </div>
         </div>
+        <div class="accordion-item" id="h_LACP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#LACP"
+              aria-expanded="false"
+              aria-controls="LACP"
+            >
+              LACP(Link Aggregation Control Protocol)
+            </button>
+          </h2>
+          <div id="LACP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              スイッチ間でネゴシエーションを行い動的にリンクアグリゲーション機能をONにするプロトコル。自動的に故障を検知することができ、リンクアグリゲーションのメンバーから
+              除外することができる。
+            </div>
+          </div>
+        </div>
         <div class="accordion-item" id="h_LDAP">
           <h2 class="accordion-header">
             <button
@@ -1737,6 +1757,33 @@
           <div id="SDN" class="accordion-collapse collapse">
             <div class="accordion-body">
               OpenFlowスイッチとコントローラーの間にOpenFlowチャネルを確立し、コントローラーはOpenFlowチャネルを介してOpenFlowスイッチの管理を行う。OpenFlowチャネルは通常TLSを使用して暗号化されるが、TCPを介して直接実行される場合もある。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_SNMP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#SNMP"
+              aria-expanded="false"
+              aria-controls="SNMP"
+            >
+              SNMP(Simple Network Management Protocol)
+            </button>
+          </h2>
+          <div id="SNMP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              ルータ、スイッチ、サーバなどTCP/IPネットワークに接続された通信機器に対して、ネットワーク経由で監視、制御するためのアプリケーションプロトコル。管理する側のSNMPマネージャと
+              管理される側のSNMPエージェントで構成される。SNMPではMIB(Management
+              Information
+              Base)と呼ばれる階層構造のデータベースで情報のやり取りを行う。
+              SNMPマネージャとSNMPエージェントは以下のやりとりを行う。<br />
+              ポーリング：<br />
+              マネージャからエージェントにリクエストを送信して情報を取得<br />
+              トラップ：<br />
+              エージェントからマネージャに突発的なエラーに関する情報を通知
             </div>
           </div>
         </div>
