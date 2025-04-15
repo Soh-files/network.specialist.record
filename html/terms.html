@@ -96,7 +96,8 @@
           <div id="ALPN" class="accordion-collapse collapse">
             <div class="accordion-body">
               TLSプロトコルの拡張の1つで、クライアントとサーバ間でプロトコルのネゴシエーションを行い使用するプロトコルを決定するために使用する。
-              HTTP/2の通信開始処理で用いられる。TLSセッション開始時のClientHello、ServerHelloにネゴシエーションが含まれ、ネゴシエーションにはクライアントが利用可能なアプリケーション階層のプロトコルの情報が含まれる。
+              HTTP/2の通信開始処理で用いられる。TLSセッション開始時のClientHello、ServerHelloにネゴシエーションが含まれ、ネゴシエーションには
+              クライアントが利用可能なアプリケーション階層のプロトコルの情報が含まれる。
             </div>
           </div>
         </div>
@@ -752,8 +753,46 @@
           </h2>
           <div id="HTTP_2" class="accordion-collapse collapse">
             <div class="accordion-body">
-              HTTP/2のヘッダー情報はバイナリ圧縮されており、ヘッダーフィールドには必須フィールドとして:schema、:path、:methodがある。
-              :methodではGET、POSTなどHTTP/1.1でのメソッドに該当するものを記述する。
+              RFC7540として公開された新しいバージョンのHTTPで通信の高速化を主な目的としている。HTTP/1.1との互換性を保つため「https://」というURIスキームを
+              利用する。またTLS(Transport Layer
+              Protocol)の拡張の1つであるALPN(Application-Layer Protocol
+              Negotiation)が利用される。
+              HTTP/2では以下のような変更がされている。<br />
+              1）ストリーム<br />
+              バイナリデータを多重に送受信する仕組みのこと。ストリーム内での優先順位設定も可能。<br />
+              2）ヘッダー圧縮<br />
+              HTTP/2のヘッダー情報はHPACKという仕組みでバイナリ圧縮されており、ヘッダーフィールドには必須フィールドとして:schema、:path、:methodがある。
+              :methodではGET、POSTなどHTTP/1.1でのメソッドに該当するものを記述する。<br />
+              3）サーバプッシュ<br />
+              クライアントからのリクエストよりも先にレスポンスを送る仕組み。HTML文の内部から次に画像などが要求されると予測される場合にあらかじめ画像データを
+              送信するなどの処理で使用される。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_HTTP_3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#HTTP_3"
+              aria-expanded="false"
+              aria-controls="HTTP_3"
+            >
+              HTTP/3
+            </button>
+          </h2>
+          <div id="HTTP_3" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              RFC9114として正式に勧告された現在の最新バージョン。RFC9000として勧告されたQUICと合わせてUDPでのTLS1.3通信が可能となる。トランスポート層にはTCPの代わりに
+              QUICを使用する。
+              HTTP/3では以下のような仕組みを利用して通信の高速化を実現する。<br />
+              1）ストリーム<br />
+              HTTP/2と同様にHTTP/3でも利用される。通信管理の仮想単位としてQUICのストリームを利用する。QUICのストリームではコネクションよりも細かい単位となる
+              アプリケーションデータごとに通信路が作られる。単方向ストリームと双方向ストリームがあり、単方向ストリームではストリームをオープンした側(クライアントか
+              サーバのどちらか)のみがデータを送信できる。<br />
+              2）ヘッダー圧縮<br />
+              QPACKと呼ばれるQUICの利点を活かす仕組みでヘッダー圧縮を行う。ハフマン符号と辞書データという技術を組み合わせて高速にヘッダー圧縮を行う。
             </div>
           </div>
         </div>
@@ -1034,7 +1073,8 @@
           </h2>
           <div id="LLDP" class="accordion-collapse collapse">
             <div class="accordion-body">
-              OSI基本参照モデルのデータリンク層(第2層)で動作する隣接する機器に自分の情報を広告(Advertise)するためのプロトコル。
+              OSI基本参照モデルのデータリンク層(第2層)で動作する隣接されている機器の構成を取得するプロトコル。LLDPで得られた情報をLLDP-MIBを用いて収集することによって
+              ネットワークの構成情報を外部から取得できる。
             </div>
           </div>
         </div>
@@ -1165,7 +1205,7 @@
           <div id="MQTT" class="accordion-collapse collapse">
             <div class="accordion-body">
               短いメッセージを頻繁にやり取りすることに特化したシンプルかつ軽量のプロトコル。IoTネットワークやモバイルアプリケーションでの活用が期待されている。
-              MQTTはパブリッシュ(送信側)とサブスクライブ(受信側)の間をMQTTブローカー(メッセージ配信サーバ)が取り持つという通信モデルになっている。
+              MQTTはパブリッシャ(送信側)とサブスクライバ(受信側)の間をMQTTサーバ(メッセージ配信サーバ)が中継するという通信モデルになっている。
             </div>
           </div>
         </div>
@@ -1608,6 +1648,29 @@
             </div>
           </div>
         </div>
+        <div class="accordion-item" id="h_REST">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#REST"
+              aria-expanded="false"
+              aria-controls="REST"
+            >
+              REST(REpresentational State Transfer)
+            </button>
+          </h2>
+          <div id="REST" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Webアーキテクチャの原則のことで、RESTfulとも呼ばれる。以下の原則がある。<br />
+              1. アドレス可能性(URIでリソースにアクセスできること)<br />
+              2. ステートレス(リクエストが分離していること)<br />
+              3. 接続性(情報に「別の情報へのリンク」を含められること)<br />
+              4. 統一インタフェース(すべてHTTPメソッドで統一すること)
+            </div>
+          </div>
+        </div>
         <div class="accordion-item" id="h_RIP">
           <h2 class="accordion-header">
             <button
@@ -1711,8 +1774,50 @@
           </h2>
           <div id="RSVP" class="accordion-collapse collapse">
             <div class="accordion-body">
-              IPネットワークにおいて特定の通信に対して通信品質を確保するためのプロトコル。受信ホストから送信ホストに制御パケットを送信することで、品質確保の対象とする通信が経由するすべてのルータに対して
-              制御設定を行う。この制御設定をもとにルータがその通信のパケットを識別し処理できる仕組みとなっている。
+              ネットワーク上で送信元から送信先までの帯域を予約し、通信品質を確保するプロトコル。エンドツーエンドできめ細かい優先制御を行うIntServと総裁的に大まかな
+              優先制御を行うDiffServが使用される。IntServではパケットを受信側から送信側に向けて制御パケットを流し、その間に存在するそれぞれのルータに品質制御のための
+              設定を行うフローのセットアップを行う。DiffServでは特定のネットワーク内でそれぞれのパケットをランク付けし、パケットに対して優先制御を行う。これはIPヘッダーの
+              TOSフィールド(DSCPフィールド)を用いて優先度を設定するものでIP電話などでよく利用される。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_RTCP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#RTCP"
+              aria-expanded="false"
+              aria-controls="RTCP"
+            >
+              RTCP(RTP Control Protocol)
+            </button>
+          </h2>
+          <div id="RTCP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              RTPを補助するプロトコル。送信バイト数、パケットの欠落数、パケット到着間隔のばらつきなどの統計情報を集め、その情報をアプリケーションなどに提供することで
+              QoS(Quality of Service)の確保に役立つ。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_RTP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#RTP"
+              aria-expanded="false"
+              aria-controls="RTP"
+            >
+              RTP(Real-time Transport Protocol)
+            </button>
+          </h2>
+          <div id="RTP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              音声や動画などのデータ本体を送るためのプロトコル。UDP上でリアルタイムなマルチメディア通信を実現する。パケットにシーケンス番号をつけてパケットの順番を並べ直し、
+              パケットの抜けを確認する。パケットのタイムスタンプ(送信時刻)の管理も行う。
             </div>
           </div>
         </div>
@@ -1823,6 +1928,26 @@
               マネージャからエージェントにリクエストを送信して情報を取得<br />
               トラップ：<br />
               エージェントからマネージャに突発的なエラーに関する情報を通知
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_SOAP">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#SOAP"
+              aria-expanded="false"
+              aria-controls="SOAP"
+            >
+              SOAP
+            </button>
+          </h2>
+          <div id="SOAP" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              ソフトウェア同士がメッセージを交換するためのプロトコル。HTTPやSMTPなどのプロトコルの上位に位置し、そのパケットの中でオブジェクト呼び出しに必要なXMLメッセージの
+              交換を行う。XML文書に対してエンベロープと呼ばれる付加情報を自由に追加することができる。
             </div>
           </div>
         </div>
@@ -2001,6 +2126,45 @@
             </div>
           </div>
         </div>
+        <div class="accordion-item" id="h_UDDI">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#UDDI"
+              aria-expanded="false"
+              aria-controls="UDDI"
+            >
+              UDDI(Universal Description, Discovery and Integration)
+            </button>
+          </h2>
+          <div id="UDDI" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Webサービスを公開および検索する技術。Webサービスの提供者はサービスの概要を登録、公開し、利用者はインターネット上に存在するWebサービスから必要なものを検索できる。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_uRPF">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#uRPF"
+              aria-expanded="false"
+              aria-controls="uRPF"
+            >
+              uRPF(Unicast Reverse Path Forwarding)
+            </button>
+          </h2>
+          <div id="uRPF" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              ルータ上のルーティングテーブルの仕組みを利用したパケットフィルタリング技術。ルータのインターフェースに着信するパケットの送信元IPアドレスをチェックして、
+              その送信元IPアドレスがルーティングテーブルに存在しているかをチェックする。存在する場合は正常にパケット転送を行い、存在しない場合はパケットを破棄する。
+            </div>
+          </div>
+        </div>
         <div class="accordion-item" id="h_UWB">
           <h2 class="accordion-header">
             <button
@@ -2170,6 +2334,26 @@
               CCMP(Counter Mode Cipher Block Chaining Message Authentication
               Code Protocol)プロトコルが利用されており、
               メッセージ認証と整合性検証が備わっている。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_WSDL">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#WSDL"
+              aria-expanded="false"
+              aria-controls="WSDL"
+            >
+              WSDL(Web Services Description Language)
+            </button>
+          </h2>
+          <div id="WSDL" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Webサービスを利用するためのインターフェースを記述するための技術。Webサービスがどこにあるのか、どのようなフォーマットのメッセージか、どのような通信プロトコルを
+              使うのかといったWebサービスのインターフェースに関する情報をやり取りする。
             </div>
           </div>
         </div>
@@ -2643,6 +2827,33 @@
               Interface Card)と同期を取るために使用される。
               1と0を交互に並べて7オクテット送ったあとに「10101011」と8オクテット目の末尾を1にして送ることでプリアンブルの終わりを表す。最後の1オクテットは
               SFD(Start Frame Delimiter)と呼ばれる。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_プロキシ">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#プロキシ"
+              aria-expanded="false"
+              aria-controls="プロキシ"
+            >
+              プロキシ
+            </button>
+          </h2>
+          <div id="プロキシ" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              複数のクライアントからのWebアクセスを受け取り、そのURIを参考にWebサーバへアクセスし、結果をクライアントに返す。キャッシュ機能によって一度アクセスした情報を
+              サーバ内に保存し、同じURIへの要求あった場合にキャッシュの情報を返すことで高速化を図る。クライアントのPC情報が外部に漏れないため安全な通信が実現でき、また有害な
+              サイトをプロキシサーバで遮断することもできる。プロキシサーバのデータ変換機能によってクライアントが対応していないプロトコルでの通信もプロキシサーバを中継することで
+              可能となる。<br />
+              プロキシを使用して通信を行う場合はクライアント側でプロキシサーバを設定する必要がある。設定方法には各クライアントで手動でプロキシサーバのIPアドレスまたはホスト名を
+              設定する方法、プロキシサーバ自動設定用のファイルを作成して自動設定するPAC(スクリプト)と呼ばれる仕組みを利用した方法、プロキシ設定を自動化するためのプロトコルである
+              WPAD(Web Proxy Auto-Discovery
+              Protocol)を用いて自動設定を行う方法がある。<br />
+              不特定多数のクライアントからのリクエストをいったん受け取り、特定のWebサーバに中継するリバースプロキシサーバもある。
             </div>
           </div>
         </div>
