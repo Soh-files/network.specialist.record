@@ -1347,6 +1347,28 @@
             </div>
           </div>
         </div>
+        <div class="accordion-item" id="h_OAuth">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#OAuth"
+              aria-expanded="false"
+              aria-controls="OAuth"
+            >
+              OAuth
+            </button>
+          </h2>
+          <div id="OAuth" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              権限の認可を行うためのプロトコルで、現在は多くのサービスで最新のOAuth2.0が利用されている。認可コードやアクセストークンを用いてアクセス権を委譲し、
+              第三者に特定のリソースへのアクセスを認可する。Authorization Code
+              Grant(認可コードフロー)とImplicit
+              Grant(暗黙的な許可のフロー)の2種類がある。
+            </div>
+          </div>
+        </div>
         <div class="accordion-item" id="h_OFDM">
           <h2 class="accordion-header">
             <button
@@ -1407,6 +1429,27 @@
             </div>
           </div>
         </div>
+        <div class="accordion-item" id="h_OpenID_Connect">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#OpenID_Connect"
+              aria-expanded="false"
+              aria-controls="OpenID_Connect"
+            >
+              OpenID Connect
+            </button>
+          </h2>
+          <div id="OpenID_Connect" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              OAuth2.0プロトコル上にアイデンティティレイヤを追加したプロトコル。OAuthは認可のプロトコルで認証については明確な定義がないため認証部分を追加している。
+              OpenIDプロバイダは利用者を認証した後で発行者(OpenIDプロバイダ)のデジタル署名付きのIDトークンを発行する。デジタル署名を公開鍵で検証することで正当な
+              利用者であることを確認できる。
+            </div>
+          </div>
+        </div>
         <div class="accordion-item" id="h_OSPF">
           <h2 class="accordion-header">
             <button
@@ -1423,7 +1466,8 @@
           <div id="OSPF" class="accordion-collapse collapse">
             <div class="accordion-body">
               リンク状態型のルーティングプロトコルで、すべてのルータがネットワークのトポロジー(接続状態)を完全に把握し、それをもとに制御制御を行う。
-              ループがあるネットワークでも安定した経路制御が可能となる。各リンクに重み(コスト)をつけることができ、コストの合計が最も小さい経路が選択される。<br />
+              ループがあるネットワークでも安定した経路制御が可能となる。各リンクに重み(コスト)をつけることができ、コストの合計が最も小さい経路が選択される。ルーティング情報の更新には
+              マルチキャストが使用される。<br />
               すべてのルータ間で経路情報が交換されるわけではなく、指名ルータが決められそれを中心に経路制御情報が交換される。またルータの台数が増えた場合には
               エリアというグループに分けて管理される。各エリアは必ずバックボーンエリアに接続され、バックボーンエリアと各エリアの教会にあるルータはエリア境界ルータと呼ばれる。<br />
               OSPFではすべてのルータがエリア0に接続されている必要があるため、エリア0に直接接続できないエリアが発生した場合にはOSPF仮想リンクを導入することで2台のエリア境界ルータの
@@ -1689,7 +1733,15 @@
               LANで最も広く利用されているルーティングプロトコル。距離ベクトル型であり、ホップ数(ルータの数)を用いて選択する経路を決定する。<br />
               自分の知っている経路制御情報を30秒に1回ネットワーク上にブロードキャストする。他のルータから受け取った経路情報は距離に1足してから次の機会にブロードキャストする。<br />
               パケットが6回(180秒)こなかった場合には接続が切れたと判断して距離ベクトルデータベースから該当する情報を削除する。またパケットがループし続けないように、ホップの最大数を15とし、これを超えた場合には破棄する。<br />
-              AS内部で使用され、主に小規模ネットワークで使用されるルーティングプロトコル。
+              AS内部で使用され、主に小規模ネットワークで使用されるルーティングプロトコル。<br />
+              RIP-1とRIP-2には以下の違いがある。<br />
+              RIP-1<br />
+              ・可変長サブネットマスクに対応していない<br />
+              ・ルーティング情報の更新にブロードキャストを使用する<br />
+              RIP-2<br />
+              ・可変長サブネットマスクに対応している。<br />
+              ・ルーティング情報の更新にマルチキャストを使用している<br />
+              ・ルーティング情報の更新を30秒ごとに行う
             </div>
           </div>
         </div>
@@ -1841,6 +1893,27 @@
             </div>
           </div>
         </div>
+        <div class="accordion-item" id="h_SAML">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#SAML"
+              aria-expanded="false"
+              aria-controls="SAML"
+            >
+              SAML(Security Assertion Markup Language)
+            </button>
+          </h2>
+          <div id="SAML" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              インターネット上で異なるWebサイト間での認証を実現するために標準化団体OASISが考案したフレームワーク。IDやパスワードなどの認証情報を安全に交換するための仕様で、
+              認証情報のやりとりにXML(eXtensible Markup
+              Language)を用いる。通信プロトコルにはHTTPやSOAPが用いられる。
+            </div>
+          </div>
+        </div>
         <div class="accordion-item" id="h_SAN">
           <h2 class="accordion-header">
             <button
@@ -1967,6 +2040,26 @@
           <div id="SOAレコード" class="accordion-collapse collapse">
             <div class="accordion-body">
               DNSの資源レコード(リソースレコード)のうち、他のDNSサーバのキャッシュ領域に情報を残す許可時間やゾーン情報の更新をチェックする間隔などを指定するレコードのこと。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_SSL_TLSオフロード">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#SSL_TLSオフロード"
+              aria-expanded="false"
+              aria-controls="SSL_TLSオフロード"
+            >
+              SSL/TLSオフロード
+            </button>
+          </h2>
+          <div id="SSL_TLSオフロード" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              負荷分散装置が持つSSL/TLSの暗号化や復号を行う機能。1つのセッションを継続して特定のサーバに振り分けるセッション維持(セッション・パーシステンス)を実現するために、
+              暗号化されたHTTPヘッダを復号しHTTPヘッダ内にあるクッキーの情報を利用する。
             </div>
           </div>
         </div>
@@ -2913,6 +3006,26 @@
           <div id="ベストエフォート" class="accordion-collapse collapse">
             <div class="accordion-body">
               通信網は最善を尽くすが利用状況によっては通信の品質を保証しないとするサービスの方針のこと。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_ホストアドレス">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#ホストアドレス"
+              aria-expanded="false"
+              aria-controls="ホストアドレス"
+            >
+              ホストアドレス
+            </button>
+          </h2>
+          <div id="ホストアドレス" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              サブネットマスクを反転させたビット列とIPアドレスの論理積を求めることでIPアドレスのホストアドレス部を求めることができる。サブネットマスクを反転させたビット列と
+              IPアドレスの論理和を求めることでIPアドレスのブロードキャストアドレスを求めることができる。
             </div>
           </div>
         </div>
