@@ -473,9 +473,9 @@
           <div id="DMARC" class="accordion-collapse collapse">
             <div class="accordion-body">
               受信者がヘッダーFromのメールアドレス(送信者のメールアドレス)のドメインについてSPFおよびDKIMで検証することでなりすましメールを防ぐ技術。認証に失敗した場合、ドメインの所有者はメール受信者に以下の3つのポリシーを強制することができる。<br />
-              　None(何もしない)：受信メールに対して特定のアクションを要求しない<br />
-              　Quarantine(隔離)：受信メールを疑わしいものとして処理するように要求する<br />
-              　Reject(拒否)：受信メールを拒否することを要求する
+              None(何もしない)：受信メールに対して特定のアクションを要求しない<br />
+              Quarantine(隔離)：受信メールを疑わしいものとして処理するように要求する<br />
+              Reject(拒否)：受信メールを拒否することを要求する
             </div>
           </div>
         </div>
@@ -1073,8 +1073,8 @@
           </h2>
           <div id="LLDP" class="accordion-collapse collapse">
             <div class="accordion-body">
-              OSI基本参照モデルのデータリンク層(第2層)で動作する隣接されている機器の構成を取得するプロトコル。LLDPで得られた情報をLLDP-MIBを用いて収集することによって
-              ネットワークの構成情報を外部から取得できる。
+              OSI基本参照モデルのデータリンク層(第2層)で動作する隣接されている機器の構成を取得するプロトコル。隣接する機器に自身の機器情報を送ることで接続構成を把握する。
+              機器の情報にはIPアドレス、機種、ポート、OSバージョンなどが含まれる。LLDPで得られた情報をLLDP-MIBを用いて収集することによってネットワークの構成情報を外部から取得できる。
             </div>
           </div>
         </div>
@@ -1424,8 +1424,8 @@
           </h2>
           <div id="OpenFlow" class="accordion-collapse collapse">
             <div class="accordion-body">
-              データ転送と経路制御の機能を論理的に分離し、コントローラが複数のネットワーク機器のデータ転送を集中的に制御・管理するプロトコル。アプリケーションはノースバウンドインターフェースを介してコントロータに
-              指示を出す。ネットワーク機器がコントローラに提供するAPIはサウスバウンドインターフェースと呼ばれる。
+              各フレームが持つMACアドレスやVLANタグ、IPアドレス、ポート番号などの特徴をフローとして扱い、そのフローをベースにスイッチングを行い、経路を柔軟に制御できるようにするための
+              標準化規格。制御用ネットワークとパケット処理用のネットワークが分かれており、制御用ネットワークはコントロールプレーン、パケット処理用ネットワークはデータプレーンと呼ばれる。
             </div>
           </div>
         </div>
@@ -2126,9 +2126,10 @@
           </h2>
           <div id="Syslog" class="accordion-collapse collapse">
             <div class="accordion-body">
-              ログデータの転送に使用される標準規格(RFC5424)のプロトコルで、IPネットワークでログをやりとりするために利用される。
+              ログデータの転送に使用される標準規格(RFC5424)のプロトコルで、IPネットワークでログをやりとりするために利用される。<br />
               RFC5424 - The Syslog
-              Protocolはイベント通知メッセージの伝達に使用されるSyslogプロトコルの規格。
+              Protocolはイベント通知メッセージの伝達に使用されるSyslogプロトコルの規格。<br />
+              SYSLOGメッセージはUDPまたはTCPを用いて送信され、TLSによる暗号化も可能。サーバやネットワーク機器などのログ情報をログ監視サーバなどの管理機器に送信するために用いられる。
             </div>
           </div>
         </div>
@@ -2356,7 +2357,7 @@
               物理的に2台あるルータを論理的(仮想的)に1台のルータとして動作させる技術。2台のルータはそれぞれマスタとバックアップに分けられ、通常のマスタとなるルータの優先度を
               あげることでマスタが通信に利用される。マスタルータ自体に障害が発生した場合、バックアップルータはその障害を検知して自動的にマスタルータとして通信を行う。
               マスタとバックアップは互いに定期的にVRRPアドバタイズメンと(VRRP広告)を送り合うことで正常に稼働していることを確認する。マスタルータのインターフェースの障害は
-              通常バックアップルータでは検知できないため、インターフェースに障害が発生した場合は自動的にマスタルータに優先度を下げるように設定される場合がある。
+              通常バックアップルータでは検知できないため、インターフェースに障害が発生した場合は自動的にマスタルータに優先度を下げるように設定される場合がある(VRRPトリガ/VRRPトラッキング)。
               VRRPでは仮想ルータごとにVRRPグループを作成してグループを識別するためにVRIDを使用する。VRIDは8ビットで、0以外の最大255組の仮想ルータを使用できる。
             </div>
           </div>
@@ -2627,6 +2628,25 @@
             </div>
           </div>
         </div>
+        <div class="accordion-item" id="h_シン_プロビジョニング">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#シン_プロビジョニング"
+              aria-expanded="false"
+              aria-controls="シン_プロビジョニング"
+            >
+              シン・プロビジョニング
+            </button>
+          </h2>
+          <div id="シン_プロビジョニング" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              物理的なストレージ容量を仮想化して必要に応じて自由に変化させることができる技術。仮想化された論理的なストレージをボリュームと呼び、物理的は容量と無関係に設定することができる。
+            </div>
+          </div>
+        </div>
         <div class="accordion-item" id="h_スタック">
           <h2 class="accordion-header">
             <button
@@ -2838,6 +2858,29 @@
               D：パイプラインの深さ(命令のステージ数)<br />
               I：命令数<br />
               P：パイプラインのピッチ(時間)
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_バグトラッキングシステム">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#バグトラッキングシステム"
+              aria-expanded="false"
+              aria-controls="バグトラッキングシステム"
+            >
+              バグトラッキングシステム(BTS: Bug Tracking System)
+            </button>
+          </h2>
+          <div
+            id="バグトラッキングシステム"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              ソフトウェアのバグ(エラーや欠陥)を特定、記録、追跡し、解決するためのシステム。修正計画や修正履歴を管理することでバグを効率的に解決することができる。独自システムの他に
+              プロジェクト管理ツールの一部として提供されるものもある。
             </div>
           </div>
         </div>
@@ -3063,7 +3106,7 @@
           </h2>
           <div id="待ち行列モデル" class="accordion-collapse collapse">
             <div class="accordion-body">
-              M/M/1の待ち行列モデルにおいて待ち行列に並んでからサービスを受け終わるまでに要する平均時間は次の式で計算する。
+              M/M/1の待ち行列モデルにおいて待ち行列に並んでからサービスを受け終わるまでに要する平均時間は次の式で計算する。<br />
               (利用率 / (1 - 利用率)) × 平均サービス時間 + 平均サービス時間
             </div>
           </div>
@@ -3146,6 +3189,26 @@
           <div id="優先制御" class="accordion-collapse collapse">
             <div class="accordion-body">
               ネットワークのQoSを実現するために使用されるトラフィック制御の1つで、フレームの種類や宛先に応じて優先度を変えて中継すること。
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="h_ライブマイグレーション">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed bg-warning"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#ライブマイグレーション"
+              aria-expanded="false"
+              aria-controls="ライブマイグレーション"
+            >
+              ライブマイグレーション
+            </button>
+          </h2>
+          <div id="ライブマイグレーション" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              仮想マシンを稼働させたままの状態で他のサーバに移行させる機能。仮想化機構の負荷分散で物理サーバによって負荷に差が生じた場合に稼働中の仮想サーバを他の物理サーバに
+              移動させることで負荷を平準化できる。
             </div>
           </div>
         </div>
